@@ -60,12 +60,7 @@ export default function NotificationCenter({ dark }) {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="h-9 w-9 rounded-xl border flex items-center justify-center transition-all hover:border-[var(--gold)] active:scale-95 cursor-pointer shrink-0"
-        style={{
-          backgroundColor: dark ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
-          borderColor: isOpen ? "var(--gold)" : dark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
-          color: dark ? "#FFFFFF" : "#181B18",
-        }}
+        className="h-9 w-9 rounded-xl border border-[var(--border)] bg-[var(--muted-bg)]/50 flex items-center justify-center transition-all hover:border-[var(--gold)] active:scale-95 cursor-pointer shrink-0 text-[var(--fg)]"
         title="Multi-Channel Notification Gateway (Live Simulator)"
       >
         <div className="relative flex items-center justify-center">

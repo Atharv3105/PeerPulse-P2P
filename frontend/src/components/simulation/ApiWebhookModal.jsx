@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import { api } from '../../services/api';
 
-export default function ApiWebhookModal() {
+export default function ApiWebhookModal({ dark }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('aa'); // 'aa' | 'enach' | 'webhooks'
   const [aaState, setAaState] = useState('IDLE'); // 'IDLE' | 'PENDING' | 'APPROVED'
@@ -38,7 +38,7 @@ export default function ApiWebhookModal() {
       const res = await api.triggerAAConsent({
         borrowerId: 'BOR-PRIYA-001',
         customerVpa: 'priya@okhdfcbank',
-        phone: '+91 98251 04928'
+        fipId: 'HDFC-FIP-01'
       });
       setConsentHandle(res.consentHandle);
       setAaState('PENDING');
@@ -53,7 +53,10 @@ export default function ApiWebhookModal() {
   const handleApproveAAConsent = async () => {
     setIsProcessing(true);
     try {
-      await api.approveAAConsent({ consentHandle });
+      await api.approveAAConsent({
+        consentHandle: consentHandle || 'AA-CONSENT-DEMO',
+        status: 'READY'
+      });
       setAaState('APPROVED');
       fetchWebhooks();
     } catch (err) {
@@ -63,16 +66,16 @@ export default function ApiWebhookModal() {
     }
   };
 
-  const handleCreateEnach = async () => {
+  const handleRegisterMandate = async () => {
     setIsProcessing(true);
     try {
-      const res = await api.createEnachMandate({
+      const res = await api.registerEnachMandate({
         borrowerId: 'BOR-PRIYA-001',
-        accountNumber: '50100492810482',
-        ifsc: 'HDFC0001234',
-        maxAmount: 50000
+        loanId: '660000000000000000000020',
+        maxAmount: 50000,
+        frequency: 'MONTHLY'
       });
-      setEnachMandate(res);
+      setEnachMandate(res.mandate);
       fetchWebhooks();
     } catch (err) {
       alert(err.message);
@@ -81,12 +84,12 @@ export default function ApiWebhookModal() {
     }
   };
 
-  const handleSimulateSweep = async (isSuccess) => {
+  const handleExecuteEscrowSweep = async (isSuccess = true) => {
     setIsProcessing(true);
     try {
-      const res = await api.simulateNachSweep({
-        loanId: 'LN-PRIYA-810',
-        amount: 4479,
+      await api.simulateEscrowSweep({
+        loanId: '660000000000000000000020',
+        amount: 38400,
         isSuccess
       });
       setSweepStatus(isSuccess ? 'SUCCESS' : 'FAILED');
@@ -104,12 +107,7 @@ export default function ApiWebhookModal() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="h-9 flex items-center gap-2 px-3 rounded-xl border transition-all hover:border-amber-500/50 active:scale-95 text-xs font-semibold cursor-pointer shrink-0"
-        style={{
-          backgroundColor: dark ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
-          borderColor: isOpen ? "rgb(245, 158, 11)" : dark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
-          color: dark ? "#FFFFFF" : "#181B18",
-        }}
+        className="h-9 flex items-center gap-2 px-3 rounded-xl border border-[var(--border)] bg-[var(--muted-bg)]/50 hover:border-amber-500/50 active:scale-95 text-xs font-semibold text-[var(--fg)] cursor-pointer shrink-0 transition-all"
         title="Live Fintech APIs & Webhook Simulator"
       >
         <Zap className="w-3.5 h-3.5 text-amber-500 animate-pulse" />

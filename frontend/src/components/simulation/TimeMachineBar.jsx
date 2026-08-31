@@ -231,12 +231,7 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="h-9 flex items-center gap-2 px-3 rounded-xl border transition-all hover:border-[var(--gold)] active:scale-95 cursor-pointer shrink-0 font-mono text-xs font-bold"
-        style={{
-          backgroundColor: dark ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
-          borderColor: isOpen ? "var(--gold)" : dark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
-          color: dark ? "#FFFFFF" : "#181B18",
-        }}
+        className="h-9 flex items-center gap-2 px-3 rounded-xl border border-[var(--border)] bg-[var(--muted-bg)]/50 hover:border-[var(--gold)] active:scale-95 cursor-pointer shrink-0 font-mono text-xs font-bold text-[var(--fg)] transition-all"
         title="Open Portfolio Time Machine"
       >
         <Clock className="w-3.5 h-3.5 text-amber-500" />
