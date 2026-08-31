@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const router = express.Router();
 const PaymentService = require('../services/paymentService');
 const Lender = require('../models/Lender');
@@ -7,13 +7,10 @@ const LoanApplication = require('../models/LoanApplication');
 const AuditLog = require('../models/AuditLog');
 const eventBus = require('../services/eventBus');
 
-// Key configured or default test key
-const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID || 'rzp_test_PeerPulseSandbox2026';
-
 // GET /api/payments/config - Expose public key for frontend checkout
 router.get('/config', (req, res) => {
   res.json({
-    keyId: RAZORPAY_KEY_ID,
+    keyId: process.env.RAZORPAY_KEY_ID || 'rzp_test_TWQRpRwBlre2Us',
     currency: 'INR'
   });
 });
@@ -38,7 +35,7 @@ router.post('/create-order', async (req, res) => {
 
     res.json({
       order,
-      keyId: RAZORPAY_KEY_ID
+      keyId: process.env.RAZORPAY_KEY_ID || 'rzp_test_TWQRpRwBlre2Us'
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -57,7 +54,8 @@ router.post('/verify-wallet-deposit', async (req, res) => {
     const isValid = PaymentService.verifySignature({
       orderId: razorpayOrderId,
       paymentId: razorpayPaymentId,
-      signature: razorpaySignature
+      signature: razorpaySignature,
+      keySecret: process.env.RAZORPAY_KEY_SECRET || 'test_secret'
     });
 
     if (!isValid) {

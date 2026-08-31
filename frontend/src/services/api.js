@@ -739,7 +739,7 @@ export const api = {
       const res = await client.get('/payments/config');
       return res.data;
     } catch {
-      return { keyId: 'rzp_test_PeerPulseSandbox2026', currency: 'INR' };
+      return { keyId: 'rzp_test_TWQRpRwBlre2Us', currency: 'INR' };
     }
   },
 
@@ -750,7 +750,7 @@ export const api = {
     } catch {
       // client fallback mock order
       return {
-        keyId: 'rzp_test_PeerPulseSandbox2026',
+        keyId: 'rzp_test_TWQRpRwBlre2Us',
         order: {
           id: 'order_mock_' + Math.random().toString(36).substring(2, 9),
           amount: (payload.amount || 1000) * 100,
