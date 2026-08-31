@@ -1,7 +1,8 @@
-﻿services:
+services:
   - type: web
     name: peerpulse-acie
     runtime: python
+    plan: free
     rootDir: acie
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
@@ -14,6 +15,7 @@
   - type: web
     name: peerpulse-backend
     runtime: node
+    plan: free
     rootDir: backend
     buildCommand: npm install
     startCommand: node server.js
