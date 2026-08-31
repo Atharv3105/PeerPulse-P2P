@@ -1,10 +1,13 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+// In production, VITE_API_URL points to deployed backend (e.g. Render / Railway). In dev, defaults to '/api'
+const API_BASE = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api` 
+  : '/api';
 
 const client = axios.create({
   baseURL: API_BASE,
-  timeout: 4000,
+  timeout: 6000,
 });
 
 // Fallback Mock Datasets when Backend is Offline

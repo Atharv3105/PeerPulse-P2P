@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import NotificationService from './notificationService';
 
 /**
@@ -14,7 +14,10 @@ export function useLiveSync(onEventCallback) {
 
     const connectSSE = () => {
       try {
-        const es = new EventSource('/api/events');
+        const eventsUrl = import.meta.env.VITE_API_URL 
+          ? `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api/events` 
+          : '/api/events';
+        const es = new EventSource(eventsUrl);
         eventSourceRef.current = es;
 
         es.onmessage = (e) => {
