@@ -77,7 +77,7 @@ export default function LenderDashboard({ activeLenderId }) {
           currency: order.currency || 'INR',
           name: 'PeerPulse Escrow',
           description: `Retail Lender Wallet Top-Up (IDFC FIRST Trustee)`,
-          order_id: order.id,
+          ...(order.id && !order.isMock && !order.id.startsWith('order_mock') ? { order_id: order.id } : {}),
           prefill: {
             name: lender?.name || 'Retail Investor',
             email: 'investor@peerpulse.in',
@@ -86,7 +86,11 @@ export default function LenderDashboard({ activeLenderId }) {
           theme: {
             color: '#10B981'
           },
+          modal: {
+            ondismiss: () => setDepositLoading(false)
+          },
           handler: async (response) => {
+            setDepositLoading(true);
             await api.verifyWalletDeposit({
               lenderId: lender?.lenderId,
               amount,
@@ -95,9 +99,14 @@ export default function LenderDashboard({ activeLenderId }) {
               razorpaySignature: response.razorpay_signature || 'mock_sig'
             });
             await fetchLenderData();
+            setDepositLoading(false);
           }
         };
         const rzp = new window.Razorpay(options);
+        rzp.on('payment.failed', (response) => {
+          alert('Payment Failed: ' + (response.error?.description || 'Transaction declined'));
+          setDepositLoading(false);
+        });
         rzp.open();
       } else {
         // Fallback simulation
@@ -109,10 +118,10 @@ export default function LenderDashboard({ activeLenderId }) {
           razorpaySignature: 'mock_sig'
         });
         await fetchLenderData();
+        setDepositLoading(false);
       }
     } catch (err) {
       alert('Deposit error: ' + err.message);
-    } finally {
       setDepositLoading(false);
     }
   };

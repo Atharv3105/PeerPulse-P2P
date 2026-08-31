@@ -23,7 +23,7 @@ router.post('/create-order', async (req, res) => {
       return res.status(400).json({ error: 'Valid amount is required' });
     }
 
-    const order = PaymentService.createOrder({
+    const order = await PaymentService.createOrder({
       amount: Number(amount),
       receipt: `rcpt_${purpose || 'wallet'}_${Date.now()}`,
       notes: {

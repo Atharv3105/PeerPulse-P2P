@@ -87,7 +87,7 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
           currency: 'INR',
           name: 'PeerPulse Loan Escrow',
           description: `Monthly EMI for Loan #${selectedLoan.applicationId}`,
-          order_id: order.id,
+          ...(order.id && !order.isMock && !order.id.startsWith('order_mock') ? { order_id: order.id } : {}),
           prefill: {
             name: borrower?.name || 'MSME Borrower',
             email: 'borrower@peerpulse.in',
@@ -96,7 +96,11 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
           theme: {
             color: '#10B981'
           },
+          modal: {
+            ondismiss: () => setPayEmiLoading(false)
+          },
           handler: async (response) => {
+            setPayEmiLoading(true);
             await api.payEmiViaRazorpay({
               loanId: selectedLoan._id,
               amount: emiAmount,
@@ -105,9 +109,14 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
               razorpaySignature: response.razorpay_signature || 'mock_sig'
             });
             await fetchDashboardData();
+            setPayEmiLoading(false);
           }
         };
         const rzp = new window.Razorpay(options);
+        rzp.on('payment.failed', (response) => {
+          alert('Repayment Failed: ' + (response.error?.description || 'Transaction declined'));
+          setPayEmiLoading(false);
+        });
         rzp.open();
       } else {
         await api.payEmiViaRazorpay({
@@ -118,10 +127,10 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
           razorpaySignature: 'mock_sig'
         });
         await fetchDashboardData();
+        setPayEmiLoading(false);
       }
     } catch (err) {
       alert('Payment error: ' + err.message);
-    } finally {
       setPayEmiLoading(false);
     }
   };
