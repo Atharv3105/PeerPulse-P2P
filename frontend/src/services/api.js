@@ -1,4 +1,5 @@
 import axios from 'axios';
+import enterpriseLoans from '../data/enterpriseLoans.json';
 
 // In production, VITE_API_URL points to deployed backend (e.g. Render / Railway). In dev, defaults to '/api'
 const API_BASE = import.meta.env.VITE_API_URL 
@@ -25,75 +26,7 @@ const MOCK_DATA = {
       { lenderId: 'LEN-KARAN-003', name: 'Karan Singhal', riskAppetite: 'Aggressive', walletBalance: 850000, totalExposure: 75000 }
     ]
   },
-  loans: [
-    {
-      _id: 'loan-priya-01',
-      applicationId: 'LN-PRIYA-810',
-      borrowerName: 'Priya Sharma',
-      businessName: 'Priya Textiles Surat',
-      sector: 'textile',
-      businessCategory: 'textile',
-      loanAmount: 500000,
-      targetAmount: 500000,
-      fundedAmount: 375000,
-      fundingPercent: 75,
-      interestRate: 13.5,
-      tenure: 12,
-      purpose: 'Procurement of High-Grade Silk Fabrics & Loom Automation',
-      grade: 'A',
-      score: 810,
-      status: 'ACTIVE',
-      lenderCount: 4,
-      fraudRiskFlag: 'None',
-      positiveFactors: ['Consistent cash flow with 0 bounce events in 12 months', 'GSTR-1 declared sales closely align with bank receipts (1.8% delta)'],
-      acieScore: { total: 810, grade: 'A', confidence: 'High', fraudRiskFlag: 'None' }
-    },
-    {
-      _id: 'loan-amit-01',
-      applicationId: 'LN-AMIT-710',
-      borrowerName: 'Amit Deshmukh',
-      businessName: 'Deshmukh Precision Engineering',
-      sector: 'manufacturing',
-      businessCategory: 'manufacturing',
-      loanAmount: 500000,
-      targetAmount: 500000,
-      fundedAmount: 500000,
-      fundingPercent: 100,
-      interestRate: 14.5,
-      tenure: 12,
-      purpose: 'CNC Tooling Precision Upgrades & Working Capital',
-      grade: 'B',
-      score: 710,
-      status: 'DELAYED',
-      lenderCount: 3,
-      fraudRiskFlag: 'None',
-      positiveFactors: ['Strong operational history with high rating Google Business Profile'],
-      acieScore: { total: 710, grade: 'B', confidence: 'High', fraudRiskFlag: 'None' }
-    },
-    {
-      _id: 'loan-ravi-01',
-      applicationId: 'LN-RAVI-590',
-      borrowerName: 'Ravi Kumar Verma',
-      businessName: 'Ravi General Stores',
-      sector: 'retail',
-      businessCategory: 'retail',
-      loanAmount: 300000,
-      targetAmount: 300000,
-      fundedAmount: 60000,
-      fundingPercent: 20,
-      interestRate: 18.0,
-      tenure: 6,
-      purpose: 'Seasonal FMCG Inventory Pre-Stocking',
-      grade: 'C',
-      score: 590,
-      status: 'UNDERWRITING',
-      lenderCount: 1,
-      fraudRiskFlag: 'Caution',
-      fraudFlags: ['GST Discrepancy: Bank credits exceed GSTR-1 declared turnover by 47.1%'],
-      positiveFactors: ['Positive digital footprint and steady local customer reviews'],
-      acieScore: { total: 590, grade: 'C', confidence: 'Medium', fraudRiskFlag: 'Caution' }
-    }
-  ],
+  loans: enterpriseLoans,
   metrics: {
     platformDefaultRate: '0.00%',
     totalDisbursedVolume: 1350000,
@@ -248,13 +181,17 @@ export const api = {
   getMarketplaceLoans: async (filters = {}) => {
     try {
       const res = await client.get('/loans', { params: filters });
-      return res.data;
-    } catch {
-      let filtered = [...MOCK_DATA.loans];
-      if (filters.grade && filters.grade !== 'ALL') filtered = filtered.filter(l => l.grade === filters.grade);
-      if (filters.sector && filters.sector !== 'all') filtered = filtered.filter(l => l.sector === filters.sector);
-      return filtered;
+      if (res.data && Array.isArray(res.data) && res.data.length > 0) {
+        return res.data;
+      }
+    } catch (err) {
+      console.warn('[Marketplace fallback]', err.message);
     }
+    let filtered = [...MOCK_DATA.loans];
+    if (filters.grade && filters.grade !== 'ALL') filtered = filtered.filter(l => l.grade === filters.grade);
+    if (filters.sector && filters.sector !== 'all') filtered = filtered.filter(l => l.sector === filters.sector || l.businessCategory === filters.sector);
+    if (filters.tenure && filters.tenure !== 'ALL') filtered = filtered.filter(l => l.tenure === Number(filters.tenure));
+    return filtered;
   },
 
   getLoanDetails: async (id) => {

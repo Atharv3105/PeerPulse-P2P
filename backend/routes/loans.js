@@ -16,31 +16,52 @@ function getFallbackLoans() {
     const p1 = path.join(__dirname, '../data/enterprise_loans.json');
     const p2 = path.join(__dirname, '../../data/enterprise_loans.json');
     const targetPath = fs.existsSync(p1) ? p1 : fs.existsSync(p2) ? p2 : null;
+
+    const b1 = path.join(__dirname, '../data/enterprise_borrowers.json');
+    const b2 = path.join(__dirname, '../../data/enterprise_borrowers.json');
+    const borrowerPath = fs.existsSync(b1) ? b1 : fs.existsSync(b2) ? b2 : null;
+
     if (targetPath) {
       const data = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
-      return data.slice(0, 30).map(l => ({
-        applicationId: l.applicationId,
-        _id: l._id,
-        borrowerName: l.borrowerName || (l.businessCategory === 'textile' ? 'Priya Sharma' : l.businessCategory === 'retail' ? 'Ravi Kumar Verma' : 'Amit Deshmukh'),
-        businessName: l.businessName || (l.businessCategory === 'textile' ? 'Priya Textiles Surat' : l.businessCategory === 'retail' ? 'Ravi General Stores' : 'Deshmukh Precision Engineering'),
-        loanAmount: l.loanAmount,
-        tenure: l.tenure,
-        purpose: l.purpose,
-        sector: l.businessCategory,
-        interestRate: l.interestRate || (l.acieScore?.grade === 'A' ? 13.5 : l.acieScore?.grade === 'B' ? 16.0 : 19.5),
-        grade: l.acieScore?.grade || 'B',
-        score: l.acieScore?.total || 700,
-        fundedAmount: l.fundingStatus?.funded || 0,
-        targetAmount: l.fundingStatus?.target || l.loanAmount,
-        percentFunded: l.fundingStatus?.percentFunded || 0,
-        remainingAmount: Math.max(0, (l.fundingStatus?.target || l.loanAmount) - (l.fundingStatus?.funded || 0)),
-        lenderCount: l.fundingStatus?.lenders?.length || 3,
-        fraudRiskFlag: l.acieScore?.fraudRiskFlag || 'None',
-        fraudFlags: l.acieScore?.fraudFlags || [],
-        positiveFactors: l.acieScore?.explainability?.positiveFactors || ['Consistent cash flow', 'Verified GST filings'],
-        negativeFactors: l.acieScore?.explainability?.negativeFactors || [],
-        createdAt: l.createdAt || new Date()
-      }));
+      const bMap = new Map();
+      if (borrowerPath) {
+        const borrowers = JSON.parse(fs.readFileSync(borrowerPath, 'utf8'));
+        borrowers.forEach(b => {
+          bMap.set(b._id, b);
+          bMap.set(b.borrowerId, b);
+        });
+      }
+
+      return data.filter(l => l.status === 'LISTED').map(l => {
+        const b = bMap.get(l.borrowerId) || {};
+        return {
+          applicationId: l.applicationId,
+          _id: l._id,
+          borrowerName: b.name || 'Verified MSME',
+          businessName: b.businessName || 'Enterprise Partner',
+          city: b.city || 'Mumbai',
+          state: b.state || 'Maharashtra',
+          loanAmount: l.loanAmount,
+          tenure: l.tenure,
+          purpose: l.purpose,
+          sector: l.businessCategory || b.businessCategory || 'manufacturing',
+          businessCategory: l.businessCategory || b.businessCategory || 'manufacturing',
+          interestRate: l.interestRate || (l.acieScore?.grade === 'A' ? 13.5 : l.acieScore?.grade === 'B' ? 16.0 : 19.5),
+          grade: l.acieScore?.grade || 'B',
+          score: l.acieScore?.total || 720,
+          fundedAmount: l.fundingStatus?.funded || 0,
+          targetAmount: l.fundingStatus?.target || l.loanAmount,
+          percentFunded: l.fundingStatus?.percentFunded || Math.round(((l.fundingStatus?.funded || 0) / (l.fundingStatus?.target || l.loanAmount)) * 100),
+          remainingAmount: Math.max(0, (l.fundingStatus?.target || l.loanAmount) - (l.fundingStatus?.funded || 0)),
+          lenderCount: l.fundingStatus?.lenders?.length || 3,
+          fraudRiskFlag: l.acieScore?.fraudRiskFlag || 'None',
+          fraudFlags: l.acieScore?.fraudFlags || [],
+          positiveFactors: l.acieScore?.explainability?.positiveFactors || ['Consistent cash flow with zero bounce events', 'Verified GST returns filed'],
+          negativeFactors: l.acieScore?.explainability?.negativeFactors || [],
+          status: 'LISTED',
+          createdAt: l.createdAt || new Date()
+        };
+      });
     }
   } catch (e) {
     console.warn('[Loans Fallback]', e.message);
@@ -54,9 +75,9 @@ router.get('/', async (req, res) => {
     const { grade, sector, tenure } = req.query;
     const query = { status: 'LISTED' };
 
-    if (grade) query['acieScore.grade'] = grade;
+    if (grade && grade !== 'ALL') query['acieScore.grade'] = grade;
     if (sector && sector !== 'all') query.businessCategory = sector;
-    if (tenure) query.tenure = Number(tenure);
+    if (tenure && tenure !== 'ALL') query.tenure = Number(tenure);
 
     let loans = [];
     try {
