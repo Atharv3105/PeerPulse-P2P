@@ -4,6 +4,7 @@
   "description": "PeerPulse P2P MSME Lending Platform Monorepo",
   "private": true,
   "scripts": {
+    "build": "cd frontend && npm install && npm run build",
     "start": "concurrently --kill-others --names \"ACIE,BACKEND,FRONTEND\" -c \"magenta,cyan,emerald\" \"npm run start:acie\" \"npm run start:backend\" \"npm run start:frontend\"",
     "dev": "concurrently --kill-others --names \"ACIE,BACKEND,FRONTEND\" -c \"magenta,cyan,green\" \"npm run start:acie\" \"npm run start:backend\" \"npm run start:frontend\"",
     "start:acie": "python -m uvicorn main:app --app-dir acie --port 8001 --reload",
