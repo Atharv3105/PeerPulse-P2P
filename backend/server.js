@@ -41,6 +41,44 @@ app.use('/api/public', require('./routes/public'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/simulation', require('./routes/simulation'));
 app.use('/api/webhooks', require('./routes/webhooks'));
+app.use('/api/payments', require('./routes/payments'));
+
+// Server-Sent Events (SSE) Live Multi-Tab Sync Stream
+const eventBus = require('./services/eventBus');
+app.get('/api/events', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.flushHeaders?.();
+
+  // Send initial connection packet
+  res.write(`data: ${JSON.stringify({ type: 'connected', time: new Date().toISOString() })}\n\n`);
+
+  const onMessage = (payload) => {
+    try {
+      res.write(`data: ${JSON.stringify(payload)}\n\n`);
+    } catch (e) {
+      // client connection dropped
+    }
+  };
+
+  eventBus.on('message', onMessage);
+
+  // Keep-alive heartbeat every 20 seconds
+  const heartbeat = setInterval(() => {
+    try {
+      res.write(': keepalive\n\n');
+    } catch (e) {
+      clearInterval(heartbeat);
+    }
+  }, 20000);
+
+  req.on('close', () => {
+    clearInterval(heartbeat);
+    eventBus.off('message', onMessage);
+  });
+});
 
 // Fast seed endpoint for demo resets
 app.post('/api/seed', async (req, res) => {

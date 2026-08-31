@@ -7,6 +7,15 @@ router.post('/fast-forward', async (req, res) => {
   try {
     const { days } = req.body;
     const result = await simulationEngine.fastForward(days || 30);
+    
+    // Broadcast live timeline advancement event
+    const eventBus = require('../services/eventBus');
+    eventBus.broadcast('timeline_advanced', {
+      days: days || 30,
+      simulatedDate: result.simulatedDate,
+      daysOffset: result.daysOffset
+    });
+
     res.json({
       success: true,
       message: `Successfully advanced timeline by ${days || 30} days`,

@@ -8,6 +8,7 @@ import { api } from '../services/api';
 import DiversificationChart from '../components/DiversificationChart';
 import LoanCard from '../components/LoanCard';
 import EscrowAuditCard from '../components/EscrowAuditCard';
+import { useLiveSync } from '../services/useLiveSync';
 
 export default function LenderDashboard({ activeLenderId }) {
   const [lender, setLender] = useState(null);
@@ -50,6 +51,71 @@ export default function LenderDashboard({ activeLenderId }) {
     window.addEventListener('peerpulse-timeline-advanced', handleTimelineChange);
     return () => window.removeEventListener('peerpulse-timeline-advanced', handleTimelineChange);
   }, [activeLenderId]);
+
+  // Live Real-Time Multi-User Sync (SSE)
+  useLiveSync((event) => {
+    if (event.type === 'tranche_funded' || event.type === 'wallet_updated' || event.type === 'repayment_received') {
+      fetchLenderData();
+    }
+  });
+
+  // Razorpay Checkout Modal Deposit Handler
+  const [depositLoading, setDepositLoading] = useState(false);
+  const handleRazorpayDeposit = async (amount = 50000) => {
+    setDepositLoading(true);
+    try {
+      const { order, keyId } = await api.createPaymentOrder({
+        amount,
+        purpose: 'lender_wallet_deposit',
+        entityId: lender?.lenderId
+      });
+
+      if (window.Razorpay) {
+        const options = {
+          key: keyId,
+          amount: order.amount,
+          currency: order.currency || 'INR',
+          name: 'PeerPulse Escrow',
+          description: `Retail Lender Wallet Top-Up (IDFC FIRST Trustee)`,
+          order_id: order.id,
+          prefill: {
+            name: lender?.name || 'Retail Investor',
+            email: 'investor@peerpulse.in',
+            contact: '+919876543210'
+          },
+          theme: {
+            color: '#10B981'
+          },
+          handler: async (response) => {
+            await api.verifyWalletDeposit({
+              lenderId: lender?.lenderId,
+              amount,
+              razorpayOrderId: response.razorpay_order_id || order.id,
+              razorpayPaymentId: response.razorpay_payment_id || 'pay_' + Math.random().toString(36).substring(2, 10),
+              razorpaySignature: response.razorpay_signature || 'mock_sig'
+            });
+            await fetchLenderData();
+          }
+        };
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+      } else {
+        // Fallback simulation
+        await api.verifyWalletDeposit({
+          lenderId: lender?.lenderId,
+          amount,
+          razorpayOrderId: order.id,
+          razorpayPaymentId: 'pay_' + Math.random().toString(36).substring(2, 10),
+          razorpaySignature: 'mock_sig'
+        });
+        await fetchLenderData();
+      }
+    } catch (err) {
+      alert('Deposit error: ' + err.message);
+    } finally {
+      setDepositLoading(false);
+    }
+  };
 
   const handleVote = async (restructureId, vote) => {
     setVotingInProgress(true);
@@ -116,9 +182,20 @@ export default function LenderDashboard({ activeLenderId }) {
 
         {/* Wallet & Exposure Indicators */}
         <div className="flex flex-wrap items-center gap-4 text-xs font-mono">
-          <div className="p-3.5 rounded-2xl bg-[var(--muted-bg)] border border-[var(--border)]">
-            <span className="text-[var(--muted-fg)] text-[10px] font-sans block">Escrow Wallet Balance</span>
-            <span className="text-base font-bold text-emerald-500 tabular-nums">₹{walletBalance.toLocaleString('en-IN')}</span>
+          <div className="p-3.5 rounded-2xl bg-[var(--muted-bg)] border border-[var(--border)] flex items-center gap-3">
+            <div>
+              <span className="text-[var(--muted-fg)] text-[10px] font-sans block">Escrow Wallet Balance</span>
+              <span className="text-base font-bold text-emerald-500 tabular-nums">₹{walletBalance.toLocaleString('en-IN')}</span>
+            </div>
+            <button
+              onClick={() => handleRazorpayDeposit(50000)}
+              disabled={depositLoading}
+              className="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
+              title="Deposit Funds via Razorpay Sandbox"
+            >
+              <Wallet className="w-3.5 h-3.5" />
+              <span>{depositLoading ? 'Processing...' : '+ Deposit ₹50K'}</span>
+            </button>
           </div>
 
           <div className="p-3.5 rounded-2xl bg-[var(--muted-bg)] border border-[var(--border)]">

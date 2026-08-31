@@ -10,6 +10,8 @@ import { api } from '../services/api';
 import ScoreGauge from '../components/ScoreGauge';
 import RadarChartBreakdown from '../components/RadarChartBreakdown';
 import AASimulatorModal from '../components/AASimulatorModal';
+import FactoryMapView from '../components/FactoryMapView';
+import { validateGSTIN, validatePAN } from '../services/taxValidator';
 
 export default function BorrowerWizard({ activeBorrowerId }) {
   const navigate = useNavigate();
@@ -30,8 +32,73 @@ export default function BorrowerWizard({ activeBorrowerId }) {
     udyamNumber: 'UDYAM-GJ-01-001928',
     gstNumber: '24AABCP1928K1Z5',
     googleBusinessUrl: 'https://maps.google.com/?cid=priyatextilessurat',
-    employeeCount: 6
+    employeeCount: 6,
+    pincode: '395003',
+    city: 'Surat',
+    state: 'Gujarat',
+    ifscCode: 'HDFC0000060',
+    bankName: 'HDFC Bank',
+    bankBranch: 'Surat Ring Road'
   });
+
+  // Dynamic Lookup & Tax Validation State
+  const [pincodeLoading, setPincodeLoading] = useState(false);
+  const [pincodeDetails, setPincodeDetails] = useState({ district: 'Surat', state: 'Gujarat' });
+  const [ifscLoading, setIfscLoading] = useState(false);
+  const [ifscDetails, setIfscDetails] = useState({ bank: 'HDFC Bank', branch: 'Surat Ring Road', neft: true, rtgs: true, imps: true });
+  const [gstValidation, setGstValidation] = useState(() => validateGSTIN('24AABCP1928K1Z5'));
+
+  // Handler for dynamic Pincode lookup
+  const handlePincodeChange = async (val) => {
+    const clean = val.replace(/\D/g, '').slice(0, 6);
+    setFormData(prev => ({ ...prev, pincode: clean }));
+    if (clean.length === 6) {
+      setPincodeLoading(true);
+      const res = await api.lookupPincode(clean);
+      setPincodeLoading(false);
+      if (res) {
+        setPincodeDetails(res);
+        setFormData(prev => ({
+          ...prev,
+          city: res.district || prev.city,
+          state: res.state || prev.state
+        }));
+      }
+    }
+  };
+
+  // Handler for dynamic IFSC lookup
+  const handleIfscChange = async (val) => {
+    const clean = val.toUpperCase().slice(0, 11);
+    setFormData(prev => ({ ...prev, ifscCode: clean }));
+    if (clean.length === 11) {
+      setIfscLoading(true);
+      const res = await api.lookupIfsc(clean);
+      setIfscLoading(false);
+      if (res) {
+        setIfscDetails({
+          bank: res.BANK,
+          branch: res.BRANCH,
+          neft: res.NEFT,
+          rtgs: res.RTGS,
+          imps: res.IMPS
+        });
+        setFormData(prev => ({
+          ...prev,
+          bankName: res.BANK,
+          bankBranch: res.BRANCH
+        }));
+      }
+    }
+  };
+
+  // Handler for dynamic GSTIN Luhn Modulo-36 validation
+  const handleGstChange = (val) => {
+    const clean = val.toUpperCase().slice(0, 15);
+    setFormData(prev => ({ ...prev, gstNumber: clean }));
+    const result = validateGSTIN(clean);
+    setGstValidation(result);
+  };
 
   // Upload Analysis Results
   const [statementAnalysis, setStatementAnalysis] = useState(null);
@@ -417,6 +484,98 @@ export default function BorrowerWizard({ activeBorrowerId }) {
                 className="w-full neu-input px-3.5 py-2.5 text-sm"
               />
             </div>
+
+            {/* India Postal Pincode Auto-Resolution API */}
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-semibold text-slate-300">MSME Registered Pincode</label>
+                <span className="text-[10px] text-emerald-400 font-mono">India Post API</span>
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  maxLength="6"
+                  value={formData.pincode}
+                  onChange={(e) => handlePincodeChange(e.target.value)}
+                  placeholder="e.g. 395003"
+                  className="w-full neu-input px-3.5 py-2.5 text-sm font-mono"
+                />
+                {pincodeLoading && (
+                  <Loader2 className="w-4 h-4 text-emerald-400 animate-spin absolute right-3 top-3" />
+                )}
+              </div>
+              {pincodeDetails && (
+                <p className="text-[11px] text-emerald-400 font-mono flex items-center gap-1">
+                  <Check className="w-3 h-3" />
+                  Auto-resolved: {formData.city}, {formData.state}
+                </p>
+              )}
+            </div>
+
+            {/* Razorpay Public IFSC Resolution API */}
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-semibold text-slate-300">Primary Bank IFSC Code</label>
+                <span className="text-[10px] text-blue-400 font-mono">Razorpay IFSC API</span>
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  maxLength="11"
+                  value={formData.ifscCode}
+                  onChange={(e) => handleIfscChange(e.target.value)}
+                  placeholder="e.g. HDFC0000060"
+                  className="w-full neu-input px-3.5 py-2.5 text-sm font-mono uppercase"
+                />
+                {ifscLoading && (
+                  <Loader2 className="w-4 h-4 text-blue-400 animate-spin absolute right-3 top-3" />
+                )}
+              </div>
+              {ifscDetails && (
+                <div className="text-[11px] text-blue-400 font-mono space-y-0.5">
+                  <div className="flex items-center gap-1">
+                    <Check className="w-3 h-3" />
+                    <span>{formData.bankName} — {formData.bankBranch}</span>
+                  </div>
+                  <div className="text-[10px] text-slate-400 flex gap-2">
+                    <span className="text-emerald-400">NEFT: ✓</span>
+                    <span className="text-emerald-400">RTGS: ✓</span>
+                    <span className="text-emerald-400">IMPS: ✓</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Algorithmic Indian GSTIN & PAN Luhn Modulo-36 Checksum Engine */}
+            <div className="space-y-1.5 sm:col-span-2">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-semibold text-slate-300">
+                  GSTIN Tax Identifier & Entity Checksum (Luhn Mod-36)
+                </label>
+                <span className="text-[10px] text-[var(--gold)] font-mono">Mathematical Luhn Engine</span>
+              </div>
+              <input
+                type="text"
+                maxLength="15"
+                value={formData.gstNumber}
+                onChange={(e) => handleGstChange(e.target.value)}
+                placeholder="e.g. 24AABCP1928K1Z5"
+                className={`w-full neu-input px-3.5 py-2.5 text-sm font-mono uppercase border ${
+                  gstValidation.valid ? 'border-emerald-500/50 bg-emerald-950/10' : 'border-rose-500/50 bg-rose-950/10'
+                }`}
+              />
+              <div className="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                <span className={gstValidation.valid ? 'text-emerald-400 flex items-center gap-1' : 'text-rose-400 flex items-center gap-1'}>
+                  {gstValidation.valid ? <CheckCircle2 className="w-3.5 h-3.5" /> : <AlertTriangle className="w-3.5 h-3.5" />}
+                  {gstValidation.reason}
+                </span>
+                {gstValidation.entityType && (
+                  <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">
+                    Legal Entity: <strong className="text-white">{gstValidation.entityType}</strong> (PAN: {gstValidation.pan})
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
 
           <div className="flex justify-end pt-4 border-t border-slate-800">
@@ -746,6 +905,14 @@ export default function BorrowerWizard({ activeBorrowerId }) {
                 className="w-full neu-input px-3.5 py-2.5 text-sm font-mono"
               />
             </div>
+          </div>
+
+          {/* Interactive OpenStreetMap Factory Geotag Preview */}
+          <div className="pt-2">
+            <FactoryMapView 
+              address={`${formData.businessName}, ${formData.city || 'Surat'}, ${formData.state || 'Gujarat'} ${formData.pincode || '395003'}`}
+              businessName={formData.businessName}
+            />
           </div>
 
           <div className="flex justify-between pt-4 border-t border-slate-800">

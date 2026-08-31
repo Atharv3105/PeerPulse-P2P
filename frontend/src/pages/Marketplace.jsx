@@ -6,6 +6,7 @@ import {
 import { api } from '../services/api';
 import LoanCard from '../components/LoanCard';
 import MarketplaceTicker from '../components/simulation/MarketplaceTicker';
+import { useLiveSync } from '../services/useLiveSync';
 
 export default function Marketplace({ activeLenderId }) {
   const [loans, setLoans] = useState([]);
@@ -40,14 +41,12 @@ export default function Marketplace({ activeLenderId }) {
     fetchLoans();
   }, [selectedGrade, selectedSector, selectedTenure]);
 
-  // Listen for Time Machine fast-forward / reset events
-  useEffect(() => {
-    const handleTimelineChange = () => {
+  // Live Real-Time Multi-User / Multi-Tab Synchronization via SSE
+  useLiveSync((event) => {
+    if (event.type === 'tranche_funded' || event.type === 'loan_listed' || event.type === 'timeline_advanced') {
       fetchLoans();
-    };
-    window.addEventListener('peerpulse-timeline-advanced', handleTimelineChange);
-    return () => window.removeEventListener('peerpulse-timeline-advanced', handleTimelineChange);
-  }, []);
+    }
+  });
 
   // Client-side text search
   const filteredLoans = loans.filter((l) => {

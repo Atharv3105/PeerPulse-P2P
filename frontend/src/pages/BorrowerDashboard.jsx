@@ -8,6 +8,9 @@ import {
 import { api } from '../services/api';
 import ScoreGauge from '../components/ScoreGauge';
 import NachMandateModal from '../components/NachMandateModal';
+import { generateLoanContractPdf } from '../services/contractGenerator';
+import { useLiveSync } from '../services/useLiveSync';
+import { Download, CreditCard } from 'lucide-react';
 
 export default function BorrowerDashboard({ activeBorrowerId }) {
   const [borrower, setBorrower] = useState(null);
@@ -56,6 +59,103 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
   useEffect(() => {
     fetchDashboardData();
   }, [activeBorrowerId]);
+
+  // Live Multi-tab sync for repayments or funding
+  useLiveSync((event) => {
+    if (event.type === 'repayment_received' || event.type === 'tranche_funded' || event.type === 'timeline_advanced') {
+      fetchDashboardData();
+    }
+  });
+
+  // Razorpay Instant EMI Payment
+  const [payEmiLoading, setPayEmiLoading] = useState(false);
+  const handlePayEmiViaRazorpay = async () => {
+    if (!selectedLoan) return;
+    const emiAmount = Math.round(selectedLoan.loanAmount / selectedLoan.tenure);
+    setPayEmiLoading(true);
+    try {
+      const { order, keyId } = await api.createPaymentOrder({
+        amount: emiAmount,
+        purpose: 'loan_repayment',
+        entityId: selectedLoan._id
+      });
+
+      if (window.Razorpay) {
+        const options = {
+          key: keyId,
+          amount: order.amount,
+          currency: 'INR',
+          name: 'PeerPulse Loan Escrow',
+          description: `Monthly EMI for Loan #${selectedLoan.applicationId}`,
+          order_id: order.id,
+          prefill: {
+            name: borrower?.name || 'MSME Borrower',
+            email: 'borrower@peerpulse.in',
+            contact: '+919876543210'
+          },
+          theme: {
+            color: '#10B981'
+          },
+          handler: async (response) => {
+            await api.payEmiViaRazorpay({
+              loanId: selectedLoan._id,
+              amount: emiAmount,
+              razorpayOrderId: response.razorpay_order_id || order.id,
+              razorpayPaymentId: response.razorpay_payment_id || 'pay_' + Math.random().toString(36).substring(2, 10),
+              razorpaySignature: response.razorpay_signature || 'mock_sig'
+            });
+            await fetchDashboardData();
+          }
+        };
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+      } else {
+        await api.payEmiViaRazorpay({
+          loanId: selectedLoan._id,
+          amount: emiAmount,
+          razorpayOrderId: order.id,
+          razorpayPaymentId: 'pay_' + Math.random().toString(36).substring(2, 10),
+          razorpaySignature: 'mock_sig'
+        });
+        await fetchDashboardData();
+      }
+    } catch (err) {
+      alert('Payment error: ' + err.message);
+    } finally {
+      setPayEmiLoading(false);
+    }
+  };
+
+  // Dynamic RBI Contract PDF Download Handler
+  const [downloadingPdf, setDownloadingPdf] = useState(false);
+  const handleDownloadContract = async () => {
+    if (!selectedLoan) return;
+    setDownloadingPdf(true);
+    try {
+      await generateLoanContractPdf({
+        borrowerName: borrower?.name || 'Priya Sharma',
+        businessName: borrower?.businessName || 'Priya Textiles Surat',
+        loanId: selectedLoan.applicationId || 'LN-PRIYA-810',
+        loanAmount: selectedLoan.loanAmount || 500000,
+        tenure: selectedLoan.tenure || 12,
+        interestRate: selectedLoan.interestRate || 13.5,
+        acieScore: selectedLoan.acieScore?.total || 810,
+        grade: selectedLoan.acieScore?.grade || 'A',
+        lenders: selectedLoan.fundingStatus?.lenders?.length > 0
+          ? selectedLoan.fundingStatus.lenders.map(l => ({ name: l.lenderId || 'Syndicate Investor', tranche: l.amount || 25000, sharePct: '5.0%' }))
+          : [
+              { name: 'Vikram Sethi (Conservative)', tranche: 25000, sharePct: '5.0%' },
+              { name: 'Ananya Roy (Moderate)', tranche: 50000, sharePct: '10.0%' },
+              { name: 'Karan Singhal (Aggressive)', tranche: 25000, sharePct: '5.0%' }
+            ],
+        purpose: selectedLoan.purpose || 'Working Capital'
+      });
+    } catch (err) {
+      alert('Failed to generate PDF: ' + err.message);
+    } finally {
+      setDownloadingPdf(false);
+    }
+  };
 
   const handleApplySettlement = async () => {
     if (!selectedLoan) return;
@@ -126,6 +226,18 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
               {borrower?.platformTrustScore || 92} / 100
             </div>
           </div>
+
+          {selectedLoan && (
+            <button
+              onClick={handleDownloadContract}
+              disabled={downloadingPdf}
+              className="px-4 py-2.5 rounded-xl text-xs font-bold transition-all border border-[var(--gold)]/40 bg-[var(--card-bg)] text-[var(--gold-dark)] hover:bg-[var(--gold)]/10 flex items-center gap-1.5 cursor-pointer shadow-sm"
+              title="Download Formal RBI P2P Sanction Agreement (PDF)"
+            >
+              <Download className="w-4 h-4 text-[var(--gold-dark)]" />
+              <span>{downloadingPdf ? 'Generating PDF...' : 'Sanction Agreement (PDF)'}</span>
+            </button>
+          )}
 
           <button
             onClick={() => setIsMandateOpen(true)}
@@ -383,7 +495,21 @@ export default function BorrowerDashboard({ activeBorrowerId }) {
 
             {/* Repayment Schedule Table */}
             <div className="glass-panel rounded-2xl p-6 border border-[var(--border)] space-y-4">
-              <h4 className="font-bold text-sm text-[var(--fg)]">Monthly Repayment Schedule</h4>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-bold text-sm text-[var(--fg)]">Monthly Repayment Schedule</h4>
+                  <p className="text-[11px] text-[var(--muted-fg)]">e-NACH AutoPay or Instant Card/UPI via Razorpay Gateway</p>
+                </div>
+                <button
+                  onClick={handlePayEmiViaRazorpay}
+                  disabled={payEmiLoading}
+                  className="px-3.5 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
+                  title="Pay Monthly EMI via Razorpay Modal"
+                >
+                  <CreditCard className="w-3.5 h-3.5" />
+                  <span>{payEmiLoading ? 'Opening Gateway...' : `Pay EMI (₹${Math.round(selectedLoan.loanAmount / selectedLoan.tenure).toLocaleString('en-IN')})`}</span>
+                </button>
+              </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
                   <thead>

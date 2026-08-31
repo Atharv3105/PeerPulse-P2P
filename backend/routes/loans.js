@@ -5,6 +5,7 @@ const LoanRepayment = require('../models/LoanRepayment');
 const Borrower = require('../models/Borrower');
 const Lender = require('../models/Lender');
 const MatchingEngine = require('../services/matchingEngine');
+const eventBus = require('../services/eventBus');
 const { v4: uuidv4 } = require('uuid');
 
 // GET /api/loans - Marketplace listing
@@ -209,6 +210,17 @@ router.post('/fund-tranche', async (req, res) => {
     }
 
     const result = await MatchingEngine.fundTranche(lenderId, applicationId, amount);
+    
+    // Broadcast live SSE sync event across all browser clients
+    eventBus.broadcast('tranche_funded', {
+      applicationId,
+      lenderId,
+      amount: Number(amount),
+      fundingStatus: result.fundingStatus,
+      status: result.status,
+      timestamp: new Date().toISOString()
+    });
+
     res.json(result);
   } catch (err) {
     res.status(400).json({ error: err.message });

@@ -4,6 +4,7 @@ import {
   CheckCircle2, ChevronUp, ChevronDown, Sparkles, Clock, X 
 } from 'lucide-react';
 import { api } from '../../services/api';
+import NotificationService from '../../services/notificationService';
 
 export default function TimeMachineBar({ dark, onTimelineChange }) {
   const [status, setStatus] = useState({ daysOffset: 0, simulatedDate: '2026-03-01' });
@@ -34,6 +35,13 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
       // Dispatch global window event so any active page (Marketplace, Admin, Lender) auto-refreshes
       window.dispatchEvent(new CustomEvent('peerpulse-timeline-advanced', { detail: res }));
       if (onTimelineChange) onTimelineChange(res);
+
+      // Trigger Native OS Desktop Notification
+      NotificationService.notifyTimelineAdvance({
+        days,
+        simulatedDate: res.simulatedDate,
+        daysOffset: res.totalDaysOffset
+      });
 
       setTimeout(() => setLastAction(null), 6000);
     } catch (err) {
