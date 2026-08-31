@@ -1,0 +1,40 @@
+{
+  "gstin": "24AABCP1928K1Z5",
+  "legalName": "Priya Sharma",
+  "tradeName": "Priya Textiles Surat",
+  "financialYear": "2025-2026",
+  "filingStatus": "REGULAR_COMPLIANT",
+  "declaredAnnualTurnover": 3420000,
+  "quarterlyFilings": [
+    {
+      "quarter": "Q1",
+      "grossTurnover": 845000,
+      "taxPaid": 42250,
+      "filedOnTime": true,
+      "arn": "AA2406250019281"
+    },
+    {
+      "quarter": "Q2",
+      "grossTurnover": 865000,
+      "taxPaid": 43250,
+      "filedOnTime": true,
+      "arn": "AA2409250028472"
+    },
+    {
+      "quarter": "Q3",
+      "grossTurnover": 890000,
+      "taxPaid": 44500,
+      "filedOnTime": true,
+      "arn": "AA2412250039483"
+    },
+    {
+      "quarter": "Q4",
+      "grossTurnover": 820000,
+      "taxPaid": 41000,
+      "filedOnTime": true,
+      "arn": "AA2503250048291"
+    }
+  ],
+  "businessCategory": "textile",
+  "verifiedByGSTN": true
+}

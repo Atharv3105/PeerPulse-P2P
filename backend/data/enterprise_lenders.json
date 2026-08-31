@@ -1,0 +1,2981 @@
+[
+  {
+    "_id": "660000000000000000000010",
+    "lenderId": "LEN-VIKRAM-001",
+    "name": "Vikram Sethi",
+    "email": "vikram.sethi@example.com",
+    "mobile": "+919811122233",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 450000,
+    "totalExposure": 50000,
+    "activeInvestments": [],
+    "createdAt": "2024-10-01T08:00:00.000Z"
+  },
+  {
+    "_id": "660000000000000000000011",
+    "lenderId": "LEN-ANANYA-002",
+    "name": "Ananya Roy",
+    "email": "ananya.roy@example.com",
+    "mobile": "+919822233344",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 700000,
+    "totalExposure": 100000,
+    "activeInvestments": [],
+    "createdAt": "2024-10-15T09:00:00.000Z"
+  },
+  {
+    "_id": "660000000000000000000012",
+    "lenderId": "LEN-KARAN-003",
+    "name": "Karan Singhal",
+    "email": "karan.singhal@example.com",
+    "mobile": "+919833344455",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 850000,
+    "totalExposure": 75000,
+    "activeInvestments": [],
+    "createdAt": "2024-11-01T10:00:00.000Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e2",
+    "lenderId": "LEN-ENT-004",
+    "name": "Sujata Chatterjee",
+    "email": "sujata.chatterjee27@investor.in",
+    "mobile": "+919983279320",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 212712,
+    "totalExposure": 159837,
+    "activeInvestments": [],
+    "createdAt": "2025-08-15T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e3",
+    "lenderId": "LEN-ENT-005",
+    "name": "Subhash Varma",
+    "email": "subhash.varma59@investor.in",
+    "mobile": "+919909386574",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 329791,
+    "totalExposure": 175689,
+    "activeInvestments": [],
+    "createdAt": "2025-05-04T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e4",
+    "lenderId": "LEN-ENT-006",
+    "name": "Naveen Khan",
+    "email": "naveen.khan36@investor.in",
+    "mobile": "+919376929012",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 646640,
+    "totalExposure": 37686,
+    "activeInvestments": [],
+    "createdAt": "2025-10-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e5",
+    "lenderId": "LEN-ENT-007",
+    "name": "Gita Saxena",
+    "email": "gita.saxena55@investor.in",
+    "mobile": "+919672017746",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 549367,
+    "totalExposure": 223694,
+    "activeInvestments": [],
+    "createdAt": "2026-03-16T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e6",
+    "lenderId": "LEN-ENT-008",
+    "name": "Subhash Mehta",
+    "email": "subhash.mehta78@investor.in",
+    "mobile": "+919147430555",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 390752,
+    "totalExposure": 174297,
+    "activeInvestments": [],
+    "createdAt": "2025-07-22T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e7",
+    "lenderId": "LEN-ENT-009",
+    "name": "Harish Agarwal",
+    "email": "harish.agarwal32@investor.in",
+    "mobile": "+919922611882",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 90239,
+    "totalExposure": 5511,
+    "activeInvestments": [],
+    "createdAt": "2026-06-17T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e8",
+    "lenderId": "LEN-ENT-010",
+    "name": "Pranav Agarwal",
+    "email": "pranav.agarwal63@investor.in",
+    "mobile": "+919883672839",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 133939,
+    "totalExposure": 90369,
+    "activeInvestments": [],
+    "createdAt": "2025-08-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e9",
+    "lenderId": "LEN-ENT-011",
+    "name": "Karan Prasad",
+    "email": "karan.prasad34@investor.in",
+    "mobile": "+919683391203",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 474630,
+    "totalExposure": 130660,
+    "activeInvestments": [],
+    "createdAt": "2025-12-09T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ea",
+    "lenderId": "LEN-ENT-012",
+    "name": "Sachin Mukherjee",
+    "email": "sachin.mukherjee72@investor.in",
+    "mobile": "+919541211419",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 931756,
+    "totalExposure": 165882,
+    "activeInvestments": [],
+    "createdAt": "2025-06-29T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309eb",
+    "lenderId": "LEN-ENT-013",
+    "name": "Meera Varma",
+    "email": "meera.varma13@investor.in",
+    "mobile": "+919343244598",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 391427,
+    "totalExposure": 168633,
+    "activeInvestments": [],
+    "createdAt": "2025-06-19T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ec",
+    "lenderId": "LEN-ENT-014",
+    "name": "Sujata Mukherjee",
+    "email": "sujata.mukherjee69@investor.in",
+    "mobile": "+919342268518",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 206423,
+    "totalExposure": 157385,
+    "activeInvestments": [],
+    "createdAt": "2025-10-16T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ed",
+    "lenderId": "LEN-ENT-015",
+    "name": "Naveen Pillai",
+    "email": "naveen.pillai29@investor.in",
+    "mobile": "+919657727623",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 96188,
+    "totalExposure": 52081,
+    "activeInvestments": [],
+    "createdAt": "2025-10-08T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ee",
+    "lenderId": "LEN-ENT-016",
+    "name": "Madhav Pandey",
+    "email": "madhav.pandey48@investor.in",
+    "mobile": "+919475733024",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 946833,
+    "totalExposure": 119402,
+    "activeInvestments": [],
+    "createdAt": "2026-05-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ef",
+    "lenderId": "LEN-ENT-017",
+    "name": "Aarav Bansal",
+    "email": "aarav.bansal58@investor.in",
+    "mobile": "+919549062500",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 111134,
+    "totalExposure": 111126,
+    "activeInvestments": [],
+    "createdAt": "2025-08-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f0",
+    "lenderId": "LEN-ENT-018",
+    "name": "Vinod Naik",
+    "email": "vinod.naik46@investor.in",
+    "mobile": "+919897160493",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 808538,
+    "totalExposure": 69541,
+    "activeInvestments": [],
+    "createdAt": "2025-05-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f1",
+    "lenderId": "LEN-ENT-019",
+    "name": "Ajay Sen",
+    "email": "ajay.sen40@investor.in",
+    "mobile": "+919906138117",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 525154,
+    "totalExposure": 166814,
+    "activeInvestments": [],
+    "createdAt": "2026-05-08T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f2",
+    "lenderId": "LEN-ENT-020",
+    "name": "Manish Rao",
+    "email": "manish.rao50@investor.in",
+    "mobile": "+919928773148",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 713762,
+    "totalExposure": 204609,
+    "activeInvestments": [],
+    "createdAt": "2025-11-26T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f3",
+    "lenderId": "LEN-ENT-021",
+    "name": "Vijay Iyer",
+    "email": "vijay.iyer86@investor.in",
+    "mobile": "+919884510030",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 893804,
+    "totalExposure": 114252,
+    "activeInvestments": [],
+    "createdAt": "2026-01-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f4",
+    "lenderId": "LEN-ENT-022",
+    "name": "Vikram Bose",
+    "email": "vikram.bose42@investor.in",
+    "mobile": "+919359459876",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 551393,
+    "totalExposure": 206703,
+    "activeInvestments": [],
+    "createdAt": "2025-12-09T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f5",
+    "lenderId": "LEN-ENT-023",
+    "name": "Priya Swaminathan",
+    "email": "priya.swaminathan11@investor.in",
+    "mobile": "+919206400462",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 739306,
+    "totalExposure": 200323,
+    "activeInvestments": [],
+    "createdAt": "2025-12-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f6",
+    "lenderId": "LEN-ENT-024",
+    "name": "Umesh Pandey",
+    "email": "umesh.pandey20@investor.in",
+    "mobile": "+919244776234",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 876987,
+    "totalExposure": 165329,
+    "activeInvestments": [],
+    "createdAt": "2025-10-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f7",
+    "lenderId": "LEN-ENT-025",
+    "name": "Sanjay Varma",
+    "email": "sanjay.varma16@investor.in",
+    "mobile": "+919260698302",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 650548,
+    "totalExposure": 134901,
+    "activeInvestments": [],
+    "createdAt": "2025-08-19T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f8",
+    "lenderId": "LEN-ENT-026",
+    "name": "Deepak Dutta",
+    "email": "deepak.dutta81@investor.in",
+    "mobile": "+919706944444",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 712766,
+    "totalExposure": 132958,
+    "activeInvestments": [],
+    "createdAt": "2026-04-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309f9",
+    "lenderId": "LEN-ENT-027",
+    "name": "Neha Srivastava",
+    "email": "neha.srivastava82@investor.in",
+    "mobile": "+919402959104",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 383086,
+    "totalExposure": 118605,
+    "activeInvestments": [],
+    "createdAt": "2026-06-08T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309fa",
+    "lenderId": "LEN-ENT-028",
+    "name": "Vinod Dutta",
+    "email": "vinod.dutta15@investor.in",
+    "mobile": "+919234853395",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 447620,
+    "totalExposure": 97244,
+    "activeInvestments": [],
+    "createdAt": "2025-12-07T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309fb",
+    "lenderId": "LEN-ENT-029",
+    "name": "Sachin Agarwal",
+    "email": "sachin.agarwal43@investor.in",
+    "mobile": "+919255405092",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 259143,
+    "totalExposure": 148349,
+    "activeInvestments": [],
+    "createdAt": "2026-03-12T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309fc",
+    "lenderId": "LEN-ENT-030",
+    "name": "Chetan Singh",
+    "email": "chetan.singh53@investor.in",
+    "mobile": "+919984058641",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 837103,
+    "totalExposure": 119914,
+    "activeInvestments": [],
+    "createdAt": "2025-12-27T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309fd",
+    "lenderId": "LEN-ENT-031",
+    "name": "Harish Chatterjee",
+    "email": "harish.chatterjee92@investor.in",
+    "mobile": "+919806925154",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 467608,
+    "totalExposure": 239563,
+    "activeInvestments": [],
+    "createdAt": "2026-02-19T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309fe",
+    "lenderId": "LEN-ENT-032",
+    "name": "Subhash Verma",
+    "email": "subhash.verma40@investor.in",
+    "mobile": "+919276782407",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 803438,
+    "totalExposure": 142327,
+    "activeInvestments": [],
+    "createdAt": "2026-03-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ff",
+    "lenderId": "LEN-ENT-033",
+    "name": "Rahul Bose",
+    "email": "rahul.bose77@investor.in",
+    "mobile": "+919713074845",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 64035,
+    "totalExposure": 16671,
+    "activeInvestments": [],
+    "createdAt": "2026-03-07T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a00",
+    "lenderId": "LEN-ENT-034",
+    "name": "Ashok Malhotra",
+    "email": "ashok.malhotra28@investor.in",
+    "mobile": "+919701913580",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 335513,
+    "totalExposure": 207693,
+    "activeInvestments": [],
+    "createdAt": "2025-07-15T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a01",
+    "lenderId": "LEN-ENT-035",
+    "name": "Amit Menon",
+    "email": "amit.menon34@investor.in",
+    "mobile": "+919396076388",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 170648,
+    "totalExposure": 7321,
+    "activeInvestments": [],
+    "createdAt": "2025-07-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a02",
+    "lenderId": "LEN-ENT-036",
+    "name": "Manish Yadav",
+    "email": "manish.yadav25@investor.in",
+    "mobile": "+919115007716",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 388885,
+    "totalExposure": 99961,
+    "activeInvestments": [],
+    "createdAt": "2026-04-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a03",
+    "lenderId": "LEN-ENT-037",
+    "name": "Divya Srivastava",
+    "email": "divya.srivastava56@investor.in",
+    "mobile": "+919444818672",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 576335,
+    "totalExposure": 147466,
+    "activeInvestments": [],
+    "createdAt": "2025-11-04T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a04",
+    "lenderId": "LEN-ENT-038",
+    "name": "Aarav Srivastava",
+    "email": "aarav.srivastava78@investor.in",
+    "mobile": "+919238287037",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 685776,
+    "totalExposure": 149381,
+    "activeInvestments": [],
+    "createdAt": "2025-11-28T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a05",
+    "lenderId": "LEN-ENT-039",
+    "name": "Anil Iyer",
+    "email": "anil.iyer41@investor.in",
+    "mobile": "+919614857253",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 536651,
+    "totalExposure": 120367,
+    "activeInvestments": [],
+    "createdAt": "2025-09-02T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a06",
+    "lenderId": "LEN-ENT-040",
+    "name": "Aditi Singhal",
+    "email": "aditi.singhal49@investor.in",
+    "mobile": "+919560640432",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 815074,
+    "totalExposure": 204716,
+    "activeInvestments": [],
+    "createdAt": "2026-05-10T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a07",
+    "lenderId": "LEN-ENT-041",
+    "name": "Isha Chauhan",
+    "email": "isha.chauhan45@investor.in",
+    "mobile": "+919328414351",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 173819,
+    "totalExposure": 141922,
+    "activeInvestments": [],
+    "createdAt": "2025-06-25T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a08",
+    "lenderId": "LEN-ENT-042",
+    "name": "Jagdish Pillai",
+    "email": "jagdish.pillai87@investor.in",
+    "mobile": "+919937623456",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 132334,
+    "totalExposure": 11718,
+    "activeInvestments": [],
+    "createdAt": "2025-12-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a09",
+    "lenderId": "LEN-ENT-043",
+    "name": "Gita Ghosh",
+    "email": "gita.ghosh60@investor.in",
+    "mobile": "+919674378858",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 676729,
+    "totalExposure": 25275,
+    "activeInvestments": [],
+    "createdAt": "2026-05-15T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a0a",
+    "lenderId": "LEN-ENT-044",
+    "name": "Mukesh Patel",
+    "email": "mukesh.patel76@investor.in",
+    "mobile": "+919291458333",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 59780,
+    "totalExposure": 16926,
+    "activeInvestments": [],
+    "createdAt": "2025-12-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a0b",
+    "lenderId": "LEN-ENT-045",
+    "name": "Pranav Mishra",
+    "email": "pranav.mishra34@investor.in",
+    "mobile": "+919708306327",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 600934,
+    "totalExposure": 201109,
+    "activeInvestments": [],
+    "createdAt": "2025-04-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a0c",
+    "lenderId": "LEN-ENT-046",
+    "name": "Krishna Varma",
+    "email": "krishna.varma50@investor.in",
+    "mobile": "+919411033950",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 686300,
+    "totalExposure": 4979,
+    "activeInvestments": [],
+    "createdAt": "2026-05-20T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a0d",
+    "lenderId": "LEN-ENT-047",
+    "name": "Ajay Pandey",
+    "email": "ajay.pandey45@investor.in",
+    "mobile": "+919652418981",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 868658,
+    "totalExposure": 145204,
+    "activeInvestments": [],
+    "createdAt": "2025-05-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a0e",
+    "lenderId": "LEN-ENT-048",
+    "name": "Pooja Naik",
+    "email": "pooja.naik27@investor.in",
+    "mobile": "+919451905864",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 667450,
+    "totalExposure": 53112,
+    "activeInvestments": [],
+    "createdAt": "2025-05-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a0f",
+    "lenderId": "LEN-ENT-049",
+    "name": "Aarav Bhattacharya",
+    "email": "aarav.bhattacharya73@investor.in",
+    "mobile": "+919295605709",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 468789,
+    "totalExposure": 39659,
+    "activeInvestments": [],
+    "createdAt": "2025-09-12T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a10",
+    "lenderId": "LEN-ENT-050",
+    "name": "Rohit Saxena",
+    "email": "rohit.saxena93@investor.in",
+    "mobile": "+919136296296",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 425451,
+    "totalExposure": 73210,
+    "activeInvestments": [],
+    "createdAt": "2025-06-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a11",
+    "lenderId": "LEN-ENT-051",
+    "name": "Ritu Desai",
+    "email": "ritu.desai27@investor.in",
+    "mobile": "+919693422067",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 856883,
+    "totalExposure": 223981,
+    "activeInvestments": [],
+    "createdAt": "2025-06-27T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a12",
+    "lenderId": "LEN-ENT-052",
+    "name": "Shilpa Desai",
+    "email": "shilpa.desai90@investor.in",
+    "mobile": "+919853094135",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 549194,
+    "totalExposure": 25150,
+    "activeInvestments": [],
+    "createdAt": "2026-01-08T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a13",
+    "lenderId": "LEN-ENT-053",
+    "name": "Aditi Reddy",
+    "email": "aditi.reddy94@investor.in",
+    "mobile": "+919168090277",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 155162,
+    "totalExposure": 395,
+    "activeInvestments": [],
+    "createdAt": "2025-06-26T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a14",
+    "lenderId": "LEN-ENT-054",
+    "name": "Rohit Iyer",
+    "email": "rohit.iyer87@investor.in",
+    "mobile": "+919157854938",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 794233,
+    "totalExposure": 109549,
+    "activeInvestments": [],
+    "createdAt": "2026-02-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a15",
+    "lenderId": "LEN-ENT-055",
+    "name": "Harish Varma",
+    "email": "harish.varma65@investor.in",
+    "mobile": "+919808499228",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 552515,
+    "totalExposure": 107284,
+    "activeInvestments": [],
+    "createdAt": "2025-06-10T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a16",
+    "lenderId": "LEN-ENT-056",
+    "name": "Prakash Bose",
+    "email": "prakash.bose99@investor.in",
+    "mobile": "+919372800925",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 582789,
+    "totalExposure": 73319,
+    "activeInvestments": [],
+    "createdAt": "2026-01-05T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a17",
+    "lenderId": "LEN-ENT-057",
+    "name": "Bhavna Chopra",
+    "email": "bhavna.chopra79@investor.in",
+    "mobile": "+919270204475",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 104498,
+    "totalExposure": 44160,
+    "activeInvestments": [],
+    "createdAt": "2025-05-30T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a18",
+    "lenderId": "LEN-ENT-058",
+    "name": "Vinod Pillai",
+    "email": "vinod.pillai49@investor.in",
+    "mobile": "+919686820987",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 103753,
+    "totalExposure": 75489,
+    "activeInvestments": [],
+    "createdAt": "2025-09-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a19",
+    "lenderId": "LEN-ENT-059",
+    "name": "Suresh Chopra",
+    "email": "suresh.chopra72@investor.in",
+    "mobile": "+919375428240",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 433333,
+    "totalExposure": 187090,
+    "activeInvestments": [],
+    "createdAt": "2026-04-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a1a",
+    "lenderId": "LEN-ENT-060",
+    "name": "Prashant Pillai",
+    "email": "prashant.pillai55@investor.in",
+    "mobile": "+919655470679",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 212681,
+    "totalExposure": 91976,
+    "activeInvestments": [],
+    "createdAt": "2026-03-26T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a1b",
+    "lenderId": "LEN-ENT-061",
+    "name": "Priya Ghosh",
+    "email": "priya.ghosh96@investor.in",
+    "mobile": "+919113059413",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 627909,
+    "totalExposure": 144816,
+    "activeInvestments": [],
+    "createdAt": "2025-12-31T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a1c",
+    "lenderId": "LEN-ENT-062",
+    "name": "Priya Ghosh",
+    "email": "priya.ghosh64@investor.in",
+    "mobile": "+919700972222",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 231794,
+    "totalExposure": 220465,
+    "activeInvestments": [],
+    "createdAt": "2025-09-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a1d",
+    "lenderId": "LEN-ENT-063",
+    "name": "Priya Nambiar",
+    "email": "priya.nambiar70@investor.in",
+    "mobile": "+919938653549",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 743781,
+    "totalExposure": 12779,
+    "activeInvestments": [],
+    "createdAt": "2025-06-25T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a1e",
+    "lenderId": "LEN-ENT-064",
+    "name": "Rajesh Prasad",
+    "email": "rajesh.prasad77@investor.in",
+    "mobile": "+919512214506",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 849981,
+    "totalExposure": 141881,
+    "activeInvestments": [],
+    "createdAt": "2025-09-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a1f",
+    "lenderId": "LEN-ENT-065",
+    "name": "Jagdish Trivedi",
+    "email": "jagdish.trivedi39@investor.in",
+    "mobile": "+919974432870",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 503171,
+    "totalExposure": 121227,
+    "activeInvestments": [],
+    "createdAt": "2025-10-19T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a20",
+    "lenderId": "LEN-ENT-066",
+    "name": "Saurabh Bansal",
+    "email": "saurabh.bansal83@investor.in",
+    "mobile": "+919744753086",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 422797,
+    "totalExposure": 215477,
+    "activeInvestments": [],
+    "createdAt": "2026-01-27T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a21",
+    "lenderId": "LEN-ENT-067",
+    "name": "Ritu Swaminathan",
+    "email": "ritu.swaminathan46@investor.in",
+    "mobile": "+919609286265",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 394969,
+    "totalExposure": 68922,
+    "activeInvestments": [],
+    "createdAt": "2025-05-12T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a22",
+    "lenderId": "LEN-ENT-068",
+    "name": "Pradeep Malhotra",
+    "email": "pradeep.malhotra49@investor.in",
+    "mobile": "+919820810185",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 872466,
+    "totalExposure": 233261,
+    "activeInvestments": [],
+    "createdAt": "2026-01-02T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a23",
+    "lenderId": "LEN-ENT-069",
+    "name": "Ritu Malhotra",
+    "email": "ritu.malhotra60@investor.in",
+    "mobile": "+919598769290",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 674730,
+    "totalExposure": 112040,
+    "activeInvestments": [],
+    "createdAt": "2026-02-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a24",
+    "lenderId": "LEN-ENT-070",
+    "name": "Madhav Bose",
+    "email": "madhav.bose55@investor.in",
+    "mobile": "+919929274691",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 687874,
+    "totalExposure": 71774,
+    "activeInvestments": [],
+    "createdAt": "2025-05-25T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a25",
+    "lenderId": "LEN-ENT-071",
+    "name": "Umesh Jain",
+    "email": "umesh.jain55@investor.in",
+    "mobile": "+919765104166",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 64675,
+    "totalExposure": 56841,
+    "activeInvestments": [],
+    "createdAt": "2025-07-28T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a26",
+    "lenderId": "LEN-ENT-072",
+    "name": "Vikas Patel",
+    "email": "vikas.patel51@investor.in",
+    "mobile": "+919125702160",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 224579,
+    "totalExposure": 88307,
+    "activeInvestments": [],
+    "createdAt": "2026-01-22T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a27",
+    "lenderId": "LEN-ENT-073",
+    "name": "Hari Srivastava",
+    "email": "hari.srivastava65@investor.in",
+    "mobile": "+919197179783",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 453696,
+    "totalExposure": 46269,
+    "activeInvestments": [],
+    "createdAt": "2026-05-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a28",
+    "lenderId": "LEN-ENT-074",
+    "name": "Aarav Mukherjee",
+    "email": "aarav.mukherjee22@investor.in",
+    "mobile": "+919432314814",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 404803,
+    "totalExposure": 226426,
+    "activeInvestments": [],
+    "createdAt": "2026-03-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a29",
+    "lenderId": "LEN-ENT-075",
+    "name": "Ashok Dutta",
+    "email": "ashok.dutta19@investor.in",
+    "mobile": "+919750551697",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 497346,
+    "totalExposure": 70097,
+    "activeInvestments": [],
+    "createdAt": "2026-06-17T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a2a",
+    "lenderId": "LEN-ENT-076",
+    "name": "Suresh Jain",
+    "email": "suresh.jain41@investor.in",
+    "mobile": "+919738001543",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 217434,
+    "totalExposure": 120234,
+    "activeInvestments": [],
+    "createdAt": "2026-04-15T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a2b",
+    "lenderId": "LEN-ENT-077",
+    "name": "Meera Bhatia",
+    "email": "meera.bhatia91@investor.in",
+    "mobile": "+919347442129",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 617847,
+    "totalExposure": 149223,
+    "activeInvestments": [],
+    "createdAt": "2026-01-10T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a2c",
+    "lenderId": "LEN-ENT-078",
+    "name": "Shilpa Nair",
+    "email": "shilpa.nair17@investor.in",
+    "mobile": "+919298317901",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 218028,
+    "totalExposure": 151100,
+    "activeInvestments": [],
+    "createdAt": "2025-05-22T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a2d",
+    "lenderId": "LEN-ENT-079",
+    "name": "Suresh Yadav",
+    "email": "suresh.yadav34@investor.in",
+    "mobile": "+919376739969",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 504090,
+    "totalExposure": 243524,
+    "activeInvestments": [],
+    "createdAt": "2025-09-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a2e",
+    "lenderId": "LEN-ENT-080",
+    "name": "Ritu Jha",
+    "email": "ritu.jha45@investor.in",
+    "mobile": "+919135486111",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 328808,
+    "totalExposure": 133942,
+    "activeInvestments": [],
+    "createdAt": "2025-07-03T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a2f",
+    "lenderId": "LEN-ENT-081",
+    "name": "Prakash Nair",
+    "email": "prakash.nair97@investor.in",
+    "mobile": "+919194000771",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 811628,
+    "totalExposure": 53617,
+    "activeInvestments": [],
+    "createdAt": "2025-10-04T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a30",
+    "lenderId": "LEN-ENT-082",
+    "name": "Subhash Iyer",
+    "email": "subhash.iyer97@investor.in",
+    "mobile": "+919538395061",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 938662,
+    "totalExposure": 7949,
+    "activeInvestments": [],
+    "createdAt": "2026-05-19T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a31",
+    "lenderId": "LEN-ENT-083",
+    "name": "Naveen Agarwal",
+    "email": "naveen.agarwal26@investor.in",
+    "mobile": "+919321446759",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 62685,
+    "totalExposure": 19160,
+    "activeInvestments": [],
+    "createdAt": "2026-05-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a32",
+    "lenderId": "LEN-ENT-084",
+    "name": "Vikas Roy",
+    "email": "vikas.roy42@investor.in",
+    "mobile": "+919962600308",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 103144,
+    "totalExposure": 44149,
+    "activeInvestments": [],
+    "createdAt": "2025-08-31T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a33",
+    "lenderId": "LEN-ENT-085",
+    "name": "Jagdish Mukherjee",
+    "email": "jagdish.mukherjee12@investor.in",
+    "mobile": "+919847966820",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 246149,
+    "totalExposure": 76161,
+    "activeInvestments": [],
+    "createdAt": "2026-05-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a34",
+    "lenderId": "LEN-ENT-086",
+    "name": "Harish Swaminathan",
+    "email": "harish.swaminathan87@investor.in",
+    "mobile": "+919530324074",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 344479,
+    "totalExposure": 122477,
+    "activeInvestments": [],
+    "createdAt": "2025-06-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a35",
+    "lenderId": "LEN-ENT-087",
+    "name": "Rahul Patel",
+    "email": "rahul.patel85@investor.in",
+    "mobile": "+919429116512",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 417577,
+    "totalExposure": 229267,
+    "activeInvestments": [],
+    "createdAt": "2025-08-09T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a36",
+    "lenderId": "LEN-ENT-088",
+    "name": "Sunil Pillai",
+    "email": "sunil.pillai12@investor.in",
+    "mobile": "+919930455246",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 751555,
+    "totalExposure": 97565,
+    "activeInvestments": [],
+    "createdAt": "2026-01-31T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a37",
+    "lenderId": "LEN-ENT-089",
+    "name": "Rohit Srivastava",
+    "email": "rohit.srivastava10@investor.in",
+    "mobile": "+919387118055",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 799190,
+    "totalExposure": 167960,
+    "activeInvestments": [],
+    "createdAt": "2025-10-05T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a38",
+    "lenderId": "LEN-ENT-090",
+    "name": "Arjun Shah",
+    "email": "arjun.shah97@investor.in",
+    "mobile": "+919918549382",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 479927,
+    "totalExposure": 66223,
+    "activeInvestments": [],
+    "createdAt": "2026-02-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a39",
+    "lenderId": "LEN-ENT-091",
+    "name": "Bhavna Sen",
+    "email": "bhavna.sen59@investor.in",
+    "mobile": "+919410860339",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 279876,
+    "totalExposure": 214422,
+    "activeInvestments": [],
+    "createdAt": "2026-02-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a3a",
+    "lenderId": "LEN-ENT-092",
+    "name": "Madhav Bose",
+    "email": "madhav.bose28@investor.in",
+    "mobile": "+919416828703",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 151817,
+    "totalExposure": 66009,
+    "activeInvestments": [],
+    "createdAt": "2025-04-25T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a3b",
+    "lenderId": "LEN-ENT-093",
+    "name": "Aarav Singh",
+    "email": "aarav.singh41@investor.in",
+    "mobile": "+919255898919",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 815193,
+    "totalExposure": 13712,
+    "activeInvestments": [],
+    "createdAt": "2026-05-27T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a3c",
+    "lenderId": "LEN-ENT-094",
+    "name": "Ravi Yadav",
+    "email": "ravi.yadav26@investor.in",
+    "mobile": "+919714182098",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 256115,
+    "totalExposure": 73755,
+    "activeInvestments": [],
+    "createdAt": "2025-10-19T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a3d",
+    "lenderId": "LEN-ENT-095",
+    "name": "Sujata Mukherjee",
+    "email": "sujata.mukherjee13@investor.in",
+    "mobile": "+919244456018",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 727361,
+    "totalExposure": 90523,
+    "activeInvestments": [],
+    "createdAt": "2025-11-05T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a3e",
+    "lenderId": "LEN-ENT-096",
+    "name": "Umesh Joshi",
+    "email": "umesh.joshi61@investor.in",
+    "mobile": "+919766165123",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 148375,
+    "totalExposure": 129126,
+    "activeInvestments": [],
+    "createdAt": "2025-11-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a3f",
+    "lenderId": "LEN-ENT-097",
+    "name": "Ananya Sharma",
+    "email": "ananya.sharma55@investor.in",
+    "mobile": "+919565420524",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 305270,
+    "totalExposure": 71398,
+    "activeInvestments": [],
+    "createdAt": "2025-07-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a40",
+    "lenderId": "LEN-ENT-098",
+    "name": "Ritu Patil",
+    "email": "ritu.patil18@investor.in",
+    "mobile": "+919395000000",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 350822,
+    "totalExposure": 9270,
+    "activeInvestments": [],
+    "createdAt": "2025-06-10T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a41",
+    "lenderId": "LEN-ENT-099",
+    "name": "Manish Yadav",
+    "email": "manish.yadav27@investor.in",
+    "mobile": "+919274347993",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 804476,
+    "totalExposure": 73621,
+    "activeInvestments": [],
+    "createdAt": "2026-02-20T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a42",
+    "lenderId": "LEN-ENT-100",
+    "name": "Varun Varma",
+    "email": "varun.varma19@investor.in",
+    "mobile": "+919489575617",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 52341,
+    "totalExposure": 21603,
+    "activeInvestments": [],
+    "createdAt": "2025-12-04T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a43",
+    "lenderId": "LEN-ENT-101",
+    "name": "Pradeep Iyer",
+    "email": "pradeep.iyer95@investor.in",
+    "mobile": "+919493460648",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 447199,
+    "totalExposure": 10771,
+    "activeInvestments": [],
+    "createdAt": "2025-10-22T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a44",
+    "lenderId": "LEN-ENT-102",
+    "name": "Ajay Bansal",
+    "email": "ajay.bansal84@investor.in",
+    "mobile": "+919205447530",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 608492,
+    "totalExposure": 227707,
+    "activeInvestments": [],
+    "createdAt": "2025-05-10T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a45",
+    "lenderId": "LEN-ENT-103",
+    "name": "Shilpa Singhal",
+    "email": "shilpa.singhal60@investor.in",
+    "mobile": "+919111647376",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 922331,
+    "totalExposure": 64949,
+    "activeInvestments": [],
+    "createdAt": "2026-03-13T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a46",
+    "lenderId": "LEN-ENT-104",
+    "name": "Tarun Reddy",
+    "email": "tarun.reddy27@investor.in",
+    "mobile": "+919164837962",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 641493,
+    "totalExposure": 240861,
+    "activeInvestments": [],
+    "createdAt": "2026-03-31T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a47",
+    "lenderId": "LEN-ENT-105",
+    "name": "Naveen Pillai",
+    "email": "naveen.pillai12@investor.in",
+    "mobile": "+919184463734",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 85424,
+    "totalExposure": 25852,
+    "activeInvestments": [],
+    "createdAt": "2026-06-03T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a48",
+    "lenderId": "LEN-ENT-106",
+    "name": "Isha Bhatia",
+    "email": "isha.bhatia51@investor.in",
+    "mobile": "+919856635802",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 740236,
+    "totalExposure": 102523,
+    "activeInvestments": [],
+    "createdAt": "2025-08-30T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a49",
+    "lenderId": "LEN-ENT-107",
+    "name": "Meera Jha",
+    "email": "meera.jha46@investor.in",
+    "mobile": "+919834131944",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 558704,
+    "totalExposure": 95371,
+    "activeInvestments": [],
+    "createdAt": "2026-01-19T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a4a",
+    "lenderId": "LEN-ENT-108",
+    "name": "Deepak Srivastava",
+    "email": "deepak.srivastava46@investor.in",
+    "mobile": "+919736396604",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 660274,
+    "totalExposure": 13310,
+    "activeInvestments": [],
+    "createdAt": "2026-03-19T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a4b",
+    "lenderId": "LEN-ENT-109",
+    "name": "Vikas Nair",
+    "email": "vikas.nair45@investor.in",
+    "mobile": "+919549540895",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 931058,
+    "totalExposure": 111740,
+    "activeInvestments": [],
+    "createdAt": "2026-01-14T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a4c",
+    "lenderId": "LEN-ENT-110",
+    "name": "Ramesh Singhal",
+    "email": "ramesh.singhal26@investor.in",
+    "mobile": "+919326342592",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 723831,
+    "totalExposure": 220137,
+    "activeInvestments": [],
+    "createdAt": "2025-09-21T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a4d",
+    "lenderId": "LEN-ENT-111",
+    "name": "Subhash Mishra",
+    "email": "subhash.mishra57@investor.in",
+    "mobile": "+919586246141",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 158040,
+    "totalExposure": 117894,
+    "activeInvestments": [],
+    "createdAt": "2026-06-12T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a4e",
+    "lenderId": "LEN-ENT-112",
+    "name": "Manish Malhotra",
+    "email": "manish.malhotra93@investor.in",
+    "mobile": "+919615362654",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 219795,
+    "totalExposure": 209627,
+    "activeInvestments": [],
+    "createdAt": "2025-05-30T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a4f",
+    "lenderId": "LEN-ENT-113",
+    "name": "Divya Shetty",
+    "email": "divya.shetty17@investor.in",
+    "mobile": "+919966469907",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 761875,
+    "totalExposure": 10990,
+    "activeInvestments": [],
+    "createdAt": "2025-10-07T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a50",
+    "lenderId": "LEN-ENT-114",
+    "name": "Vikas Swaminathan",
+    "email": "vikas.swaminathan97@investor.in",
+    "mobile": "+919259012345",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 903723,
+    "totalExposure": 241043,
+    "activeInvestments": [],
+    "createdAt": "2026-05-31T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a51",
+    "lenderId": "LEN-ENT-115",
+    "name": "Ganesh Pandey",
+    "email": "ganesh.pandey69@investor.in",
+    "mobile": "+919679101080",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 931451,
+    "totalExposure": 128439,
+    "activeInvestments": [],
+    "createdAt": "2025-06-28T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a52",
+    "lenderId": "LEN-ENT-116",
+    "name": "Rahul Sharma",
+    "email": "rahul.sharma73@investor.in",
+    "mobile": "+919579513888",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 297835,
+    "totalExposure": 113765,
+    "activeInvestments": [],
+    "createdAt": "2025-06-24T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a53",
+    "lenderId": "LEN-ENT-117",
+    "name": "Deepak Desai",
+    "email": "deepak.desai40@investor.in",
+    "mobile": "+919279695216",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 722323,
+    "totalExposure": 72791,
+    "activeInvestments": [],
+    "createdAt": "2025-05-30T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a54",
+    "lenderId": "LEN-ENT-118",
+    "name": "Vikas Khan",
+    "email": "vikas.khan24@investor.in",
+    "mobile": "+919365756172",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 891023,
+    "totalExposure": 177587,
+    "activeInvestments": [],
+    "createdAt": "2025-07-28T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a55",
+    "lenderId": "LEN-ENT-119",
+    "name": "Pooja Kapoor",
+    "email": "pooja.kapoor67@investor.in",
+    "mobile": "+919590474537",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 756713,
+    "totalExposure": 174294,
+    "activeInvestments": [],
+    "createdAt": "2025-05-11T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a56",
+    "lenderId": "LEN-ENT-120",
+    "name": "Amit Nair",
+    "email": "amit.nair28@investor.in",
+    "mobile": "+919273294753",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 138838,
+    "totalExposure": 43080,
+    "activeInvestments": [],
+    "createdAt": "2026-05-10T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a57",
+    "lenderId": "LEN-ENT-121",
+    "name": "Gita Pandey",
+    "email": "gita.pandey11@investor.in",
+    "mobile": "+919200327932",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 623511,
+    "totalExposure": 31712,
+    "activeInvestments": [],
+    "createdAt": "2026-02-28T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a58",
+    "lenderId": "LEN-ENT-122",
+    "name": "Neha Bansal",
+    "email": "neha.bansal50@investor.in",
+    "mobile": "+919624351851",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 863507,
+    "totalExposure": 88411,
+    "activeInvestments": [],
+    "createdAt": "2025-11-30T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a59",
+    "lenderId": "LEN-ENT-123",
+    "name": "Divya Pandey",
+    "email": "divya.pandey22@investor.in",
+    "mobile": "+919764810956",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 578272,
+    "totalExposure": 151219,
+    "activeInvestments": [],
+    "createdAt": "2026-02-16T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a5a",
+    "lenderId": "LEN-ENT-124",
+    "name": "Rahul Rao",
+    "email": "rahul.rao84@investor.in",
+    "mobile": "+919707816358",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 653916,
+    "totalExposure": 86647,
+    "activeInvestments": [],
+    "createdAt": "2025-05-05T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a5b",
+    "lenderId": "LEN-ENT-125",
+    "name": "Ajay Saxena",
+    "email": "ajay.saxena76@investor.in",
+    "mobile": "+919306145833",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 243217,
+    "totalExposure": 1896,
+    "activeInvestments": [],
+    "createdAt": "2026-06-10T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a5c",
+    "lenderId": "LEN-ENT-126",
+    "name": "Chetan Trivedi",
+    "email": "chetan.trivedi77@investor.in",
+    "mobile": "+919479243827",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 765621,
+    "totalExposure": 189564,
+    "activeInvestments": [],
+    "createdAt": "2026-06-11T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a5d",
+    "lenderId": "LEN-ENT-127",
+    "name": "Ravi Deshmukh",
+    "email": "ravi.deshmukh23@investor.in",
+    "mobile": "+919613221450",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 607238,
+    "totalExposure": 238226,
+    "activeInvestments": [],
+    "createdAt": "2026-01-14T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a5e",
+    "lenderId": "LEN-ENT-128",
+    "name": "Sunil Prasad",
+    "email": "sunil.prasad16@investor.in",
+    "mobile": "+919160856481",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 320845,
+    "totalExposure": 60742,
+    "activeInvestments": [],
+    "createdAt": "2026-03-25T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a5f",
+    "lenderId": "LEN-ENT-129",
+    "name": "Prakash Nambiar",
+    "email": "prakash.nambiar64@investor.in",
+    "mobile": "+919841593364",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 325887,
+    "totalExposure": 88442,
+    "activeInvestments": [],
+    "createdAt": "2025-05-20T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a60",
+    "lenderId": "LEN-ENT-130",
+    "name": "Aditi Varma",
+    "email": "aditi.varma63@investor.in",
+    "mobile": "+919441543209",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 108476,
+    "totalExposure": 57397,
+    "activeInvestments": [],
+    "createdAt": "2026-05-01T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a61",
+    "lenderId": "LEN-ENT-131",
+    "name": "Neha Mishra",
+    "email": "neha.mishra14@investor.in",
+    "mobile": "+919713483796",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 721389,
+    "totalExposure": 160624,
+    "activeInvestments": [],
+    "createdAt": "2025-10-15T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a62",
+    "lenderId": "LEN-ENT-132",
+    "name": "Varun Shah",
+    "email": "varun.shah36@investor.in",
+    "mobile": "+919576859567",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 684070,
+    "totalExposure": 243686,
+    "activeInvestments": [],
+    "createdAt": "2025-11-13T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a63",
+    "lenderId": "LEN-ENT-133",
+    "name": "Hari Deshmukh",
+    "email": "hari.deshmukh74@investor.in",
+    "mobile": "+919717781635",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 582631,
+    "totalExposure": 164647,
+    "activeInvestments": [],
+    "createdAt": "2025-07-10T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a64",
+    "lenderId": "LEN-ENT-134",
+    "name": "Neha Trivedi",
+    "email": "neha.trivedi31@investor.in",
+    "mobile": "+919689027777",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 169849,
+    "totalExposure": 134131,
+    "activeInvestments": [],
+    "createdAt": "2025-08-13T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a65",
+    "lenderId": "LEN-ENT-135",
+    "name": "Suresh Mehta",
+    "email": "suresh.mehta45@investor.in",
+    "mobile": "+919210042438",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 565170,
+    "totalExposure": 51128,
+    "activeInvestments": [],
+    "createdAt": "2025-12-27T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a66",
+    "lenderId": "LEN-ENT-136",
+    "name": "Tarun Singh",
+    "email": "tarun.singh21@investor.in",
+    "mobile": "+919166936728",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 754703,
+    "totalExposure": 231156,
+    "activeInvestments": [],
+    "createdAt": "2025-04-27T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a67",
+    "lenderId": "LEN-ENT-137",
+    "name": "Mukesh Kapoor",
+    "email": "mukesh.kapoor31@investor.in",
+    "mobile": "+919612488425",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 91226,
+    "totalExposure": 24442,
+    "activeInvestments": [],
+    "createdAt": "2026-03-21T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a68",
+    "lenderId": "LEN-ENT-138",
+    "name": "Vinod Singhal",
+    "email": "vinod.singhal54@investor.in",
+    "mobile": "+919266141975",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 494186,
+    "totalExposure": 156604,
+    "activeInvestments": [],
+    "createdAt": "2026-03-31T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a69",
+    "lenderId": "LEN-ENT-139",
+    "name": "Prashant Chopra",
+    "email": "prashant.chopra45@investor.in",
+    "mobile": "+919214008487",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 249691,
+    "totalExposure": 227361,
+    "activeInvestments": [],
+    "createdAt": "2026-03-24T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a6a",
+    "lenderId": "LEN-ENT-140",
+    "name": "Vijay Pandey",
+    "email": "vijay.pandey66@investor.in",
+    "mobile": "+919108865740",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 110520,
+    "totalExposure": 73000,
+    "activeInvestments": [],
+    "createdAt": "2025-09-07T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a6b",
+    "lenderId": "LEN-ENT-141",
+    "name": "Sunil Kulkarni",
+    "email": "sunil.kulkarni25@investor.in",
+    "mobile": "+919370158179",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 96118,
+    "totalExposure": 79180,
+    "activeInvestments": [],
+    "createdAt": "2025-12-08T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a6c",
+    "lenderId": "LEN-ENT-142",
+    "name": "Sunil Chatterjee",
+    "email": "sunil.chatterjee18@investor.in",
+    "mobile": "+919483996913",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 492596,
+    "totalExposure": 49938,
+    "activeInvestments": [],
+    "createdAt": "2026-05-01T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a6d",
+    "lenderId": "LEN-ENT-143",
+    "name": "Priya Mukherjee",
+    "email": "priya.mukherjee98@investor.in",
+    "mobile": "+919603159722",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 752732,
+    "totalExposure": 137694,
+    "activeInvestments": [],
+    "createdAt": "2025-09-21T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a6e",
+    "lenderId": "LEN-ENT-144",
+    "name": "Amit Singh",
+    "email": "amit.singh11@investor.in",
+    "mobile": "+919147091049",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 795969,
+    "totalExposure": 94984,
+    "activeInvestments": [],
+    "createdAt": "2025-07-24T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a6f",
+    "lenderId": "LEN-ENT-145",
+    "name": "Kavita Srivastava",
+    "email": "kavita.srivastava84@investor.in",
+    "mobile": "+919601902006",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 208418,
+    "totalExposure": 78263,
+    "activeInvestments": [],
+    "createdAt": "2026-02-19T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a70",
+    "lenderId": "LEN-ENT-146",
+    "name": "Vikram Jha",
+    "email": "vikram.jha89@investor.in",
+    "mobile": "+919820370370",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 5000,
+    "walletBalance": 742859,
+    "totalExposure": 130515,
+    "activeInvestments": [],
+    "createdAt": "2025-08-18T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a71",
+    "lenderId": "LEN-ENT-147",
+    "name": "Deepak Patel",
+    "email": "deepak.patel64@investor.in",
+    "mobile": "+919121940586",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 418734,
+    "totalExposure": 219557,
+    "activeInvestments": [],
+    "createdAt": "2025-08-17T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a72",
+    "lenderId": "LEN-ENT-148",
+    "name": "Priya Desai",
+    "email": "priya.desai25@investor.in",
+    "mobile": "+919192723765",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 1000,
+    "walletBalance": 822157,
+    "totalExposure": 5294,
+    "activeInvestments": [],
+    "createdAt": "2026-02-23T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a73",
+    "lenderId": "LEN-ENT-149",
+    "name": "Rakesh Swaminathan",
+    "email": "rakesh.swaminathan93@investor.in",
+    "mobile": "+919385497685",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "retail",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 605903,
+    "totalExposure": 39423,
+    "activeInvestments": [],
+    "createdAt": "2025-11-28T19:16:55.243Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830a74",
+    "lenderId": "LEN-ENT-150",
+    "name": "Shilpa Jha",
+    "email": "shilpa.jha57@investor.in",
+    "mobile": "+919819706790",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "services",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 389417,
+    "totalExposure": 225496,
+    "activeInvestments": [],
+    "createdAt": "2025-06-05T19:16:55.243Z"
+  }
+]

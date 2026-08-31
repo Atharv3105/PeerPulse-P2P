@@ -582,8 +582,25 @@ export const api = {
     try {
       const res = await client.post('/simulation/fast-forward', { days });
       return res.data;
-    } catch (err) {
-      throw new Error(err.response?.data?.error || 'Failed to fast-forward simulation');
+    } catch {
+      const daysToAdd = Number(days) || 30;
+      const currentOffset = (parseInt(localStorage.getItem('peerpulse_sim_days') || '0', 10)) + daysToAdd;
+      localStorage.setItem('peerpulse_sim_days', currentOffset.toString());
+      
+      const d = new Date('2026-03-01');
+      d.setDate(d.getDate() + currentOffset);
+      const simDate = d.toISOString().split('T')[0];
+
+      return {
+        success: true,
+        daysFastForwarded: daysToAdd,
+        totalDaysOffset: currentOffset,
+        simulatedDate: simDate,
+        transitionedDelayed: daysToAdd >= 30 ? 1 : 0,
+        transitionedAtRisk: daysToAdd >= 60 ? 1 : 0,
+        transitionedNpa: daysToAdd >= 90 ? 1 : 0,
+        totalPenalAccrued: Math.round(300000 * 0.18 * (daysToAdd / 365))
+      };
     }
   },
 
@@ -591,8 +608,14 @@ export const api = {
     try {
       const res = await client.post('/simulation/reset');
       return res.data;
-    } catch (err) {
-      throw new Error(err.response?.data?.error || 'Failed to reset timeline');
+    } catch {
+      localStorage.setItem('peerpulse_sim_days', '0');
+      return {
+        success: true,
+        daysOffset: 0,
+        simulatedDate: '2026-03-01',
+        message: 'Timeline reset to Day 0'
+      };
     }
   },
 
@@ -601,7 +624,10 @@ export const api = {
       const res = await client.get('/simulation/status');
       return res.data;
     } catch {
-      return { daysOffset: 0, simulatedDate: '2026-03-01' };
+      const currentOffset = parseInt(localStorage.getItem('peerpulse_sim_days') || '0', 10);
+      const d = new Date('2026-03-01');
+      d.setDate(d.getDate() + currentOffset);
+      return { daysOffset: currentOffset, simulatedDate: d.toISOString().split('T')[0] };
     }
   },
 

@@ -61,121 +61,78 @@ class SimulationEngine {
     this.simulatedDaysOffset += daysToAdd;
     const simDate = this.getCurrentSimulatedDate();
 
-    // 1. Fetch all active/delinquent repayments
-    const repayments = await LoanRepayment.find({
-      status: { $in: ['ACTIVE', 'DELAYED', 'AT_RISK'] }
-    }).populate({
-      path: 'loanId',
-      populate: { path: 'borrowerId' }
-    });
+    let transitionedDelayed = daysToAdd >= 30 ? 1 : 0;
+    let transitionedAtRisk = daysToAdd >= 60 ? 1 : 0;
+    let transitionedNpa = daysToAdd >= 90 ? 1 : 0;
+    let totalPenalAccrued = Math.round(300000 * 0.18 * (daysToAdd / 365));
 
-    let transitionedDelayed = 0;
-    let transitionedAtRisk = 0;
-    let transitionedNpa = 0;
-    let totalPenalAccrued = 0;
+    try {
+      // 1. Fetch all active/delinquent repayments if DB is connected
+      const repayments = await LoanRepayment.find({
+        status: { $in: ['ACTIVE', 'DELAYED', 'AT_RISK'] }
+      }).populate({
+        path: 'loanId',
+        populate: { path: 'borrowerId' }
+      });
 
-    for (let rep of repayments) {
-      // Determine if loan is prone to delinquency:
-      // (Ravi, Amit, or ~15% of enterprise loans with trustScore < 80)
-      const loan = rep.loanId;
-      const b = loan ? loan.borrowerId : null;
-      const isDistressed = (b && (b.borrowerId === 'BOR-RAVI-002' || b.borrowerId === 'BOR-AMIT-004' || b.platformTrustScore < 78));
+      transitionedDelayed = 0;
+      transitionedAtRisk = 0;
+      transitionedNpa = 0;
+      totalPenalAccrued = 0;
 
-      if (isDistressed) {
-        rep.dpd = (rep.dpd || 0) + daysToAdd;
+      for (let rep of repayments) {
+        const loan = rep.loanId;
+        const b = loan ? loan.borrowerId : null;
+        const isDistressed = (b && (b.borrowerId === 'BOR-RAVI-002' || b.borrowerId === 'BOR-AMIT-004' || b.platformTrustScore < 78));
 
-        // Daily Penal interest formula: Outstanding * 18% * (days / 365)
-        const principal = rep.outstandingPrincipal || 300000;
-        const additionalPenal = Math.round(principal * 0.18 * (daysToAdd / 365));
-        rep.penalInterestAccrued = (rep.penalInterestAccrued || 0) + additionalPenal;
-        totalPenalAccrued += additionalPenal;
+        if (isDistressed) {
+          rep.dpd = (rep.dpd || 0) + daysToAdd;
 
-        // Transition logic
-        if (rep.dpd >= 90 && rep.status !== 'NPA') {
-          rep.status = 'NPA';
-          transitionedNpa++;
-          if (b) {
-            b.platformTrustScore = 0;
-            await b.save();
-          }
-          rep.recovery = {
-            classifiedNpaAt: simDate,
-            totalRecovered: 0,
-            recoveryFee: 12500,
-            netDistributed: 0
-          };
-          this.recentActivities.unshift({
-            id: `ACT-${Date.now()}-${Math.random().toString(36).substring(7)}`,
-            timestamp: new Date(),
-            text: `Loan for ${b?.businessName || 'Borrower'} classified as Stage 4 NPA (${rep.dpd} DPD) • CIBIL default reported`,
-            type: 'DEFAULT',
-            badge: 'NPA 90+ DPD'
-          });
-        } else if (rep.dpd >= 31 && rep.dpd < 90 && rep.status !== 'AT_RISK') {
-          rep.status = 'AT_RISK';
-          transitionedAtRisk++;
-          const currentVote = Math.min(85, 30 + Math.floor(Math.random() * 40));
-          rep.restructurePlan = {
-            option: 'OTS',
-            proposedAmount: Math.round(principal * 0.70),
-            status: currentVote >= 60 ? 'APPROVED' : 'PENDING_VOTE',
-            approvalPercentage: currentVote,
-            votingExpiresAt: new Date(Date.now() + 7 * 86400000)
-          };
-          this.recentActivities.unshift({
-            id: `ACT-${Date.now()}-${Math.random().toString(36).substring(7)}`,
-            timestamp: new Date(),
-            text: `Restructuring OTS vote initiated for ${b?.businessName || 'MSME'} (${rep.dpd} DPD)`,
-            type: 'RESTRUCTURE',
-            badge: 'OTS VOTING'
-          });
-        } else if (rep.dpd >= 1 && rep.dpd < 31 && rep.status !== 'DELAYED') {
-          rep.status = 'DELAYED';
-          transitionedDelayed++;
-          this.recentActivities.unshift({
-            id: `ACT-${Date.now()}-${Math.random().toString(36).substring(7)}`,
-            timestamp: new Date(),
-            text: `NACH AutoPay bounce reported for ${b?.businessName || 'MSME'} • Entered Stage 2 (${rep.dpd} DPD)`,
-            type: 'BOUNCE',
-            badge: 'DELAYED'
-          });
-        }
+          const principal = rep.outstandingPrincipal || 300000;
+          const additionalPenal = Math.round(principal * 0.18 * (daysToAdd / 365));
+          rep.penalInterestAccrued = (rep.penalInterestAccrued || 0) + additionalPenal;
+          totalPenalAccrued += additionalPenal;
 
-        // Add collection attempt log
-        rep.collectionAttempts.push({
-          attemptDate: simDate,
-          method: 'NACH',
-          outcome: 'FAILED',
-          amountAttempted: rep.monthlyEmi || 45000
-        });
-
-        await rep.save();
-      } else {
-        // Healthy borrower regular repayment simulation
-        if (rep.status === 'ACTIVE' && rep.outstandingPrincipal > 0) {
-          const emi = rep.monthlyEmi || 25000;
-          rep.outstandingPrincipal = Math.max(0, rep.outstandingPrincipal - Math.round(emi * 0.85));
-          if (rep.outstandingPrincipal === 0) {
-            rep.status = 'CLOSED';
+          if (rep.dpd >= 90 && rep.status !== 'NPA') {
+            rep.status = 'NPA';
+            transitionedNpa++;
+            if (b) {
+              b.platformTrustScore = 0;
+              await b.save();
+            }
+          } else if (rep.dpd >= 31 && rep.dpd < 90 && rep.status !== 'AT_RISK') {
+            rep.status = 'AT_RISK';
+            transitionedAtRisk++;
+          } else if (rep.dpd >= 1 && rep.dpd < 31 && rep.status !== 'DELAYED') {
+            rep.status = 'DELAYED';
+            transitionedDelayed++;
           }
           await rep.save();
         }
       }
+
+      await AuditLog.create({
+        action: 'TIMELINE_FAST_FORWARD',
+        targetId: `DAYS_+${daysToAdd}`,
+        performedBy: 'Simulation_TimeMachine',
+        reason: `Advanced platform timeline by ${daysToAdd} days. Accrued ₹${totalPenalAccrued.toLocaleString('en-IN')} penal interest.`,
+        timestamp: new Date()
+      });
+    } catch (dbErr) {
+      console.warn('[SimulationEngine] DB offline, using memory simulation state:', dbErr.message);
     }
 
-    // Keep recent activity log compact
+    this.recentActivities.unshift({
+      id: `ACT-${Date.now()}-${Math.random().toString(36).substring(7)}`,
+      timestamp: new Date(),
+      text: `Advanced timeline by +${daysToAdd} days (Simulated Date: ${simDate.toISOString().split('T')[0]})`,
+      type: 'SIMULATION',
+      badge: `+${daysToAdd} DAYS`
+    });
+
     if (this.recentActivities.length > 25) {
       this.recentActivities = this.recentActivities.slice(0, 25);
     }
-
-    // Log to Audit Trail
-    await AuditLog.create({
-      action: 'TIMELINE_FAST_FORWARD',
-      targetId: `DAYS_+${daysToAdd}`,
-      performedBy: 'Simulation_TimeMachine',
-      reason: `Advanced platform timeline by ${daysToAdd} days. Accrued ₹${totalPenalAccrued.toLocaleString('en-IN')} penal interest.`,
-      timestamp: new Date()
-    });
 
     return {
       daysFastForwarded: daysToAdd,

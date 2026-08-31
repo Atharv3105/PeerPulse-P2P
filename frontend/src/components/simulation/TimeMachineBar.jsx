@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   FastForward, RotateCcw, Calendar, Zap, AlertTriangle, 
   CheckCircle2, ChevronUp, ChevronDown, Sparkles, Clock, X 
@@ -11,6 +11,7 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [lastAction, setLastAction] = useState(null);
+  const containerRef = useRef(null);
 
   const fetchStatus = async () => {
     const s = await api.getSimulationStatus();
@@ -19,6 +20,15 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
 
   useEffect(() => {
     fetchStatus();
+
+    // Close when clicking outside
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const handleFastForward = async (days) => {
@@ -76,7 +86,7 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       {/* Popover Control Panel (Appears upwards when clicked) */}
       {isOpen && (
         <div className="absolute bottom-14 left-0 sm:-left-6 w-80 sm:w-96 max-w-[calc(100vw-2.5rem)] rounded-2xl border border-[var(--gold)]/40 bg-[var(--card-bg)]/98 backdrop-blur-xl shadow-2xl p-4 text-xs space-y-3.5 mb-1 animate-in fade-in slide-in-from-bottom-2 duration-200 z-50">
