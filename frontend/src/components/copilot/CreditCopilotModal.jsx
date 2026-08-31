@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   Bot, Sparkles, Send, X, ShieldCheck, TrendingUp, AlertTriangle, 
   HelpCircle, RefreshCw, Layers, ArrowUpRight, CheckCircle2, ChevronRight,
@@ -283,9 +284,12 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
       </button>
 
       {/* Copilot Drawer / Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-end p-2 sm:p-6 bg-black/40 backdrop-blur-xs animate-in fade-in duration-150">
-          <div className="w-full sm:w-[500px] h-[88vh] sm:h-[650px] bg-[var(--card-bg)] border border-[var(--border)] text-[var(--fg)] rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-200">
+      {isOpen && typeof document !== 'undefined' && createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-end p-2 sm:p-6 bg-black/40 backdrop-blur-xs animate-in fade-in duration-150" onClick={() => setIsOpen(false)}>
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="w-full sm:w-[500px] h-[88vh] sm:h-[650px] bg-[var(--card-bg)] border border-[var(--border)] text-[var(--fg)] rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-200"
+          >
             {/* Header */}
             <div className="p-4 border-b border-[var(--border)] flex items-center justify-between bg-[var(--muted-bg)]/50">
               <div className="flex items-center gap-3">
@@ -426,7 +430,8 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
               </button>
             </form>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

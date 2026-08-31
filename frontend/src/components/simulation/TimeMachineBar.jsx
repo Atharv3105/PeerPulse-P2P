@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   FastForward, RotateCcw, Calendar, Zap, AlertTriangle, 
   CheckCircle2, ChevronUp, ChevronDown, Sparkles, Clock, X 
@@ -85,147 +86,148 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
     }
   };
 
-  return (
-    <div ref={containerRef} className="relative">
-      {/* Centered Modal Overlay (Prevents UI Bleed/Overlap) */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
-          onClick={() => setIsOpen(false)}
-        >
-          <div 
-            onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-md rounded-3xl border border-[var(--gold)]/40 bg-[var(--card-bg)] text-[var(--fg)] shadow-2xl p-6 text-xs space-y-4 animate-in zoom-in-95 duration-150"
+  const modalContent = isOpen ? (
+    <div 
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
+      onClick={() => setIsOpen(false)}
+    >
+      <div 
+        onClick={(e) => e.stopPropagation()}
+        className="w-full max-w-md max-h-[90vh] overflow-y-auto rounded-3xl border border-[var(--gold)]/40 bg-[var(--card-bg)] text-[var(--fg)] shadow-2xl p-6 text-xs space-y-4 animate-in zoom-in-95 duration-150"
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between border-b border-[var(--border)] pb-3">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-[var(--gold)]/10 text-[var(--gold-dark)] flex items-center justify-center border border-[var(--gold)]/30">
+              <Clock className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="font-bold text-sm text-[var(--fg)] flex items-center gap-1.5">
+                <span>Portfolio Time Machine</span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 font-bold">
+                  LIVE
+                </span>
+              </div>
+              <div className="text-[11px] text-[var(--muted-fg)]">
+                Simulate real-world date progression, NACH sweeps & DPD
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="w-7 h-7 rounded-lg flex items-center justify-center text-[var(--muted-fg)] hover:text-[var(--fg)] hover:bg-[var(--muted-bg)] cursor-pointer transition-colors"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between border-b border-[var(--border)] pb-3">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Current Date Ribbon */}
+        <div className="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-[var(--muted-bg)] border border-[var(--border)] font-mono text-xs">
+          <div className="flex items-center gap-2 text-[var(--muted-fg)]">
+            <Calendar className="w-4 h-4 text-[var(--gold-dark)]" />
+            <span>Simulated Date:</span>
+          </div>
+          <div className="font-bold text-[var(--fg)] text-sm">
+            {status.simulatedDate} <span className="text-[var(--gold-dark)]">(Day +{status.daysOffset})</span>
+          </div>
+        </div>
+
+        {/* Action Fast-Forward Tiles */}
+        <div className="space-y-2">
+          <div className="text-[10px] font-mono uppercase tracking-wider text-[var(--muted-fg)] font-bold">
+            Advance Timeline
+          </div>
+
+          <div className="grid grid-cols-1 gap-2">
+            {/* +30 Days (Primary) */}
+            <button
+              type="button"
+              onClick={() => handleFastForward(30)}
+              disabled={loading}
+              className="p-3 rounded-2xl border border-[var(--gold)]/50 bg-[var(--gold)]/10 hover:bg-[var(--gold)]/20 text-left transition-all cursor-pointer disabled:opacity-50 flex items-center justify-between group"
+            >
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-[var(--gold)]/10 text-[var(--gold-dark)] flex items-center justify-center border border-[var(--gold)]/30">
-                  <Clock className="w-4 h-4" />
+                <div className="p-2 rounded-xl bg-[var(--gold)]/20 text-[var(--gold-dark)]">
+                  <Zap className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-[var(--fg)] flex items-center gap-1.5">
-                    <span>Portfolio Time Machine</span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 font-bold">
-                      LIVE
-                    </span>
+                  <div className="font-bold text-[var(--gold-dark)] text-xs">
+                    +30 Days (Monthly NACH Cycle)
                   </div>
-                  <div className="text-[11px] text-[var(--muted-fg)]">
-                    Simulate real-world date progression, NACH sweeps & DPD
+                  <div className="text-[10px] text-[var(--muted-fg)]">
+                    Executes monthly sweeps, accrues 18% penal, advances loan stages
                   </div>
                 </div>
               </div>
+              <FastForward className="w-4 h-4 text-[var(--gold-dark)] shrink-0 group-hover:translate-x-1 transition-transform" />
+            </button>
 
+            <div className="grid grid-cols-2 gap-2">
+              {/* +7 Days */}
               <button
                 type="button"
-                onClick={() => setIsOpen(false)}
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-[var(--muted-fg)] hover:text-[var(--fg)] hover:bg-[var(--muted-bg)] cursor-pointer transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Current Date Ribbon */}
-            <div className="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-[var(--muted-bg)] border border-[var(--border)] font-mono text-xs">
-              <div className="flex items-center gap-2 text-[var(--muted-fg)]">
-                <Calendar className="w-4 h-4 text-[var(--gold-dark)]" />
-                <span>Simulated Date:</span>
-              </div>
-              <div className="font-bold text-[var(--fg)] text-sm">
-                {status.simulatedDate} <span className="text-[var(--gold-dark)]">(Day +{status.daysOffset})</span>
-              </div>
-            </div>
-
-            {/* Action Fast-Forward Tiles */}
-            <div className="space-y-2">
-              <div className="text-[10px] font-mono uppercase tracking-wider text-[var(--muted-fg)] font-bold">
-                Advance Timeline
-              </div>
-
-              <div className="grid grid-cols-1 gap-2">
-                {/* +30 Days (Primary) */}
-                <button
-                  type="button"
-                  onClick={() => handleFastForward(30)}
-                  disabled={loading}
-                  className="p-3 rounded-2xl border border-[var(--gold)]/50 bg-[var(--gold)]/10 hover:bg-[var(--gold)]/20 text-left transition-all cursor-pointer disabled:opacity-50 flex items-center justify-between group"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <div className="p-2 rounded-xl bg-[var(--gold)]/20 text-[var(--gold-dark)]">
-                      <Zap className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-[var(--gold-dark)] text-xs">
-                        +30 Days (Monthly NACH Cycle)
-                      </div>
-                      <div className="text-[10px] text-[var(--muted-fg)]">
-                        Executes monthly sweeps, accrues 18% penal, advances loan stages
-                      </div>
-                    </div>
-                  </div>
-                  <FastForward className="w-4 h-4 text-[var(--gold-dark)] shrink-0 group-hover:translate-x-1 transition-transform" />
-                </button>
-
-                <div className="grid grid-cols-2 gap-2">
-                  {/* +7 Days */}
-                  <button
-                    type="button"
-                    onClick={() => handleFastForward(7)}
-                    disabled={loading}
-                    className="p-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card-bg)] hover:border-[var(--gold)]/60 text-left transition-all cursor-pointer disabled:opacity-50"
-                  >
-                    <div className="font-bold text-xs text-[var(--fg)] flex items-center gap-1.5">
-                      <FastForward className="w-3.5 h-3.5 text-amber-500" />
-                      <span>+7 Days</span>
-                    </div>
-                    <div className="text-[10px] text-[var(--muted-fg)] mt-0.5">
-                      Grace window & initial bounces
-                    </div>
-                  </button>
-
-                  {/* +90 Days */}
-                  <button
-                    type="button"
-                    onClick={() => handleFastForward(90)}
-                    disabled={loading}
-                    className="p-2.5 rounded-2xl border border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20 text-left transition-all cursor-pointer disabled:opacity-50"
-                  >
-                    <div className="font-bold text-xs text-rose-400 flex items-center gap-1.5">
-                      <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
-                      <span>+90 Days</span>
-                    </div>
-                    <div className="text-[10px] text-[var(--muted-fg)] mt-0.5">
-                      Stage 4 NPA & recovery triggers
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Feedback Toast Inside Panel */}
-            {lastAction && (
-              <div className="text-[11px] font-mono text-emerald-500 bg-emerald-500/10 px-3.5 py-2.5 rounded-2xl border border-emerald-500/30 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span className="truncate">{lastAction.text}</span>
-              </div>
-            )}
-
-            {/* Reset Baseline Seed Button */}
-            <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between">
-              <button
-                type="button"
-                onClick={handleReset}
+                onClick={() => handleFastForward(7)}
                 disabled={loading}
-                className="text-xs font-semibold text-rose-400 hover:text-rose-300 hover:underline flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                className="p-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card-bg)] hover:border-[var(--gold)]/60 text-left transition-all cursor-pointer disabled:opacity-50"
               >
-                <RotateCcw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
-                <span>Reset to Day 0</span>
+                <div className="font-bold text-xs text-[var(--fg)] flex items-center gap-1.5">
+                  <FastForward className="w-3.5 h-3.5 text-amber-500" />
+                  <span>+7 Days</span>
+                </div>
+                <div className="text-[10px] text-[var(--muted-fg)] mt-0.5">
+                  Grace window & initial bounces
+                </div>
               </button>
-              <span className="text-[10px] text-[var(--muted-fg)] font-mono">180 MSMEs • 322 Loans</span>
+
+              {/* +90 Days */}
+              <button
+                type="button"
+                onClick={() => handleFastForward(90)}
+                disabled={loading}
+                className="p-2.5 rounded-2xl border border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20 text-left transition-all cursor-pointer disabled:opacity-50"
+              >
+                <div className="font-bold text-xs text-rose-400 flex items-center gap-1.5">
+                  <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
+                  <span>+90 Days</span>
+                </div>
+                <div className="text-[10px] text-[var(--muted-fg)] mt-0.5">
+                  Stage 4 NPA & recovery triggers
+                </div>
+              </button>
             </div>
           </div>
         </div>
-      )}
+
+        {/* Feedback Toast Inside Panel */}
+        {lastAction && (
+          <div className="text-[11px] font-mono text-emerald-500 bg-emerald-500/10 px-3.5 py-2.5 rounded-2xl border border-emerald-500/30 flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 shrink-0" />
+            <span className="truncate">{lastAction.text}</span>
+          </div>
+        )}
+
+        {/* Reset Baseline Seed Button */}
+        <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between">
+          <button
+            type="button"
+            onClick={handleReset}
+            disabled={loading}
+            className="text-xs font-semibold text-rose-400 hover:text-rose-300 hover:underline flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+          >
+            <RotateCcw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
+            <span>Reset to Day 0</span>
+          </button>
+          <span className="text-[10px] text-[var(--muted-fg)] font-mono">180 MSMEs • 322 Loans</span>
+        </div>
+      </div>
+    </div>
+  ) : null;
+
+  return (
+    <div ref={containerRef} className="relative">
+      {typeof document !== 'undefined' && createPortal(modalContent, document.body)}
 
       {/* Trigger Button */}
       <button

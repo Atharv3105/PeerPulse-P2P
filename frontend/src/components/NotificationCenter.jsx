@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   Bell, MessageSquare, Mail, Smartphone, X, 
   CheckCheck, Clock, ShieldAlert, AlertTriangle, Coins, Landmark 
@@ -72,9 +73,10 @@ export default function NotificationCenter({ dark }) {
       </button>
 
       {/* Drawer Overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs animate-fadeIn">
+      {isOpen && typeof document !== 'undefined' && createPortal(
+        <div className="fixed inset-0 z-[9999] flex justify-end bg-black/50 backdrop-blur-xs animate-fadeIn" onClick={() => setIsOpen(false)}>
           <div 
+            onClick={(e) => e.stopPropagation()}
             className="w-full max-w-md h-full bg-[var(--card-bg)] border-l border-[var(--border)] shadow-2xl flex flex-col overflow-hidden text-[var(--fg)] animate-slideLeft"
           >
             {/* Drawer Header */}
@@ -159,7 +161,8 @@ export default function NotificationCenter({ dark }) {
               Strictly adheres to RBI Fair Practices Code (FPC) Multi-Channel Messaging Standards.
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   Zap, Smartphone, ShieldCheck, CheckCircle2, RefreshCw, X, 
   ArrowRight, FileCode, Check, AlertCircle, Radio, Database, Landmark 
@@ -116,9 +117,9 @@ export default function ApiWebhookModal({ dark }) {
       </button>
 
       {/* Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
-          <div className="w-full max-w-3xl bg-[var(--card-bg)] border border-[var(--border)] text-[var(--fg)] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      {isOpen && typeof document !== 'undefined' && createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150" onClick={() => setIsOpen(false)}>
+          <div className="w-full max-w-3xl bg-[var(--card-bg)] border border-[var(--border)] text-[var(--fg)] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="p-5 border-b border-[var(--border)] flex items-center justify-between bg-[var(--muted-bg)]/50">
               <div className="flex items-center gap-3">
@@ -380,7 +381,8 @@ export default function ApiWebhookModal({ dark }) {
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
