@@ -87,165 +87,163 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
 
   return (
     <div ref={containerRef} className="relative">
-      {/* Popover Control Panel (Appears upwards when clicked) */}
+      {/* Centered Modal Overlay (Prevents UI Bleed/Overlap) */}
       {isOpen && (
-        <div className="absolute bottom-14 left-0 sm:-left-6 w-80 sm:w-96 max-w-[calc(100vw-2.5rem)] rounded-2xl border border-[var(--gold)]/40 bg-[var(--card-bg)]/98 backdrop-blur-xl shadow-2xl p-4 text-xs space-y-3.5 mb-1 animate-in fade-in slide-in-from-bottom-2 duration-200 z-50">
-          {/* Header */}
-          <div className="flex items-center justify-between border-b border-[var(--border)] pb-2.5">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-lg bg-[var(--gold)]/10 text-[var(--gold-dark)] flex items-center justify-center border border-[var(--gold)]/20">
-                <Clock className="w-3.5 h-3.5" />
-              </div>
-              <div>
-                <div className="font-bold text-xs text-[var(--fg)] flex items-center gap-1.5">
-                  <span>Portfolio Time Machine</span>
-                  <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 font-bold">
-                    LIVE
-                  </span>
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
+          onClick={() => setIsOpen(false)}
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-md rounded-3xl border border-[var(--gold)]/40 bg-[var(--card-bg)] text-[var(--fg)] shadow-2xl p-6 text-xs space-y-4 animate-in zoom-in-95 duration-150"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between border-b border-[var(--border)] pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-[var(--gold)]/10 text-[var(--gold-dark)] flex items-center justify-center border border-[var(--gold)]/30">
+                  <Clock className="w-4 h-4" />
                 </div>
-                <div className="text-[10px] text-[var(--muted-fg)]">
-                  Simulate real-world date progression & DPD
+                <div>
+                  <div className="font-bold text-sm text-[var(--fg)] flex items-center gap-1.5">
+                    <span>Portfolio Time Machine</span>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 font-bold">
+                      LIVE
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-[var(--muted-fg)]">
+                    Simulate real-world date progression, NACH sweeps & DPD
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              className="p-1 rounded-lg text-[var(--muted-fg)] hover:text-[var(--fg)] hover:bg-[var(--muted-bg)] cursor-pointer"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
-
-          {/* Current Date Ribbon */}
-          <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-[var(--muted-bg)] border border-[var(--border)] font-mono text-[11px]">
-            <div className="flex items-center gap-1.5 text-[var(--muted-fg)]">
-              <Calendar className="w-3.5 h-3.5 text-[var(--gold-dark)]" />
-              <span>Simulated Date:</span>
-            </div>
-            <div className="font-bold text-[var(--fg)]">
-              {status.simulatedDate} <span className="text-[var(--gold-dark)]">(Day +{status.daysOffset})</span>
-            </div>
-          </div>
-
-          {/* Action Fast-Forward Tiles */}
-          <div className="space-y-1.5">
-            <div className="text-[10px] font-mono uppercase tracking-wider text-[var(--muted-fg)] font-semibold">
-              Fast-Forward Controls
-            </div>
-
-            <div className="grid grid-cols-1 gap-2">
-              {/* +30 Days (Primary) */}
               <button
                 type="button"
-                onClick={() => handleFastForward(30)}
-                disabled={loading}
-                className="p-2.5 rounded-xl border border-[var(--gold)]/50 bg-[var(--gold)]/10 hover:bg-[var(--gold)]/20 text-left transition-all cursor-pointer disabled:opacity-50 flex items-center justify-between group"
+                onClick={() => setIsOpen(false)}
+                className="w-7 h-7 rounded-lg flex items-center justify-center text-[var(--muted-fg)] hover:text-[var(--fg)] hover:bg-[var(--muted-bg)] cursor-pointer transition-colors"
               >
-                <div className="flex items-center gap-2">
-                  <div className="p-1.5 rounded-lg bg-[var(--gold)]/20 text-[var(--gold-dark)]">
-                    <Zap className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[var(--gold-dark)] text-xs">
-                      +30 Days (Monthly NACH Cycle)
-                    </div>
-                    <div className="text-[10px] text-[var(--muted-fg)]">
-                      Executes monthly sweeps, accrues 18% penal, triggers Stage 2/3
-                    </div>
-                  </div>
-                </div>
-                <FastForward className="w-4 h-4 text-[var(--gold-dark)] shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                <X className="w-4 h-4" />
               </button>
+            </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                {/* +7 Days */}
-                <button
-                  type="button"
-                  onClick={() => handleFastForward(7)}
-                  disabled={loading}
-                  className="p-2 rounded-xl border border-[var(--border)] bg-[var(--bg)] hover:border-[var(--gold)]/60 text-left transition-all cursor-pointer disabled:opacity-50"
-                >
-                  <div className="font-bold text-xs text-[var(--fg)] flex items-center gap-1">
-                    <FastForward className="w-3 h-3 text-amber-500" />
-                    <span>+7 Days</span>
-                  </div>
-                  <div className="text-[10px] text-[var(--muted-fg)]">
-                    Grace window & initial bounces
-                  </div>
-                </button>
-
-                {/* +90 Days */}
-                <button
-                  type="button"
-                  onClick={() => handleFastForward(90)}
-                  disabled={loading}
-                  className="p-2 rounded-xl border border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20 text-left transition-all cursor-pointer disabled:opacity-50"
-                >
-                  <div className="font-bold text-xs text-rose-400 flex items-center gap-1">
-                    <AlertTriangle className="w-3 h-3 text-rose-400" />
-                    <span>+90 Days</span>
-                  </div>
-                  <div className="text-[10px] text-[var(--muted-fg)]">
-                    Stage 4 NPA & CIBIL report
-                  </div>
-                </button>
+            {/* Current Date Ribbon */}
+            <div className="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-[var(--muted-bg)] border border-[var(--border)] font-mono text-xs">
+              <div className="flex items-center gap-2 text-[var(--muted-fg)]">
+                <Calendar className="w-4 h-4 text-[var(--gold-dark)]" />
+                <span>Simulated Date:</span>
+              </div>
+              <div className="font-bold text-[var(--fg)] text-sm">
+                {status.simulatedDate} <span className="text-[var(--gold-dark)]">(Day +{status.daysOffset})</span>
               </div>
             </div>
-          </div>
 
-          {/* Feedback Toast Inside Panel */}
-          {lastAction && (
-            <div className="text-[11px] font-mono text-emerald-500 bg-emerald-500/10 px-3 py-2 rounded-xl border border-emerald-500/30 flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-              <span className="truncate">{lastAction.text}</span>
+            {/* Action Fast-Forward Tiles */}
+            <div className="space-y-2">
+              <div className="text-[10px] font-mono uppercase tracking-wider text-[var(--muted-fg)] font-bold">
+                Advance Timeline
+              </div>
+
+              <div className="grid grid-cols-1 gap-2">
+                {/* +30 Days (Primary) */}
+                <button
+                  type="button"
+                  onClick={() => handleFastForward(30)}
+                  disabled={loading}
+                  className="p-3 rounded-2xl border border-[var(--gold)]/50 bg-[var(--gold)]/10 hover:bg-[var(--gold)]/20 text-left transition-all cursor-pointer disabled:opacity-50 flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-2 rounded-xl bg-[var(--gold)]/20 text-[var(--gold-dark)]">
+                      <Zap className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-[var(--gold-dark)] text-xs">
+                        +30 Days (Monthly NACH Cycle)
+                      </div>
+                      <div className="text-[10px] text-[var(--muted-fg)]">
+                        Executes monthly sweeps, accrues 18% penal, advances loan stages
+                      </div>
+                    </div>
+                  </div>
+                  <FastForward className="w-4 h-4 text-[var(--gold-dark)] shrink-0 group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                <div className="grid grid-cols-2 gap-2">
+                  {/* +7 Days */}
+                  <button
+                    type="button"
+                    onClick={() => handleFastForward(7)}
+                    disabled={loading}
+                    className="p-2.5 rounded-2xl border border-[var(--border)] bg-[var(--card-bg)] hover:border-[var(--gold)]/60 text-left transition-all cursor-pointer disabled:opacity-50"
+                  >
+                    <div className="font-bold text-xs text-[var(--fg)] flex items-center gap-1.5">
+                      <FastForward className="w-3.5 h-3.5 text-amber-500" />
+                      <span>+7 Days</span>
+                    </div>
+                    <div className="text-[10px] text-[var(--muted-fg)] mt-0.5">
+                      Grace window & initial bounces
+                    </div>
+                  </button>
+
+                  {/* +90 Days */}
+                  <button
+                    type="button"
+                    onClick={() => handleFastForward(90)}
+                    disabled={loading}
+                    className="p-2.5 rounded-2xl border border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20 text-left transition-all cursor-pointer disabled:opacity-50"
+                  >
+                    <div className="font-bold text-xs text-rose-400 flex items-center gap-1.5">
+                      <AlertTriangle className="w-3.5 h-3.5 text-rose-400" />
+                      <span>+90 Days</span>
+                    </div>
+                    <div className="text-[10px] text-[var(--muted-fg)] mt-0.5">
+                      Stage 4 NPA & recovery triggers
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
-          )}
 
-          {/* Reset Baseline Seed Button */}
-          <div className="pt-2 border-t border-[var(--border)] flex items-center justify-between">
-            <button
-              type="button"
-              onClick={handleReset}
-              disabled={loading}
-              className="text-[11px] font-semibold text-rose-400 hover:text-rose-300 hover:underline flex items-center gap-1 cursor-pointer disabled:opacity-50"
-            >
-              <RotateCcw className={`w-3 h-3 ${loading ? 'animate-spin' : ''}`} />
-              <span>Reset to Day 0 (Baseline Seed)</span>
-            </button>
-            <span className="text-[10px] text-[var(--muted-fg)] font-mono">180 MSMEs</span>
+            {/* Feedback Toast Inside Panel */}
+            {lastAction && (
+              <div className="text-[11px] font-mono text-emerald-500 bg-emerald-500/10 px-3.5 py-2.5 rounded-2xl border border-emerald-500/30 flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 shrink-0" />
+                <span className="truncate">{lastAction.text}</span>
+              </div>
+            )}
+
+            {/* Reset Baseline Seed Button */}
+            <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between">
+              <button
+                type="button"
+                onClick={handleReset}
+                disabled={loading}
+                className="text-xs font-semibold text-rose-400 hover:text-rose-300 hover:underline flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+              >
+                <RotateCcw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
+                <span>Reset to Day 0</span>
+              </button>
+              <span className="text-[10px] text-[var(--muted-fg)] font-mono">180 MSMEs • 322 Loans</span>
+            </div>
           </div>
         </div>
       )}
 
-      {/* Floating Launcher Pill Button */}
+      {/* Trigger Button */}
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className="h-10 flex items-center gap-2 px-3.5 rounded-full shadow-lg border transition-all hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md shrink-0"
+        onClick={() => setIsOpen(true)}
+        className="h-9 flex items-center gap-2 px-3 rounded-xl border transition-all hover:border-[var(--gold)] active:scale-95 cursor-pointer shrink-0 font-mono text-xs font-bold"
         style={{
-          backgroundColor: dark ? "#14181F" : "#FFFFFF",
-          borderColor: isOpen ? "var(--gold)" : dark ? "rgba(212, 175, 55, 0.5)" : "rgba(0, 0, 0, 0.15)",
-          color: "var(--gold-dark)",
+          backgroundColor: dark ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
+          borderColor: isOpen ? "var(--gold)" : dark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
+          color: dark ? "#FFFFFF" : "#181B18",
         }}
         title="Open Portfolio Time Machine"
       >
-        <div className="relative flex items-center justify-center">
-          <Clock className="w-4 h-4 text-[var(--gold-dark)]" />
-          <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-        </div>
-        <span className="font-mono font-bold text-xs text-[var(--fg)]">
-          Day +{status.daysOffset}
-        </span>
-        <span className="text-[10px] text-[var(--muted-fg)] hidden sm:inline font-mono">
+        <Clock className="w-3.5 h-3.5 text-amber-500" />
+        <span>Day +{status.daysOffset}</span>
+        <span className="text-[10px] text-[var(--muted-fg)] hidden md:inline font-normal">
           ({status.simulatedDate})
         </span>
-        {isOpen ? (
-          <ChevronDown className="w-3.5 h-3.5 text-[var(--muted-fg)]" />
-        ) : (
-          <ChevronUp className="w-3.5 h-3.5 text-[var(--muted-fg)]" />
-        )}
       </button>
     </div>
   );

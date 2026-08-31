@@ -100,16 +100,21 @@ export default function ApiWebhookModal() {
 
   return (
     <div className="relative">
-      {/* Floating Trigger Button */}
+      {/* Trigger Button */}
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="h-10 flex items-center gap-2 px-3.5 rounded-full bg-[var(--card-bg)] border border-[var(--border)] text-[var(--fg)] shadow-lg hover:border-[var(--gold)] active:scale-95 transition-all text-xs font-bold cursor-pointer shrink-0"
+        className="h-9 flex items-center gap-2 px-3 rounded-xl border transition-all hover:border-amber-500/50 active:scale-95 text-xs font-semibold cursor-pointer shrink-0"
+        style={{
+          backgroundColor: dark ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
+          borderColor: isOpen ? "rgb(245, 158, 11)" : dark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
+          color: dark ? "#FFFFFF" : "#181B18",
+        }}
         title="Live Fintech APIs & Webhook Simulator"
       >
-        <Zap className="w-4 h-4 text-amber-500 animate-pulse" />
+        <Zap className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
         <span className="hidden sm:inline">Fintech APIs</span>
-        <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
       </button>
 
       {/* Modal */}

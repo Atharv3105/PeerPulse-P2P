@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Sparkles, Minimize2, ChevronUp } from 'lucide-react';
 
 // Layouts
 import BorrowerPortalLayout from './components/layout/BorrowerPortalLayout';
@@ -41,6 +42,9 @@ export default function App() {
     const saved = localStorage.getItem('peerpulse-theme');
     return saved ? saved === 'dark' : true;
   });
+
+  // Dock Minimize state
+  const [dockMinimized, setDockMinimized] = useState(false);
 
   useEffect(() => {
     if (dark) {
@@ -254,28 +258,51 @@ export default function App() {
       {/* Global Interactive Simulation & Copilot Dock */}
       <aside 
         aria-label="Simulation & AI Copilot Controls"
-        className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 max-w-[calc(100vw-1.5rem)]"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 select-none max-w-[calc(100vw-2rem)]"
       >
-        <div className="flex items-center gap-2 sm:gap-2.5 p-1.5 sm:p-2 rounded-full border border-[var(--border)] bg-[var(--card-bg)]/85 backdrop-blur-xl shadow-2xl transition-all">
-          {/* Global Time Machine Simulation Controls */}
-          <TimeMachineBar dark={dark} />
+        {dockMinimized ? (
+          <button
+            type="button"
+            onClick={() => setDockMinimized(false)}
+            className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-[var(--gold)]/50 bg-[var(--card-bg)] text-[var(--fg)] shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer font-semibold text-xs"
+            title="Expand Simulation & AI Copilot Lab"
+          >
+            <Sparkles className="w-4 h-4 text-amber-500" />
+            <span>Simulation Lab</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          </button>
+        ) : (
+          <div className="flex items-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl border border-[var(--border)] bg-[var(--card-bg)]/95 backdrop-blur-xl shadow-[0_10px_35px_rgba(0,0,0,0.35)] transition-all">
+            {/* Global Time Machine Simulation Controls */}
+            <TimeMachineBar dark={dark} />
 
-          {/* Live Fintech API & Webhook Simulator */}
-          <ApiWebhookModal />
+            {/* Live Fintech API & Webhook Simulator */}
+            <ApiWebhookModal />
 
-          {/* AI LLM Credit Copilot Assistant */}
-          <CreditCopilotModal 
-            activeBorrowerId={activeBorrowerId}
-            activeLenderId={activeLenderId}
-            currentRole={currentRole}
-            authUser={authUser}
-          />
+            {/* AI LLM Credit Copilot Assistant */}
+            <CreditCopilotModal 
+              activeBorrowerId={activeBorrowerId}
+              activeLenderId={activeLenderId}
+              currentRole={currentRole}
+              authUser={authUser}
+            />
 
-          <div className="h-5 w-px bg-[var(--border)] mx-0.5 hidden sm:block" />
+            <div className="h-5 w-px bg-[var(--border)] mx-0.5" />
 
-          {/* Universal Multi-Channel Notification Gateway Simulator */}
-          <NotificationCenter dark={dark} />
-        </div>
+            {/* Universal Multi-Channel Notification Gateway Simulator */}
+            <NotificationCenter dark={dark} />
+
+            {/* Minimize Toggle */}
+            <button
+              type="button"
+              onClick={() => setDockMinimized(true)}
+              className="w-7 h-7 rounded-xl flex items-center justify-center text-[var(--muted-fg)] hover:text-[var(--fg)] hover:bg-[var(--muted-bg)] transition-colors cursor-pointer"
+              title="Minimize Lab Bar"
+            >
+              <Minimize2 className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
       </aside>
     </div>
   );

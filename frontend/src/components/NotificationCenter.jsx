@@ -56,21 +56,21 @@ export default function NotificationCenter({ dark }) {
 
   return (
     <div className="relative">
-      {/* Floating Trigger Button */}
+      {/* Trigger Button */}
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="h-10 w-10 rounded-full shadow-lg border flex items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer shrink-0"
+        className="h-9 w-9 rounded-xl border flex items-center justify-center transition-all hover:border-[var(--gold)] active:scale-95 cursor-pointer shrink-0"
         style={{
-          backgroundColor: dark ? "#14181F" : "#FFFFFF",
-          borderColor: dark ? "rgba(212, 175, 55, 0.4)" : "rgba(0, 0, 0, 0.15)",
-          color: "#D4AF37",
+          backgroundColor: dark ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
+          borderColor: isOpen ? "var(--gold)" : dark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
+          color: dark ? "#FFFFFF" : "#181B18",
         }}
         title="Multi-Channel Notification Gateway (Live Simulator)"
       >
         <div className="relative flex items-center justify-center">
-          <Bell className="w-4 h-4" />
-          <span className="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 text-white text-[8px] font-bold flex items-center justify-center font-mono animate-pulse">
+          <Bell className="w-4 h-4 text-amber-500" />
+          <span className="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 text-white text-[8px] font-bold flex items-center justify-center font-mono">
             {notifications.length}
           </span>
         </div>

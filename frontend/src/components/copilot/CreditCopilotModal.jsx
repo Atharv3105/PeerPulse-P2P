@@ -271,14 +271,14 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
 
   return (
     <div className="relative">
-      {/* Floating Trigger Button */}
+      {/* Trigger Button */}
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="h-10 flex items-center gap-2 px-4 rounded-full bg-[#1A211D] dark:bg-[var(--gold)] text-white dark:text-black shadow-lg hover:scale-105 active:scale-95 transition-all font-bold text-xs border border-[var(--gold)]/40 cursor-pointer shrink-0"
+        className="h-9 flex items-center gap-2 px-3.5 rounded-xl bg-[var(--gold)] text-black font-bold text-xs shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer shrink-0 border border-[var(--gold-dark)]/40"
         title="Open Credit Risk Copilot"
       >
-        <Sparkles className="w-4 h-4 text-[var(--gold)] dark:text-black" />
+        <Sparkles className="w-3.5 h-3.5 text-black" />
         <span>AI Copilot</span>
       </button>
 
