@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Surfaces - Warm Luxury Cream / Parchment for Light Mode */
+  --bg: #F5EFEA;
+  --bg-subtle: #ECE4DC;
+  --fg: #111411;
+  --card-bg: #FFFFFF;
+  --card-fg: #111411;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.22);
+  --muted-bg: #EAE2D8;
+  --muted-fg: #3E3B35;
+
+  /* Executive Leather Specifics */
+  --desk-bg: #F5EFEA;
+  --desk-text: #111411;
+  --desk-muted: #3E3B35;
+  --desk-border: rgba(0, 0, 0, 0.12);
+  --desk-stitch: rgba(180, 155, 125, 0.6);
+
+  /* Gold & Brass Accents */
+  --gold: #C5A059;
+  --gold-light: #F7F0E3;
+  --gold-dark: #9A7B38;
+  --gold-glow: rgba(197, 160, 89, 0.25);
+
+  /* Glass layer */
+  --glass-bg: rgba(245, 239, 234, 0.88);
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  /* Action Buttons */
+  --btn-primary-bg: #1A261F;
+  --btn-primary-fg: #FFFFFF;
+  --btn-secondary-bg: #EAE2D7;
+  --btn-secondary-fg: #181B18;
+
+  /* Portal accent */
+  --accent: #1A261F;
+  --accent-soft: #EAE3DA;
+  --accent-ring: rgba(26, 38, 31, 0.2);
+
+  /* Grade colors */
+  --grade-a: #15803D;
+  --grade-a-soft: #ECFDF5;
+  --grade-b: #1E40AF;
+  --grade-b-soft: #EFF6FF;
+  --grade-c: #B45309;
+  --grade-c-soft: #FFFBEB;
+  --grade-x: #B91C1C;
+  --grade-x-soft: #FEF2F2;
+
+  /* Loan status colors */
+  --s-active: #15803D;
+  --s-active-soft: #ECFDF5;
+  --s-delayed: #C2410C;
+  --s-delayed-soft: #FFF7ED;
+  --s-risk: #B91C1C;
+  --s-risk-soft: #FEF2F2;
+  --s-npa: #881337;
+  --s-npa-soft: #FFF1F2;
+  --s-settled: #475569;
+  --s-settled-soft: #F8FAFC;
+  --s-monitor: #A16207;
+  --s-monitor-soft: #FEFCE8;
+  --s-blocked: #334155;
+  --s-blocked-soft: #F1F5F9;
+}
+
+.dark, [data-theme="dark"] {
+  /* Surfaces - Obsidian / Executive Dark Leather */
+  --bg: #0E1114;
+  --bg-subtle: #13171C;
+  --fg: #F3F4F6;
+  --card-bg: #14181F;
+  --card-fg: #F3F4F6;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --muted-bg: #181D26;
+  --muted-fg: #9CA3AF;
+
+  /* Executive Leather Specifics */
+  --desk-bg: #121517;
+  --desk-text: #F3F4F6;
+  --desk-muted: #9CA3AF;
+  --desk-border: rgba(255, 255, 255, 0.08);
+  --desk-stitch: rgba(197, 160, 89, 0.35);
+
+  /* Gold & Brass Accents */
+  --gold: #D4AF37;
+  --gold-light: rgba(212, 175, 55, 0.14);
+  --gold-dark: #C5A059;
+  --gold-glow: rgba(212, 175, 55, 0.3);
+
+  /* Glass layer */
+  --glass-bg: rgba(14, 17, 20, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Action Buttons */
+  --btn-primary-bg: #1D2E24;
+  --btn-primary-fg: #FFFFFF;
+  --btn-secondary-bg: #D8CBB8;
+  --btn-secondary-fg: #14181F;
+
+  /* Portal accent */
+  --accent: #C5A059;
+  --accent-soft: rgba(197, 160, 89, 0.15);
+  --accent-ring: rgba(197, 160, 89, 0.3);
+
+  /* Grade colors */
+  --grade-a: #22C55E;
+  --grade-a-soft: rgba(34, 197, 94, 0.16);
+  --grade-b: #3B82F6;
+  --grade-b-soft: rgba(59, 130, 246, 0.16);
+  --grade-c: #F59E0B;
+  --grade-c-soft: rgba(245, 158, 11, 0.16);
+  --grade-x: #EF4444;
+  --grade-x-soft: rgba(239, 68, 68, 0.16);
+
+  /* Status colors */
+  --s-active: #22C55E;
+  --s-active-soft: rgba(34, 197, 94, 0.15);
+  --s-delayed: #F97316;
+  --s-delayed-soft: rgba(249, 115, 22, 0.16);
+  --s-risk: #EF4444;
+  --s-risk-soft: rgba(239, 68, 68, 0.15);
+  --s-npa: #F43F5E;
+  --s-npa-soft: rgba(244, 63, 94, 0.18);
+  --s-settled: #94A3B8;
+  --s-settled-soft: rgba(148, 163, 184, 0.15);
+  --s-monitor: #EAB308;
+  --s-monitor-soft: rgba(234, 179, 8, 0.15);
+  --s-blocked: #64748B;
+  --s-blocked-soft: rgba(100, 116, 139, 0.18);
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* ── Universal Light Theme Readability & High-Contrast Overrides ─────── */
+html:not(.dark) {
+  --fg: #111411;
+  --muted-fg: #3E3B35;
+  --desk-muted: #3E3B35;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.22);
+}
+
+/* Fix hardcoded light gray text on light backgrounds */
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-gray-400,
+html:not(.dark) .text-zinc-400 {
+  color: #4B5563 !important; /* Rich readable gray-600 */
+}
+
+html:not(.dark) .text-slate-500,
+html:not(.dark) .text-gray-500,
+html:not(.dark) .text-zinc-500 {
+  color: #374151 !important; /* Deep gray-700 */
+}
+
+html:not(.dark) .text-slate-300,
+html:not(.dark) .text-gray-300,
+html:not(.dark) .text-zinc-300 {
+  color: #1F2937 !important; /* Deep charcoal */
+}
+
+/* Fix hardcoded pure white text on light backgrounds (except on dark buttons) */
+html:not(.dark) h1.text-white,
+html:not(.dark) h2.text-white,
+html:not(.dark) h3.text-white,
+html:not(.dark) h4.text-white,
+html:not(.dark) h5.text-white,
+html:not(.dark) p.text-white,
+html:not(.dark) span.text-white:not([class*="bg-"]):not(button *),
+html:not(.dark) td.text-white,
+html:not(.dark) th.text-white,
+html:not(.dark) div.text-white:not([class*="bg-"]):not(button *) {
+  color: #111411 !important;
+}
+
+/* Fix dark background containers in light mode */
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-slate-950\/80,
+html:not(.dark) .bg-slate-950\/90,
+html:not(.dark) .bg-slate-900,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/95 {
+  background-color: #FAF6F0 !important;
+  color: #181B18 !important;
+}
+
+html:not(.dark) .bg-slate-900\/40 {
+  background-color: rgba(234, 227, 218, 0.6) !important;
+}
+
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-700 {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not(.dark) .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not(.dark) .glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+}
+
+html:not(.dark) .shadow-neu-inset {
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.06), inset -1px -1px 3px rgba(255, 255, 255, 0.8) !important;
+}
+
+html:not(.dark) .text-emerald-400 {
+  color: #047857 !important; /* Darker emerald for light backgrounds */
+}
+
+html:not(.dark) .text-amber-400 {
+  color: #B45309 !important; /* Darker amber for light backgrounds */
+}
+
+html:not(.dark) .text-rose-400 {
+  color: #BE123C !important; /* Darker rose for light backgrounds */
+}
+
+html:not(.dark) .text-blue-400 {
+  color: #1D4ED8 !important; /* Darker blue for light backgrounds */
+}
+
+/* ── Realistic Executive Desk & Dossier Styles ──────────────────── */
+
+/* Desk Mat / Leather Backing */
+.executive-desk-canvas {
+  background-color: var(--desk-bg);
+  color: var(--desk-text);
+  position: relative;
+}
+
+.stitched-border-bottom {
+  border-bottom: 1px dashed var(--desk-stitch);
+}
+
+.stitched-seam {
+  border: 1px dashed var(--desk-stitch);
+  border-radius: 1.25rem;
+}
+
+/* Brass Rivet Knob */
+.brass-rivet {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFF0C2 0%, #D4AF37 40%, #8C6D23 85%, #594211 100%);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.brass-rivet::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 1px;
+  background: rgba(89, 66, 17, 0.8);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.brass-rivet-large {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFF0C2 0%, #D4AF37 40%, #8C6D23 85%, #594211 100%);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.brass-rivet-large::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 2px;
+  background: rgba(89, 66, 17, 0.85);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Stacked Parchment Paper Sheets (The Assessment Card) */
+.stacked-paper-sheet {
+  background-color: #F8F4EE;
+  color: #1A1D1A;
+  border-radius: 1rem;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    -6px 10px 24px -4px rgba(0, 0, 0, 0.4),
+    0 20px 40px -10px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.stacked-paper-underlay-1 {
+  position: absolute;
+  inset: -4px -6px -6px -4px;
+  background-color: #EDE4D8;
+  border-radius: 1.1rem;
+  z-index: -1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.stacked-paper-underlay-2 {
+  position: absolute;
+  inset: -8px -12px -12px -8px;
+  background-color: #E2D7C7;
+  border-radius: 1.2rem;
+  z-index: -2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Luxury Executive Fountain Pen */
+.executive-fountain-pen {
+  width: 14px;
+  height: 310px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #151815 0%, #3B423B 40%, #1A1E1A 80%, #0D100D 100%);
+  box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.5), inset 1px 0 1px rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.executive-fountain-pen .pen-gold-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8C6D23 0%, #F5D77F 50%, #8C6D23 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.executive-fountain-pen .pen-clip {
+  position: absolute;
+  top: 24px;
+  right: -3px;
+  width: 3px;
+  height: 70px;
+  background: linear-gradient(180deg, #F5D77F 0%, #9A7B38 100%);
+  border-radius: 2px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.executive-fountain-pen .pen-nib {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 24px solid #D4AF37;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+/* Embossed Dark Circular Icon on Parchment */
+.embossed-circle-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2A3038 0%, #15181E 70%, #0C0E12 100%);
+  border: 1.5px solid #8C6D23;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37;
+}
+
+/* Glass & Neumorphic inputs */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.neu-input {
+  background-color: var(--muted-bg);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.neu-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}

@@ -1,0 +1,54 @@
+{
+  "applicationId": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+  "borrower": {
+    "borrowerId": "b1111111-1111-1111-1111-111111111111",
+    "name": "Amit Deshmukh",
+    "mobile": "+919876543210",
+    "aadhaarVerified": true,
+    "businessName": "Deshmukh Precision Engineering",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-MH-03-0029182",
+    "gstNumber": "27AAACD9910P1Z8",
+    "platformTrustScore": 88
+  },
+  "loanAmount": 500000,
+  "tenure": 12,
+  "purpose": "Purchase CNC Milling Tooling & Raw Steel Stock",
+  "businessCategory": "manufacturing",
+  "acieScore": {
+    "total": 710,
+    "grade": "B",
+    "breakdown": {
+      "cashflow": 72,
+      "upi": 70,
+      "gst": 75,
+      "operational": 68,
+      "aaData": 66
+    },
+    "fraudFlags": [],
+    "confidence": "High",
+    "fraudRiskFlag": "None",
+    "dataCompleteness": 90,
+    "explainability": {
+      "positiveFactors": [
+        "Consistent manufacturing invoices",
+        "Established 5-year Udyam track record"
+      ],
+      "negativeFactors": [
+        "Moderate debt-to-income ratio"
+      ],
+      "improvementTips": [
+        "Maintain current cash reserves above 15% of loan"
+      ]
+    }
+  },
+  "fundingStatus": {
+    "funded": 500000,
+    "target": 500000,
+    "percentFunded": 100,
+    "lenders": []
+  },
+  "status": "ACTIVE",
+  "createdAt": "2025-11-15T10:00:00.000Z",
+  "updatedAt": "2025-11-15T10:00:00.000Z"
+}

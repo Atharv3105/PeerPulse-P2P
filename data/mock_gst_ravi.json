@@ -1,0 +1,40 @@
+{
+  "gstin": "27AAACR4920M1Z2",
+  "legalName": "Ravi Kumar Verma",
+  "tradeName": "Ravi General Stores",
+  "financialYear": "2025-2026",
+  "filingStatus": "DELAYED_FILINGS",
+  "declaredAnnualTurnover": 2800000,
+  "quarterlyFilings": [
+    {
+      "quarter": "Q1",
+      "grossTurnover": 700000,
+      "taxPaid": 35000,
+      "filedOnTime": true,
+      "arn": "AA2706250082191"
+    },
+    {
+      "quarter": "Q2",
+      "grossTurnover": 700000,
+      "taxPaid": 35000,
+      "filedOnTime": false,
+      "arn": "AA2709250091823"
+    },
+    {
+      "quarter": "Q3",
+      "grossTurnover": 700000,
+      "taxPaid": 35000,
+      "filedOnTime": false,
+      "arn": "AA2712250019284"
+    },
+    {
+      "quarter": "Q4",
+      "grossTurnover": 700000,
+      "taxPaid": 35000,
+      "filedOnTime": true,
+      "arn": "AA2803250037192"
+    }
+  ],
+  "businessCategory": "retail",
+  "verifiedByGSTN": true
+}

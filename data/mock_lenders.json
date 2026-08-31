@@ -1,0 +1,56 @@
+[
+  {
+    "lenderId": "l1111111-1111-1111-1111-111111111111",
+    "name": "Vikram Sethi",
+    "email": "vikram.sethi@example.com",
+    "mobile": "+919811122233",
+    "riskAppetite": "Conservative",
+    "sectorPreference": "manufacturing",
+    "tenurePreference": [
+      3,
+      6,
+      12
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 450000,
+    "totalExposure": 200000,
+    "activeInvestments": []
+  },
+  {
+    "lenderId": "l2222222-2222-2222-2222-222222222222",
+    "name": "Ananya Roy",
+    "email": "ananya.roy@example.com",
+    "mobile": "+919822233344",
+    "riskAppetite": "Moderate",
+    "sectorPreference": "textile",
+    "tenurePreference": [
+      6,
+      12,
+      24
+    ],
+    "denominationPreference": 50000,
+    "walletBalance": 700000,
+    "totalExposure": 250000,
+    "activeInvestments": []
+  },
+  {
+    "lenderId": "l3333333-3333-3333-3333-333333333333",
+    "name": "Karan Singhal",
+    "email": "karan.singhal@example.com",
+    "mobile": "+919833344455",
+    "riskAppetite": "Aggressive",
+    "sectorPreference": "any",
+    "tenurePreference": [
+      3,
+      6,
+      9,
+      12,
+      24,
+      36
+    ],
+    "denominationPreference": 25000,
+    "walletBalance": 850000,
+    "totalExposure": 150000,
+    "activeInvestments": []
+  }
+]

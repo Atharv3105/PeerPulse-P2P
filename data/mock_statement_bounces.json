@@ -1,0 +1,133 @@
+{
+  "accountNumber": "91200182749102",
+  "accountType": "CURRENT",
+  "bank": "State Bank of India",
+  "holderName": "Ravi Kumar Verma",
+  "businessName": "Ravi General Stores",
+  "period": {
+    "from": "2025-04-01",
+    "to": "2026-03-31"
+  },
+  "summary": {
+    "totalCredit": 4120000,
+    "totalDebit": 3950000,
+    "netCashFlow": 170000,
+    "bounceCount": 2,
+    "avgMonthlyBalance": 82000,
+    "creditTransactionCount": 512,
+    "debitTransactionCount": 430
+  },
+  "monthlyMetrics": [
+    {
+      "month": "2025-04",
+      "credit": 340000,
+      "debit": 325000,
+      "closingBalance": 75000,
+      "bounces": 0
+    },
+    {
+      "month": "2025-05",
+      "credit": 350000,
+      "debit": 345000,
+      "closingBalance": 80000,
+      "bounces": 0
+    },
+    {
+      "month": "2025-06",
+      "credit": 330000,
+      "debit": 340000,
+      "closingBalance": 70000,
+      "bounces": 1
+    },
+    {
+      "month": "2025-07",
+      "credit": 360000,
+      "debit": 350000,
+      "closingBalance": 80000,
+      "bounces": 0
+    },
+    {
+      "month": "2025-08",
+      "credit": 345000,
+      "debit": 340000,
+      "closingBalance": 85000,
+      "bounces": 0
+    },
+    {
+      "month": "2025-09",
+      "credit": 320000,
+      "debit": 335000,
+      "closingBalance": 70000,
+      "bounces": 1
+    },
+    {
+      "month": "2025-10",
+      "credit": 370000,
+      "debit": 355000,
+      "closingBalance": 85000,
+      "bounces": 0
+    },
+    {
+      "month": "2025-11",
+      "credit": 350000,
+      "debit": 340000,
+      "closingBalance": 95000,
+      "bounces": 0
+    },
+    {
+      "month": "2025-12",
+      "credit": 340000,
+      "debit": 330000,
+      "closingBalance": 105000,
+      "bounces": 0
+    },
+    {
+      "month": "2026-01",
+      "credit": 335000,
+      "debit": 325000,
+      "closingBalance": 115000,
+      "bounces": 0
+    },
+    {
+      "month": "2026-02",
+      "credit": 330000,
+      "debit": 320000,
+      "closingBalance": 125000,
+      "bounces": 0
+    },
+    {
+      "month": "2026-03",
+      "credit": 350000,
+      "debit": 345000,
+      "closingBalance": 130000,
+      "bounces": 0
+    }
+  ],
+  "vendorDebits": [
+    {
+      "vendor": "Metro Cash and Carry",
+      "category": "wholesale_inventory",
+      "totalAmount": 2100000,
+      "frequency": 36
+    },
+    {
+      "vendor": "Hindustan Unilever Dist",
+      "category": "fmcg_supplies",
+      "totalAmount": 1150000,
+      "frequency": 24
+    },
+    {
+      "vendor": "Shop Rent AutoDebit",
+      "category": "rent",
+      "totalAmount": 360000,
+      "frequency": 12
+    }
+  ],
+  "narrations": [
+    "UPI/CR/712984128/RetailSales",
+    "INWARD CLG BOUNCE/INSUFFICIENT FUNDS/CHQ 982144",
+    "UPI/CR/712984129/PaytmQrMerchant",
+    "NACH DR BOUNCE/BAJAJ FINANCE/RETURN CHARGES APPLIED",
+    "UPI/CR/712984130/PhonePeRetail"
+  ]
+}

@@ -1,0 +1,3384 @@
+[
+  {
+    "_id": "660000000000000000000001",
+    "borrowerId": "BOR-PRIYA-001",
+    "name": "Priya Sharma",
+    "mobile": "+919820192831",
+    "aadhaarVerified": true,
+    "businessName": "Priya Textiles Surat",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-GJ-01-001928",
+    "gstNumber": "24AABCP1928K1Z5",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 98,
+    "activeApplications": [
+      "660000000000000000000020",
+      "6a933027e969bc8658830bd5"
+    ],
+    "createdAt": "2025-01-10T10:00:00.000Z"
+  },
+  {
+    "_id": "660000000000000000000002",
+    "borrowerId": "BOR-RAVI-002",
+    "name": "Ravi Verma",
+    "mobile": "+919830281920",
+    "aadhaarVerified": true,
+    "businessName": "Verma General & Provision Stores",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-MH-02-004928",
+    "gstNumber": "27AABCV8910J1Z3",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 78,
+    "activeApplications": [
+      "660000000000000000000021",
+      "6a933027e969bc8658830bd7"
+    ],
+    "createdAt": "2025-01-15T11:00:00.000Z"
+  },
+  {
+    "_id": "660000000000000000000003",
+    "borrowerId": "BOR-KUMAR-003",
+    "name": "Kumar Chandran",
+    "mobile": "+919840392810",
+    "aadhaarVerified": false,
+    "businessName": "Chandran Freight & Logistics",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-TN-03-009182",
+    "gstNumber": "33AABCC7192H1Z8",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 12,
+    "activeApplications": [
+      "660000000000000000000022",
+      "6a933027e969bc8658830bd9"
+    ],
+    "createdAt": "2025-01-20T12:00:00.000Z"
+  },
+  {
+    "_id": "660000000000000000000004",
+    "borrowerId": "BOR-AMIT-004",
+    "name": "Amit Deshmukh",
+    "mobile": "+919823011920",
+    "aadhaarVerified": true,
+    "businessName": "Deshmukh Precision Engineering Works",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-MH-12-003829",
+    "gstNumber": "27AABCD1029K1Z4",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 68,
+    "activeApplications": [
+      "660000000000000000000023",
+      "6a933027e969bc8658830bdb"
+    ],
+    "createdAt": "2024-11-05T09:00:00.000Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830932",
+    "borrowerId": "BOR-ENT-005",
+    "name": "Tarun Yadav",
+    "mobile": "+919904297839",
+    "aadhaarVerified": true,
+    "businessName": "Apex Yadav Ancillaries",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-WE-29-993969",
+    "gstNumber": "19AOSPY1485S3Z9",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 65,
+    "activeApplications": [
+      "6a933027e969bc8658830a75",
+      "6a933027e969bc8658830bdd"
+    ],
+    "createdAt": "2025-11-30T19:16:55.238Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830933",
+    "borrowerId": "BOR-ENT-006",
+    "name": "Subhash Iyer",
+    "mobile": "+919889880401",
+    "aadhaarVerified": true,
+    "businessName": "Mahalaxmi Iyer Components",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-TA-15-258950",
+    "gstNumber": "33AMRCI5915T2Z9",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 73,
+    "activeApplications": [
+      "6a933027e969bc8658830a77",
+      "6a933027e969bc8658830bdf"
+    ],
+    "createdAt": "2025-10-20T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830934",
+    "borrowerId": "BOR-ENT-007",
+    "name": "Jagdish Bansal",
+    "mobile": "+919239120370",
+    "aadhaarVerified": true,
+    "businessName": "Universal Bansal Components",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-WE-12-540366",
+    "gstNumber": "19ARYCB6870B1Z6",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 84,
+    "activeApplications": [
+      "6a933027e969bc8658830a79",
+      "6a933027e969bc8658830be1"
+    ],
+    "createdAt": "2026-04-02T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830935",
+    "borrowerId": "BOR-ENT-008",
+    "name": "Prakash Roy",
+    "mobile": "+919515906635",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Roy Logistics",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-HA-01-135439",
+    "gstNumber": "06ATZPR6656I2Z7",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 71,
+    "activeApplications": [
+      "6a933027e969bc8658830a7b",
+      "6a933027e969bc8658830be3"
+    ],
+    "createdAt": "2025-08-09T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830936",
+    "borrowerId": "BOR-ENT-009",
+    "name": "Amit Kumar",
+    "mobile": "+919150794753",
+    "aadhaarVerified": true,
+    "businessName": "Standard Kumar Logistics",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-KA-26-908059",
+    "gstNumber": "29AOECK5246T1Z6",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 71,
+    "activeApplications": [
+      "6a933027e969bc8658830a7d",
+      "6a933027e969bc8658830be5"
+    ],
+    "createdAt": "2026-02-02T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830937",
+    "borrowerId": "BOR-ENT-010",
+    "name": "Sanjay Desai",
+    "mobile": "+919941006944",
+    "aadhaarVerified": true,
+    "businessName": "Universal Desai Textiles",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-MA-08-688780",
+    "gstNumber": "27AVMPD8278X2Z6",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 92,
+    "activeApplications": [
+      "6a933027e969bc8658830a7f",
+      "6a933027e969bc8658830be7"
+    ],
+    "createdAt": "2026-06-19T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830938",
+    "borrowerId": "BOR-ENT-011",
+    "name": "Shilpa Srivastava",
+    "mobile": "+919750432098",
+    "aadhaarVerified": false,
+    "businessName": "Venkateshwara Srivastava Logistics",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-TA-06-674826",
+    "gstNumber": "33AUOFS5057Q2Z2",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830a81",
+      "6a933027e969bc8658830be9"
+    ],
+    "createdAt": "2026-03-16T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830939",
+    "borrowerId": "BOR-ENT-012",
+    "name": "Ganesh Bose",
+    "mobile": "+919309625771",
+    "aadhaarVerified": true,
+    "businessName": "Metro Bose Textiles",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-RA-08-830084",
+    "gstNumber": "08ALQFB6557D1Z9",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 94,
+    "activeApplications": [
+      "6a933027e969bc8658830a83",
+      "6a933027e969bc8658830beb"
+    ],
+    "createdAt": "2025-12-15T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc865883093a",
+    "borrowerId": "BOR-ENT-013",
+    "name": "Arjun Khan",
+    "mobile": "+919715810185",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Khan Distributors",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-MA-25-385111",
+    "gstNumber": "27ALHPK8415K1ZA",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830a85",
+      "6a933027e969bc8658830bed"
+    ],
+    "createdAt": "2026-04-13T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc865883093b",
+    "borrowerId": "BOR-ENT-014",
+    "name": "Prashant Jha",
+    "mobile": "+919632874228",
+    "aadhaarVerified": true,
+    "businessName": "Precision Jha Ancillaries",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-GU-10-737129",
+    "gstNumber": "24APIPJ4937P3Z3",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830a87",
+      "6a933027e969bc8658830bef"
+    ],
+    "createdAt": "2025-10-05T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc865883093c",
+    "borrowerId": "BOR-ENT-015",
+    "name": "Divya Singh",
+    "mobile": "+919391373456",
+    "aadhaarVerified": true,
+    "businessName": "Everest Singh Solutions",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-HA-20-850027",
+    "gstNumber": "06ABZPS9096T2Z8",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830a89",
+      "6a933027e969bc8658830bf1"
+    ],
+    "createdAt": "2026-07-02T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc865883093d",
+    "borrowerId": "BOR-ENT-016",
+    "name": "Isha Malhotra",
+    "mobile": "+919388530092",
+    "aadhaarVerified": false,
+    "businessName": "Balaji Malhotra Logistics",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-TE-30-454359",
+    "gstNumber": "36AKGCM6531M3Z4",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 95,
+    "activeApplications": [
+      "6a933027e969bc8658830a8b",
+      "6a933027e969bc8658830bf3"
+    ],
+    "createdAt": "2025-10-17T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc865883093e",
+    "borrowerId": "BOR-ENT-017",
+    "name": "Sneha Nambiar",
+    "mobile": "+919988233024",
+    "aadhaarVerified": true,
+    "businessName": "Apex Nambiar Enterprises",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-MA-12-247349",
+    "gstNumber": "27AAGPN5546C1ZA",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830a8d",
+      "6a933027e969bc8658830bf5"
+    ],
+    "createdAt": "2026-05-23T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc865883093f",
+    "borrowerId": "BOR-ENT-018",
+    "name": "Umesh Trivedi",
+    "mobile": "+919321037808",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Trivedi Solutions",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-GU-28-892885",
+    "gstNumber": "24AHBPT3115P2ZC",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 79,
+    "activeApplications": [
+      "6a933027e969bc8658830a8f",
+      "6a933027e969bc8658830bf7"
+    ],
+    "createdAt": "2025-10-11T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830940",
+    "borrowerId": "BOR-ENT-019",
+    "name": "Chetan Khan",
+    "mobile": "+919784166666",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Khan Textiles",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-KA-21-821523",
+    "gstNumber": "29ARHCK1876B2ZC",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 83,
+    "activeApplications": [
+      "6a933027e969bc8658830a91",
+      "6a933027e969bc8658830bf9"
+    ],
+    "createdAt": "2026-02-05T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830941",
+    "borrowerId": "BOR-ENT-020",
+    "name": "Manish Bose",
+    "mobile": "+919841508487",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Bose Corporation",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-MA-09-930486",
+    "gstNumber": "27ABFPB6135C3ZB",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 88,
+    "activeApplications": [
+      "6a933027e969bc8658830a93",
+      "6a933027e969bc8658830bfb"
+    ],
+    "createdAt": "2026-02-24T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830942",
+    "borrowerId": "BOR-ENT-021",
+    "name": "Karan Nambiar",
+    "mobile": "+919923618827",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Nambiar Fabrics",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-UT-01-883661",
+    "gstNumber": "09ACWFN5863N2Z9",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830a95",
+      "6a933027e969bc8658830bfd"
+    ],
+    "createdAt": "2025-11-26T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830943",
+    "borrowerId": "BOR-ENT-022",
+    "name": "Ravi Swaminathan",
+    "mobile": "+919927719907",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Swaminathan Engineering",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-KA-26-511604",
+    "gstNumber": "29ACIFS2700B1Z8",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830a97",
+      "6a933027e969bc8658830bff"
+    ],
+    "createdAt": "2026-04-06T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830944",
+    "borrowerId": "BOR-ENT-023",
+    "name": "Hari Bose",
+    "mobile": "+919117700617",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Bose Ancillaries",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-PU-28-911539",
+    "gstNumber": "03AOEFB5952M1Z3",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "platformTrustScore": 94,
+    "activeApplications": [
+      "6a933027e969bc8658830a99",
+      "6a933027e969bc8658830c01"
+    ],
+    "createdAt": "2026-02-20T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830945",
+    "borrowerId": "BOR-ENT-024",
+    "name": "Isha Jha",
+    "mobile": "+919324116512",
+    "aadhaarVerified": true,
+    "businessName": "Standard Jha Solutions",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-KA-25-747353",
+    "gstNumber": "29AJGFJ7590M1Z9",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830a9b",
+      "6a933027e969bc8658830c03"
+    ],
+    "createdAt": "2025-12-12T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830946",
+    "borrowerId": "BOR-ENT-025",
+    "name": "Sameer Mishra",
+    "mobile": "+919744189814",
+    "aadhaarVerified": true,
+    "businessName": "Everest Mishra Fabrics",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-HA-11-349602",
+    "gstNumber": "06ARHFM8254K2Z3",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 95,
+    "activeApplications": [
+      "6a933027e969bc8658830a9d",
+      "6a933027e969bc8658830c05"
+    ],
+    "createdAt": "2026-05-16T19:16:55.239Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830947",
+    "borrowerId": "BOR-ENT-026",
+    "name": "Karan Menon",
+    "mobile": "+919541809413",
+    "aadhaarVerified": false,
+    "businessName": "National Menon Components",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-TA-07-115509",
+    "gstNumber": "33ANACM4249D3ZA",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 82,
+    "activeApplications": [
+      "6a933027e969bc8658830a9f",
+      "6a933027e969bc8658830c07"
+    ],
+    "createdAt": "2026-06-09T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830948",
+    "borrowerId": "BOR-ENT-027",
+    "name": "Sameer Pandey",
+    "mobile": "+919247530864",
+    "aadhaarVerified": true,
+    "businessName": "Apex Pandey Industries",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-MA-08-408962",
+    "gstNumber": "27AAECP7547K3ZC",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 95,
+    "activeApplications": [
+      "6a933027e969bc8658830aa1",
+      "6a933027e969bc8658830c09"
+    ],
+    "createdAt": "2025-12-29T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830949",
+    "borrowerId": "BOR-ENT-028",
+    "name": "Jagdish Naik",
+    "mobile": "+919158576388",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Naik Manufacturing",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-UT-04-260516",
+    "gstNumber": "09AGBCN8787Y2Z9",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 73,
+    "activeApplications": [
+      "6a933027e969bc8658830aa3",
+      "6a933027e969bc8658830c0b"
+    ],
+    "createdAt": "2026-07-07T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883094a",
+    "borrowerId": "BOR-ENT-029",
+    "name": "Neha Srivastava",
+    "mobile": "+919238834876",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Srivastava Distributors",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-HA-04-267395",
+    "gstNumber": "06AUQCS9275B3Z7",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 90,
+    "activeApplications": [
+      "6a933027e969bc8658830aa5",
+      "6a933027e969bc8658830c0d"
+    ],
+    "createdAt": "2026-02-13T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883094b",
+    "borrowerId": "BOR-ENT-030",
+    "name": "Rajesh Reddy",
+    "mobile": "+919618861882",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Reddy Engineering",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-GU-07-693487",
+    "gstNumber": "24AZOFR4982E1Z5",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830aa7",
+      "6a933027e969bc8658830c0f"
+    ],
+    "createdAt": "2026-02-16T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883094c",
+    "borrowerId": "BOR-ENT-031",
+    "name": "Gita Dutta",
+    "mobile": "+919895879629",
+    "aadhaarVerified": true,
+    "businessName": "Metro Dutta Trading Co.",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-WE-03-169347",
+    "gstNumber": "19ATPFD3549S1ZC",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830aa9",
+      "6a933027e969bc8658830c11"
+    ],
+    "createdAt": "2025-10-03T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883094d",
+    "borrowerId": "BOR-ENT-032",
+    "name": "Rakesh Patel",
+    "mobile": "+919933777006",
+    "aadhaarVerified": true,
+    "businessName": "Shree Patel Corporation",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-KA-15-392199",
+    "gstNumber": "29AHZCP2280B2Z5",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 72,
+    "activeApplications": [
+      "6a933027e969bc8658830aab",
+      "6a933027e969bc8658830c13"
+    ],
+    "createdAt": "2026-04-13T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883094e",
+    "borrowerId": "BOR-ENT-033",
+    "name": "Sujata Patel",
+    "mobile": "+919463109567",
+    "aadhaarVerified": true,
+    "businessName": "Metro Patel Distributors",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-TE-21-625929",
+    "gstNumber": "36ADGPP8147S1ZB",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 94,
+    "activeApplications": [
+      "6a933027e969bc8658830aad",
+      "6a933027e969bc8658830c15"
+    ],
+    "createdAt": "2026-06-07T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883094f",
+    "borrowerId": "BOR-ENT-034",
+    "name": "Naveen Mukherjee",
+    "mobile": "+919181099537",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Mukherjee Engineering",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-TA-05-901095",
+    "gstNumber": "33ADUPM9790N2ZB",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830aaf",
+      "6a933027e969bc8658830c17"
+    ],
+    "createdAt": "2026-03-18T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830950",
+    "borrowerId": "BOR-ENT-035",
+    "name": "Saurabh Dutta",
+    "mobile": "+919751635802",
+    "aadhaarVerified": true,
+    "businessName": "Mahalaxmi Dutta Fabrics",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-MA-09-414918",
+    "gstNumber": "27AZZCD9514E3Z3",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830ab1",
+      "6a933027e969bc8658830c19"
+    ],
+    "createdAt": "2025-12-30T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830951",
+    "borrowerId": "BOR-ENT-036",
+    "name": "Jagdish Chopra",
+    "mobile": "+919605273919",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Chopra Textiles",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-UT-16-131288",
+    "gstNumber": "09ALGCC7291Y1Z4",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 71,
+    "activeApplications": [
+      "6a933027e969bc8658830ab3",
+      "6a933027e969bc8658830c1b"
+    ],
+    "createdAt": "2025-12-23T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830952",
+    "borrowerId": "BOR-ENT-037",
+    "name": "Umesh Joshi",
+    "mobile": "+919639236111",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Joshi Fabrics",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-GU-08-580760",
+    "gstNumber": "24AHOCJ8760I1Z5",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 91,
+    "activeApplications": [
+      "6a933027e969bc8658830ab5",
+      "6a933027e969bc8658830c1d"
+    ],
+    "createdAt": "2025-12-08T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830953",
+    "borrowerId": "BOR-ENT-038",
+    "name": "Sanjay Chauhan",
+    "mobile": "+919517411265",
+    "aadhaarVerified": true,
+    "businessName": "Delta Chauhan Corporation",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-GU-13-260555",
+    "gstNumber": "24ATNFC3227F2Z1",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 71,
+    "activeApplications": [
+      "6a933027e969bc8658830ab7",
+      "6a933027e969bc8658830c1f"
+    ],
+    "createdAt": "2026-05-12T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830954",
+    "borrowerId": "BOR-ENT-039",
+    "name": "Varun Mehta",
+    "mobile": "+919970354938",
+    "aadhaarVerified": true,
+    "businessName": "Super Mehta Trading Co.",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-GU-21-934564",
+    "gstNumber": "24AVLCM1664U1Z7",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 83,
+    "activeApplications": [
+      "6a933027e969bc8658830ab9",
+      "6a933027e969bc8658830c21"
+    ],
+    "createdAt": "2025-11-12T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830955",
+    "borrowerId": "BOR-ENT-040",
+    "name": "Nitin Bose",
+    "mobile": "+919395289351",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Bose Industries",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-RA-10-933341",
+    "gstNumber": "08ADVFB8709B2Z6",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830abb",
+      "6a933027e969bc8658830c23"
+    ],
+    "createdAt": "2026-01-11T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830956",
+    "borrowerId": "BOR-ENT-041",
+    "name": "Pradeep Verma",
+    "mobile": "+919156103395",
+    "aadhaarVerified": false,
+    "businessName": "Bharat Verma Textiles",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-GU-25-754108",
+    "gstNumber": "24AMNFV9669E2Z8",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 80,
+    "activeApplications": [
+      "6a933027e969bc8658830abd",
+      "6a933027e969bc8658830c25"
+    ],
+    "createdAt": "2026-06-13T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830957",
+    "borrowerId": "BOR-ENT-042",
+    "name": "Rajesh Iyer",
+    "mobile": "+919583352623",
+    "aadhaarVerified": true,
+    "businessName": "Universal Iyer Textiles",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-MA-02-260756",
+    "gstNumber": "27ADTFI8516D1Z8",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 85,
+    "activeApplications": [
+      "6a933027e969bc8658830abf",
+      "6a933027e969bc8658830c27"
+    ],
+    "createdAt": "2026-03-06T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830958",
+    "borrowerId": "BOR-ENT-043",
+    "name": "Ashok Sharma",
+    "mobile": "+919274259259",
+    "aadhaarVerified": true,
+    "businessName": "Apex Sharma Solutions",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-PU-07-983838",
+    "gstNumber": "03APNPS8888Q3ZC",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830ac1",
+      "6a933027e969bc8658830c29"
+    ],
+    "createdAt": "2025-07-25T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830959",
+    "borrowerId": "BOR-ENT-044",
+    "name": "Vikram Agarwal",
+    "mobile": "+919492712191",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Agarwal Trading Co.",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-GU-11-920578",
+    "gstNumber": "24AEYPA1091X3ZC",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 91,
+    "activeApplications": [
+      "6a933027e969bc8658830ac3",
+      "6a933027e969bc8658830c2b"
+    ],
+    "createdAt": "2026-05-04T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883095a",
+    "borrowerId": "BOR-ENT-045",
+    "name": "Kiran Patil",
+    "mobile": "+919269266975",
+    "aadhaarVerified": true,
+    "businessName": "Shree Patil Fabrics",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-WE-17-734864",
+    "gstNumber": "19AJCCP9097Y2Z6",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 76,
+    "activeApplications": [
+      "6a933027e969bc8658830ac5",
+      "6a933027e969bc8658830c2d"
+    ],
+    "createdAt": "2025-12-25T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883095b",
+    "borrowerId": "BOR-ENT-046",
+    "name": "Sameer Reddy",
+    "mobile": "+919201145833",
+    "aadhaarVerified": true,
+    "businessName": "Universal Reddy Industries",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-MA-27-657253",
+    "gstNumber": "27AOOFR8546Y2ZA",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 90,
+    "activeApplications": [
+      "6a933027e969bc8658830ac7",
+      "6a933027e969bc8658830c2f"
+    ],
+    "createdAt": "2025-08-19T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883095c",
+    "borrowerId": "BOR-ENT-047",
+    "name": "Ajay Shah",
+    "mobile": "+919552237654",
+    "aadhaarVerified": true,
+    "businessName": "Everest Shah Engineering",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-WE-30-684965",
+    "gstNumber": "19ARQPS3742J2ZC",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 61,
+    "activeApplications": [
+      "6a933027e969bc8658830ac9",
+      "6a933027e969bc8658830c31"
+    ],
+    "createdAt": "2026-02-12T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883095d",
+    "borrowerId": "BOR-ENT-048",
+    "name": "Vikas Gupta",
+    "mobile": "+919853097993",
+    "aadhaarVerified": false,
+    "businessName": "Shree Gupta Solutions",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-MA-04-481890",
+    "gstNumber": "27AKJPG2658D3ZC",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 91,
+    "activeApplications": [
+      "6a933027e969bc8658830acb",
+      "6a933027e969bc8658830c33"
+    ],
+    "createdAt": "2026-05-21T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883095e",
+    "borrowerId": "BOR-ENT-049",
+    "name": "Hari Pillai",
+    "mobile": "+919100949074",
+    "aadhaarVerified": false,
+    "businessName": "Bharat Pillai Logistics",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-UT-08-778584",
+    "gstNumber": "09AZUFP6933X1ZC",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 73,
+    "activeApplications": [
+      "6a933027e969bc8658830acd",
+      "6a933027e969bc8658830c35"
+    ],
+    "createdAt": "2026-04-30T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc865883095f",
+    "borrowerId": "BOR-ENT-050",
+    "name": "Rakesh Saxena",
+    "mobile": "+919259679783",
+    "aadhaarVerified": true,
+    "businessName": "Prime Saxena Enterprises",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-UT-18-872268",
+    "gstNumber": "09AYOCS7872M3Z7",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 66,
+    "activeApplications": [
+      "6a933027e969bc8658830acf",
+      "6a933027e969bc8658830c37"
+    ],
+    "createdAt": "2025-11-14T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830960",
+    "borrowerId": "BOR-ENT-051",
+    "name": "Meera Desai",
+    "mobile": "+919459845679",
+    "aadhaarVerified": false,
+    "businessName": "Metro Desai Manufacturing",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-WE-19-326832",
+    "gstNumber": "19ADMPD6448O2ZC",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 86,
+    "activeApplications": [
+      "6a933027e969bc8658830ad1",
+      "6a933027e969bc8658830c39"
+    ],
+    "createdAt": "2026-06-14T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830961",
+    "borrowerId": "BOR-ENT-052",
+    "name": "Prakash Mishra",
+    "mobile": "+919798668981",
+    "aadhaarVerified": true,
+    "businessName": "Shree Mishra Manufacturing",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-TE-08-372831",
+    "gstNumber": "36ATGPM3299L1Z4",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 90,
+    "activeApplications": [
+      "6a933027e969bc8658830ad3",
+      "6a933027e969bc8658830c3b"
+    ],
+    "createdAt": "2025-09-12T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830962",
+    "borrowerId": "BOR-ENT-053",
+    "name": "Ramesh Yadav",
+    "mobile": "+919440038580",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Yadav Industries",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-GU-04-507488",
+    "gstNumber": "24AWQFY3731D3Z8",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 64,
+    "activeApplications": [
+      "6a933027e969bc8658830ad5",
+      "6a933027e969bc8658830c3d"
+    ],
+    "createdAt": "2025-09-07T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830963",
+    "borrowerId": "BOR-ENT-054",
+    "name": "Rahul Malhotra",
+    "mobile": "+919814510030",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Malhotra Components",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-GU-02-194691",
+    "gstNumber": "24ANJCM1717F1Z6",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 60,
+    "activeApplications": [
+      "6a933027e969bc8658830ad7",
+      "6a933027e969bc8658830c3f"
+    ],
+    "createdAt": "2026-04-07T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830964",
+    "borrowerId": "BOR-ENT-055",
+    "name": "Pranav Deshmukh",
+    "mobile": "+919419305555",
+    "aadhaarVerified": false,
+    "businessName": "Standard Deshmukh Textiles",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-HA-23-264996",
+    "gstNumber": "06AVTFD5894N3Z9",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830ad9",
+      "6a933027e969bc8658830c41"
+    ],
+    "createdAt": "2025-11-10T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830965",
+    "borrowerId": "BOR-ENT-056",
+    "name": "Amit Jain",
+    "mobile": "+919118314043",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Jain Manufacturing",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-GU-15-415625",
+    "gstNumber": "24AJTFJ8569G2Z1",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 90,
+    "activeApplications": [
+      "6a933027e969bc8658830adb",
+      "6a933027e969bc8658830c43"
+    ],
+    "createdAt": "2025-08-22T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830966",
+    "borrowerId": "BOR-ENT-057",
+    "name": "Neha Shetty",
+    "mobile": "+919942091049",
+    "aadhaarVerified": true,
+    "businessName": "Universal Shetty Ancillaries",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-TA-08-910466",
+    "gstNumber": "33ALZCS5715Y2Z4",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 88,
+    "activeApplications": [
+      "6a933027e969bc8658830add",
+      "6a933027e969bc8658830c45"
+    ],
+    "createdAt": "2025-11-29T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830967",
+    "borrowerId": "BOR-ENT-058",
+    "name": "Ganesh Sen",
+    "mobile": "+919687858796",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Sen Industries",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-MA-21-380077",
+    "gstNumber": "27ABGFS4969Z2Z3",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 90,
+    "activeApplications": [
+      "6a933027e969bc8658830adf",
+      "6a933027e969bc8658830c47"
+    ],
+    "createdAt": "2025-11-19T19:16:55.240Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830968",
+    "borrowerId": "BOR-ENT-059",
+    "name": "Sachin Sharma",
+    "mobile": "+919119506172",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Sharma Corporation",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-UT-19-521678",
+    "gstNumber": "09AIVFS3637T2ZB",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 62,
+    "activeApplications": [
+      "6a933027e969bc8658830ae1",
+      "6a933027e969bc8658830c49"
+    ],
+    "createdAt": "2025-10-28T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830969",
+    "borrowerId": "BOR-ENT-060",
+    "name": "Umesh Bhatia",
+    "mobile": "+919767588734",
+    "aadhaarVerified": true,
+    "businessName": "Shree Bhatia Distributors",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-WE-07-599158",
+    "gstNumber": "19AVEPB8692S3Z7",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 87,
+    "activeApplications": [
+      "6a933027e969bc8658830ae3",
+      "6a933027e969bc8658830c4b"
+    ],
+    "createdAt": "2026-06-29T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883096a",
+    "borrowerId": "BOR-ENT-061",
+    "name": "Mukesh Menon",
+    "mobile": "+919629328703",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Menon Components",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-MA-01-643074",
+    "gstNumber": "27AKRFM8772U1Z8",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830ae5",
+      "6a933027e969bc8658830c4d"
+    ],
+    "createdAt": "2025-11-08T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883096b",
+    "borrowerId": "BOR-ENT-062",
+    "name": "Prashant Chopra",
+    "mobile": "+919368614969",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Chopra Manufacturing",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-UT-12-750648",
+    "gstNumber": "09ATUFC6183O1ZC",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 96,
+    "activeApplications": [
+      "6a933027e969bc8658830ae7",
+      "6a933027e969bc8658830c4f"
+    ],
+    "createdAt": "2026-04-28T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883096c",
+    "borrowerId": "BOR-ENT-063",
+    "name": "Sujata Nair",
+    "mobile": "+919216003086",
+    "aadhaarVerified": false,
+    "businessName": "Delta Nair Enterprises",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-UT-24-985767",
+    "gstNumber": "09AQXCN9898L3ZB",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 93,
+    "activeApplications": [
+      "6a933027e969bc8658830ae9",
+      "6a933027e969bc8658830c51"
+    ],
+    "createdAt": "2026-01-22T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883096d",
+    "borrowerId": "BOR-ENT-064",
+    "name": "Arjun Shah",
+    "mobile": "+919168715277",
+    "aadhaarVerified": true,
+    "businessName": "Metro Shah Ancillaries",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-UT-18-978989",
+    "gstNumber": "09AUYCS7555V1ZB",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830aeb",
+      "6a933027e969bc8658830c53"
+    ],
+    "createdAt": "2025-11-08T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883096e",
+    "borrowerId": "BOR-ENT-065",
+    "name": "Prakash Patil",
+    "mobile": "+919790640432",
+    "aadhaarVerified": true,
+    "businessName": "Delta Patil Industries",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-GU-23-127534",
+    "gstNumber": "24AMOFP6459P3Z3",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 69,
+    "activeApplications": [
+      "6a933027e969bc8658830aed",
+      "6a933027e969bc8658830c55"
+    ],
+    "createdAt": "2026-03-15T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883096f",
+    "borrowerId": "BOR-ENT-066",
+    "name": "Divya Shetty",
+    "mobile": "+919112334104",
+    "aadhaarVerified": true,
+    "businessName": "Standard Shetty Corporation",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-KA-28-195293",
+    "gstNumber": "29ASBCS8584A2Z6",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 64,
+    "activeApplications": [
+      "6a933027e969bc8658830aef",
+      "6a933027e969bc8658830c57"
+    ],
+    "createdAt": "2025-09-17T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830970",
+    "borrowerId": "BOR-ENT-067",
+    "name": "Deepak Swaminathan",
+    "mobile": "+919131018518",
+    "aadhaarVerified": true,
+    "businessName": "Shree Swaminathan Fabrics",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-KA-11-412820",
+    "gstNumber": "29ADYFS9567A1ZB",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 76,
+    "activeApplications": [
+      "6a933027e969bc8658830af1",
+      "6a933027e969bc8658830c59"
+    ],
+    "createdAt": "2025-12-20T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830971",
+    "borrowerId": "BOR-ENT-068",
+    "name": "Prakash Shetty",
+    "mobile": "+919410582561",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Shetty Logistics",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-HA-18-377337",
+    "gstNumber": "06AMBFS3714U1Z7",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830af3",
+      "6a933027e969bc8658830c5b"
+    ],
+    "createdAt": "2026-07-25T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830972",
+    "borrowerId": "BOR-ENT-069",
+    "name": "Tarun Singhal",
+    "mobile": "+919381581790",
+    "aadhaarVerified": true,
+    "businessName": "Delta Singhal Ancillaries",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-WE-15-852735",
+    "gstNumber": "19ABPPS3998J3Z1",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 76,
+    "activeApplications": [
+      "6a933027e969bc8658830af5",
+      "6a933027e969bc8658830c5d"
+    ],
+    "createdAt": "2026-07-21T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830973",
+    "borrowerId": "BOR-ENT-070",
+    "name": "Prakash Trivedi",
+    "mobile": "+919441238425",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Trivedi Textiles",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-KA-08-669567",
+    "gstNumber": "29AHPFT5058I2Z8",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830af7",
+      "6a933027e969bc8658830c5f"
+    ],
+    "createdAt": "2026-04-14T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830974",
+    "borrowerId": "BOR-ENT-071",
+    "name": "Nikhil Sen",
+    "mobile": "+919953441358",
+    "aadhaarVerified": false,
+    "businessName": "Delta Sen Textiles",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-HA-27-525057",
+    "gstNumber": "06AQEPS6198A2ZB",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 98,
+    "activeApplications": [
+      "6a933027e969bc8658830af9",
+      "6a933027e969bc8658830c61"
+    ],
+    "createdAt": "2026-06-22T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830975",
+    "borrowerId": "BOR-ENT-072",
+    "name": "Subhash Pillai",
+    "mobile": "+919948746141",
+    "aadhaarVerified": true,
+    "businessName": "Universal Pillai Enterprises",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-TA-15-183094",
+    "gstNumber": "33AMKFP4392K3Z7",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 85,
+    "activeApplications": [
+      "6a933027e969bc8658830afb",
+      "6a933027e969bc8658830c63"
+    ],
+    "createdAt": "2025-08-14T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830976",
+    "borrowerId": "BOR-ENT-073",
+    "name": "Bhavna Mukherjee",
+    "mobile": "+919124375000",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Mukherjee Corporation",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-TA-05-774232",
+    "gstNumber": "33AGWPM2278P2ZC",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 99,
+    "activeApplications": [
+      "6a933027e969bc8658830afd",
+      "6a933027e969bc8658830c65"
+    ],
+    "createdAt": "2025-11-13T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830977",
+    "borrowerId": "BOR-ENT-074",
+    "name": "Harish Joshi",
+    "mobile": "+919544216820",
+    "aadhaarVerified": true,
+    "businessName": "Precision Joshi Industries",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-HA-15-495694",
+    "gstNumber": "06AWWFJ4162F1Z1",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830aff",
+      "6a933027e969bc8658830c67"
+    ],
+    "createdAt": "2026-01-08T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830978",
+    "borrowerId": "BOR-ENT-075",
+    "name": "Umesh Mukherjee",
+    "mobile": "+919838827160",
+    "aadhaarVerified": true,
+    "businessName": "Shree Mukherjee Industries",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-UT-24-811369",
+    "gstNumber": "09AZKCM9015A3Z1",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 89,
+    "activeApplications": [
+      "6a933027e969bc8658830b01",
+      "6a933027e969bc8658830c69"
+    ],
+    "createdAt": "2026-01-16T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830979",
+    "borrowerId": "BOR-ENT-076",
+    "name": "Sunil Kumar",
+    "mobile": "+919905428240",
+    "aadhaarVerified": true,
+    "businessName": "Metro Kumar Enterprises",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-UT-01-651813",
+    "gstNumber": "09AXPPK9478U3ZB",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 62,
+    "activeApplications": [
+      "6a933027e969bc8658830b03",
+      "6a933027e969bc8658830c6b"
+    ],
+    "createdAt": "2025-10-27T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883097a",
+    "borrowerId": "BOR-ENT-077",
+    "name": "Sujata Nair",
+    "mobile": "+919907908950",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Nair Industries",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-WE-10-214247",
+    "gstNumber": "19ACAFN5854H2Z2",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830b05",
+      "6a933027e969bc8658830c6d"
+    ],
+    "createdAt": "2026-04-21T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883097b",
+    "borrowerId": "BOR-ENT-078",
+    "name": "Anil Bose",
+    "mobile": "+919876824845",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Bose Engineering",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-UT-09-862561",
+    "gstNumber": "09AMNCB8117F2Z4",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 84,
+    "activeApplications": [
+      "6a933027e969bc8658830b07",
+      "6a933027e969bc8658830c6f"
+    ],
+    "createdAt": "2025-11-15T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883097c",
+    "borrowerId": "BOR-ENT-079",
+    "name": "Rakesh Dutta",
+    "mobile": "+919909398148",
+    "aadhaarVerified": true,
+    "businessName": "Super Dutta Manufacturing",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-RA-22-227310",
+    "gstNumber": "08AETCD7906V1Z2",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 68,
+    "activeApplications": [
+      "6a933027e969bc8658830b09",
+      "6a933027e969bc8658830c71"
+    ],
+    "createdAt": "2026-03-25T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883097d",
+    "borrowerId": "BOR-ENT-080",
+    "name": "Anil Deshmukh",
+    "mobile": "+919169517746",
+    "aadhaarVerified": true,
+    "businessName": "Apex Deshmukh Logistics",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-GU-11-505717",
+    "gstNumber": "24AGOCD1526E1ZC",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 98,
+    "activeApplications": [
+      "6a933027e969bc8658830b0b",
+      "6a933027e969bc8658830c73"
+    ],
+    "createdAt": "2026-05-23T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883097e",
+    "borrowerId": "BOR-ENT-081",
+    "name": "Isha Kulkarni",
+    "mobile": "+919987739197",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Kulkarni Corporation",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-MA-28-261670",
+    "gstNumber": "27AVQCK9949V1Z3",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830b0d",
+      "6a933027e969bc8658830c75"
+    ],
+    "createdAt": "2026-03-21T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883097f",
+    "borrowerId": "BOR-ENT-082",
+    "name": "Manish Shah",
+    "mobile": "+919961284722",
+    "aadhaarVerified": true,
+    "businessName": "Super Shah Solutions",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-WE-06-325725",
+    "gstNumber": "19AYGFS5814Q1ZA",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830b0f",
+      "6a933027e969bc8658830c77"
+    ],
+    "createdAt": "2026-02-27T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830980",
+    "borrowerId": "BOR-ENT-083",
+    "name": "Vikas Jha",
+    "mobile": "+919954043209",
+    "aadhaarVerified": true,
+    "businessName": "Everest Jha Industries",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-GU-13-395104",
+    "gstNumber": "24AFKCJ8427T2Z6",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830b11",
+      "6a933027e969bc8658830c79"
+    ],
+    "createdAt": "2026-05-15T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830981",
+    "borrowerId": "BOR-ENT-084",
+    "name": "Krishna Chopra",
+    "mobile": "+919196570216",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Chopra Logistics",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-KA-19-733695",
+    "gstNumber": "29AZSFC4759U1ZA",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830b13",
+      "6a933027e969bc8658830c7b"
+    ],
+    "createdAt": "2026-02-20T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830982",
+    "borrowerId": "BOR-ENT-085",
+    "name": "Aditi Naik",
+    "mobile": "+919986087962",
+    "aadhaarVerified": true,
+    "businessName": "Standard Naik Distributors",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-TE-12-872056",
+    "gstNumber": "36AEZFN2451B3ZA",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 76,
+    "activeApplications": [
+      "6a933027e969bc8658830b15",
+      "6a933027e969bc8658830c7d"
+    ],
+    "createdAt": "2025-09-11T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830983",
+    "borrowerId": "BOR-ENT-086",
+    "name": "Krishna Sharma",
+    "mobile": "+919486485339",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Sharma Engineering",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-RA-16-707407",
+    "gstNumber": "08AYMPS7807A2Z6",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 85,
+    "activeApplications": [
+      "6a933027e969bc8658830b17",
+      "6a933027e969bc8658830c7f"
+    ],
+    "createdAt": "2026-04-28T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830984",
+    "borrowerId": "BOR-ENT-087",
+    "name": "Jagdish Jha",
+    "mobile": "+919228317901",
+    "aadhaarVerified": true,
+    "businessName": "Super Jha Industries",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-RA-09-403638",
+    "gstNumber": "08AWQPJ9799B1ZC",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 62,
+    "activeApplications": [
+      "6a933027e969bc8658830b19",
+      "6a933027e969bc8658830c81"
+    ],
+    "createdAt": "2025-09-22T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830985",
+    "borrowerId": "BOR-ENT-088",
+    "name": "Neha Chauhan",
+    "mobile": "+919908807870",
+    "aadhaarVerified": true,
+    "businessName": "Everest Chauhan Distributors",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-UT-05-891304",
+    "gstNumber": "09ATXFC6067C3ZB",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 72,
+    "activeApplications": [
+      "6a933027e969bc8658830b1b",
+      "6a933027e969bc8658830c83"
+    ],
+    "createdAt": "2025-12-09T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830986",
+    "borrowerId": "BOR-ENT-089",
+    "name": "Divya Malhotra",
+    "mobile": "+919491844135",
+    "aadhaarVerified": true,
+    "businessName": "Precision Malhotra Components",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-TA-16-467627",
+    "gstNumber": "33AIRFM7916U1Z1",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 88,
+    "activeApplications": [
+      "6a933027e969bc8658830b1d",
+      "6a933027e969bc8658830c85"
+    ],
+    "createdAt": "2026-05-01T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830987",
+    "borrowerId": "BOR-ENT-090",
+    "name": "Vikas Reddy",
+    "mobile": "+919107982253",
+    "aadhaarVerified": true,
+    "businessName": "Everest Reddy Industries",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-UT-26-996496",
+    "gstNumber": "09AJJPR6318M2Z8",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 68,
+    "activeApplications": [
+      "6a933027e969bc8658830b1f",
+      "6a933027e969bc8658830c87"
+    ],
+    "createdAt": "2026-01-27T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830988",
+    "borrowerId": "BOR-ENT-091",
+    "name": "Rajesh Sen",
+    "mobile": "+919654444444",
+    "aadhaarVerified": true,
+    "businessName": "Everest Sen Trading Co.",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-WE-15-308468",
+    "gstNumber": "19AQWCS6912P3Z2",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 98,
+    "activeApplications": [
+      "6a933027e969bc8658830b21",
+      "6a933027e969bc8658830c89"
+    ],
+    "createdAt": "2025-12-17T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830989",
+    "borrowerId": "BOR-ENT-092",
+    "name": "Manish Iyer",
+    "mobile": "+919895119598",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Iyer Components",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-PU-12-500763",
+    "gstNumber": "03AIXFI8004B2ZC",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "platformTrustScore": 80,
+    "activeApplications": [
+      "6a933027e969bc8658830b23",
+      "6a933027e969bc8658830c8b"
+    ],
+    "createdAt": "2026-06-27T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883098a",
+    "borrowerId": "BOR-ENT-093",
+    "name": "Jagdish Bansal",
+    "mobile": "+919660563271",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Bansal Corporation",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-TE-06-637272",
+    "gstNumber": "36ALTFB2566A1Z8",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 88,
+    "activeApplications": [
+      "6a933027e969bc8658830b25",
+      "6a933027e969bc8658830c8d"
+    ],
+    "createdAt": "2026-04-04T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883098b",
+    "borrowerId": "BOR-ENT-094",
+    "name": "Mukesh Dutta",
+    "mobile": "+919147997685",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Dutta Components",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-TE-07-848549",
+    "gstNumber": "36ARWCD4237O3Z5",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 70,
+    "activeApplications": [
+      "6a933027e969bc8658830b27",
+      "6a933027e969bc8658830c8f"
+    ],
+    "createdAt": "2025-11-04T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883098c",
+    "borrowerId": "BOR-ENT-095",
+    "name": "Sunil Deshmukh",
+    "mobile": "+919721311728",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Deshmukh Distributors",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-MA-29-731817",
+    "gstNumber": "27AUDPD7322S2Z4",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830b29",
+      "6a933027e969bc8658830c91"
+    ],
+    "createdAt": "2025-11-07T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883098d",
+    "borrowerId": "BOR-ENT-096",
+    "name": "Ganesh Roy",
+    "mobile": "+919911060956",
+    "aadhaarVerified": false,
+    "businessName": "Precision Roy Engineering",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-MA-09-150964",
+    "gstNumber": "27AZTFR6793P1ZC",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 79,
+    "activeApplications": [
+      "6a933027e969bc8658830b2b",
+      "6a933027e969bc8658830c93"
+    ],
+    "createdAt": "2026-05-11T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883098e",
+    "borrowerId": "BOR-ENT-097",
+    "name": "Saurabh Dutta",
+    "mobile": "+919214467592",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Dutta Ancillaries",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-KA-11-636547",
+    "gstNumber": "29AVTPD6290V2Z8",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 65,
+    "activeApplications": [
+      "6a933027e969bc8658830b2d",
+      "6a933027e969bc8658830c95"
+    ],
+    "createdAt": "2025-09-03T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883098f",
+    "borrowerId": "BOR-ENT-098",
+    "name": "Pradeep Bansal",
+    "mobile": "+919795420524",
+    "aadhaarVerified": true,
+    "businessName": "Mahalaxmi Bansal Textiles",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-TA-07-185787",
+    "gstNumber": "33ARGPB5118R3ZB",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 97,
+    "activeApplications": [
+      "6a933027e969bc8658830b2f",
+      "6a933027e969bc8658830c97"
+    ],
+    "createdAt": "2026-07-19T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830990",
+    "borrowerId": "BOR-ENT-099",
+    "name": "Rahul Chauhan",
+    "mobile": "+919784475308",
+    "aadhaarVerified": true,
+    "businessName": "Delta Chauhan Ancillaries",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-UT-30-362573",
+    "gstNumber": "09AYHCC9250D2Z6",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 78,
+    "activeApplications": [
+      "6a933027e969bc8658830b31",
+      "6a933027e969bc8658830c99"
+    ],
+    "createdAt": "2026-06-17T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830991",
+    "borrowerId": "BOR-ENT-100",
+    "name": "Priya Reddy",
+    "mobile": "+919778854166",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Reddy Distributors",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-MA-22-497461",
+    "gstNumber": "27AAMCR3323I3Z9",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830b33",
+      "6a933027e969bc8658830c9b"
+    ],
+    "createdAt": "2026-07-19T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830992",
+    "borrowerId": "BOR-ENT-101",
+    "name": "Jagdish Ghosh",
+    "mobile": "+919142445987",
+    "aadhaarVerified": true,
+    "businessName": "Super Ghosh Industries",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-GU-02-587673",
+    "gstNumber": "24AWECG9644V2Z7",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830b35",
+      "6a933027e969bc8658830c9d"
+    ],
+    "createdAt": "2025-08-10T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830993",
+    "borrowerId": "BOR-ENT-102",
+    "name": "Naveen Patel",
+    "mobile": "+919205806327",
+    "aadhaarVerified": true,
+    "businessName": "National Patel Textiles",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-MA-08-297098",
+    "gstNumber": "27AEGPP9185N3Z2",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830b37",
+      "6a933027e969bc8658830c9f"
+    ],
+    "createdAt": "2025-08-20T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830994",
+    "borrowerId": "BOR-ENT-103",
+    "name": "Shilpa Singhal",
+    "mobile": "+919866157407",
+    "aadhaarVerified": false,
+    "businessName": "Sterling Singhal Components",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-TA-10-356292",
+    "gstNumber": "33ADZFS3585A3Z7",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 73,
+    "activeApplications": [
+      "6a933027e969bc8658830b39",
+      "6a933027e969bc8658830ca1"
+    ],
+    "createdAt": "2026-07-10T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830995",
+    "borrowerId": "BOR-ENT-104",
+    "name": "Anil Reddy",
+    "mobile": "+919487388117",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Reddy Manufacturing",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-RA-12-962476",
+    "gstNumber": "08AIUFR2149E2Z4",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 69,
+    "activeApplications": [
+      "6a933027e969bc8658830b3b",
+      "6a933027e969bc8658830ca3"
+    ],
+    "createdAt": "2026-03-02T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830996",
+    "borrowerId": "BOR-ENT-105",
+    "name": "Rahul Sharma",
+    "mobile": "+919900054012",
+    "aadhaarVerified": true,
+    "businessName": "Precision Sharma Manufacturing",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-UT-30-779540",
+    "gstNumber": "09APPCS5850R2ZB",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 85,
+    "activeApplications": [
+      "6a933027e969bc8658830b3d",
+      "6a933027e969bc8658830ca5"
+    ],
+    "createdAt": "2025-12-30T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830997",
+    "borrowerId": "BOR-ENT-106",
+    "name": "Karan Kulkarni",
+    "mobile": "+919401377314",
+    "aadhaarVerified": true,
+    "businessName": "Apex Kulkarni Components",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-HA-30-138040",
+    "gstNumber": "06ADCFK6326U1Z1",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 78,
+    "activeApplications": [
+      "6a933027e969bc8658830b3f",
+      "6a933027e969bc8658830ca7"
+    ],
+    "createdAt": "2025-09-06T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830998",
+    "borrowerId": "BOR-ENT-107",
+    "name": "Sujata Swaminathan",
+    "mobile": "+919855246913",
+    "aadhaarVerified": true,
+    "businessName": "Universal Swaminathan Trading Co.",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-WE-04-335196",
+    "gstNumber": "19AZBPS8883N3Z2",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830b41",
+      "6a933027e969bc8658830ca9"
+    ],
+    "createdAt": "2026-04-10T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc8658830999",
+    "borrowerId": "BOR-ENT-108",
+    "name": "Aarav Reddy",
+    "mobile": "+919992218364",
+    "aadhaarVerified": true,
+    "businessName": "Precision Reddy Industries",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-WE-04-834899",
+    "gstNumber": "19AFFFR7494N3Z7",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 87,
+    "activeApplications": [
+      "6a933027e969bc8658830b43",
+      "6a933027e969bc8658830cab"
+    ],
+    "createdAt": "2025-08-07T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883099a",
+    "borrowerId": "BOR-ENT-109",
+    "name": "Ajay Joshi",
+    "mobile": "+919209513888",
+    "aadhaarVerified": true,
+    "businessName": "Shree Joshi Components",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-TA-22-667704",
+    "gstNumber": "33AXVFJ1796N1Z3",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 93,
+    "activeApplications": [
+      "6a933027e969bc8658830b45",
+      "6a933027e969bc8658830cad"
+    ],
+    "createdAt": "2026-02-20T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883099b",
+    "borrowerId": "BOR-ENT-110",
+    "name": "Naveen Bhatia",
+    "mobile": "+919271022376",
+    "aadhaarVerified": true,
+    "businessName": "Standard Bhatia Logistics",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-MA-06-430833",
+    "gstNumber": "27ARWPB2096W1ZA",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 89,
+    "activeApplications": [
+      "6a933027e969bc8658830b47",
+      "6a933027e969bc8658830caf"
+    ],
+    "createdAt": "2026-01-07T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883099c",
+    "borrowerId": "BOR-ENT-111",
+    "name": "Prashant Chopra",
+    "mobile": "+919407299382",
+    "aadhaarVerified": true,
+    "businessName": "Precision Chopra Fabrics",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-GU-16-388175",
+    "gstNumber": "24AVAPC4367Y2Z2",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 83,
+    "activeApplications": [
+      "6a933027e969bc8658830b49",
+      "6a933027e969bc8658830cb1"
+    ],
+    "createdAt": "2026-07-23T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883099d",
+    "borrowerId": "BOR-ENT-112",
+    "name": "Tarun Patel",
+    "mobile": "+919215567129",
+    "aadhaarVerified": true,
+    "businessName": "Shree Patel Textiles",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-GU-12-970285",
+    "gstNumber": "24AJBFP7246F2ZB",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830b4b",
+      "6a933027e969bc8658830cb3"
+    ],
+    "createdAt": "2025-12-13T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883099e",
+    "borrowerId": "BOR-ENT-113",
+    "name": "Sneha Singhal",
+    "mobile": "+919459714506",
+    "aadhaarVerified": true,
+    "businessName": "Everest Singhal Manufacturing",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-TA-16-274386",
+    "gstNumber": "33AJEPS8039B2Z5",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 70,
+    "activeApplications": [
+      "6a933027e969bc8658830b4d",
+      "6a933027e969bc8658830cb5"
+    ],
+    "createdAt": "2026-07-02T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc865883099f",
+    "borrowerId": "BOR-ENT-114",
+    "name": "Gita Jain",
+    "mobile": "+919870297067",
+    "aadhaarVerified": true,
+    "businessName": "Venkateshwara Jain Engineering",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-HA-06-264367",
+    "gstNumber": "06ALYCJ4719Y2Z7",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 70,
+    "activeApplications": [
+      "6a933027e969bc8658830b4f",
+      "6a933027e969bc8658830cb7"
+    ],
+    "createdAt": "2025-11-28T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a0",
+    "borrowerId": "BOR-ENT-115",
+    "name": "Subhash Ghosh",
+    "mobile": "+919344537037",
+    "aadhaarVerified": true,
+    "businessName": "National Ghosh Enterprises",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-HA-27-970783",
+    "gstNumber": "06AKRFG3924S2Z1",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 60,
+    "activeApplications": [
+      "6a933027e969bc8658830b51",
+      "6a933027e969bc8658830cb9"
+    ],
+    "createdAt": "2026-03-21T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a1",
+    "borrowerId": "BOR-ENT-116",
+    "name": "Suresh Ghosh",
+    "mobile": "+919446323302",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Ghosh Logistics",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-UT-30-690856",
+    "gstNumber": "09AZWPG7961C3Z8",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 92,
+    "activeApplications": [
+      "6a933027e969bc8658830b53",
+      "6a933027e969bc8658830cbb"
+    ],
+    "createdAt": "2025-10-08T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a2",
+    "borrowerId": "BOR-ENT-117",
+    "name": "Suresh Varma",
+    "mobile": "+919506211419",
+    "aadhaarVerified": true,
+    "businessName": "Shree Varma Engineering",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-MA-29-388476",
+    "gstNumber": "27AYWFV7800J3Z8",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 85,
+    "activeApplications": [
+      "6a933027e969bc8658830b55",
+      "6a933027e969bc8658830cbd"
+    ],
+    "createdAt": "2025-10-09T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a3",
+    "borrowerId": "BOR-ENT-118",
+    "name": "Rohit Naik",
+    "mobile": "+919521423611",
+    "aadhaarVerified": true,
+    "businessName": "Universal Naik Trading Co.",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-KA-06-594197",
+    "gstNumber": "29AAQPN9082Z1Z6",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 85,
+    "activeApplications": [
+      "6a933027e969bc8658830b57",
+      "6a933027e969bc8658830cbf"
+    ],
+    "createdAt": "2026-01-02T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a4",
+    "borrowerId": "BOR-ENT-119",
+    "name": "Prakash Patel",
+    "mobile": "+919155848765",
+    "aadhaarVerified": true,
+    "businessName": "Apex Patel Engineering",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-RA-17-705243",
+    "gstNumber": "08ALVPP1111V3Z7",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 73,
+    "activeApplications": [
+      "6a933027e969bc8658830b59",
+      "6a933027e969bc8658830cc1"
+    ],
+    "createdAt": "2025-12-11T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a5",
+    "borrowerId": "BOR-ENT-120",
+    "name": "Naveen Srivastava",
+    "mobile": "+919140042438",
+    "aadhaarVerified": false,
+    "businessName": "Delta Srivastava Logistics",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-GU-24-685501",
+    "gstNumber": "24AGTFS3861D1Z5",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 84,
+    "activeApplications": [
+      "6a933027e969bc8658830b5b",
+      "6a933027e969bc8658830cc3"
+    ],
+    "createdAt": "2026-03-26T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a6",
+    "borrowerId": "BOR-ENT-121",
+    "name": "Nikhil Dutta",
+    "mobile": "+919671226851",
+    "aadhaarVerified": true,
+    "businessName": "National Dutta Distributors",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-HA-05-665528",
+    "gstNumber": "06ABWFD3969X1Z3",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 66,
+    "activeApplications": [
+      "6a933027e969bc8658830b5d",
+      "6a933027e969bc8658830cc5"
+    ],
+    "createdAt": "2026-06-02T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a7",
+    "borrowerId": "BOR-ENT-122",
+    "name": "Sanjay Mishra",
+    "mobile": "+919413290895",
+    "aadhaarVerified": true,
+    "businessName": "Universal Mishra Textiles",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-HA-04-242546",
+    "gstNumber": "06AQAPM4741F3Z2",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b5f",
+      "6a933027e969bc8658830cc7"
+    ],
+    "createdAt": "2026-02-03T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a8",
+    "borrowerId": "BOR-ENT-123",
+    "name": "Subhash Bhattacharya",
+    "mobile": "+919596790123",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Bhattacharya Textiles",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-KA-18-180443",
+    "gstNumber": "29AGMFB1150E3Z8",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b61",
+      "6a933027e969bc8658830cc9"
+    ],
+    "createdAt": "2026-05-09T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309a9",
+    "borrowerId": "BOR-ENT-124",
+    "name": "Amit Pandey",
+    "mobile": "+919718946759",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Pandey Engineering",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-WE-23-209776",
+    "gstNumber": "19ALFFP5835K2Z3",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b63",
+      "6a933027e969bc8658830ccb"
+    ],
+    "createdAt": "2026-07-10T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309aa",
+    "borrowerId": "BOR-ENT-125",
+    "name": "Manish Prasad",
+    "mobile": "+919243649691",
+    "aadhaarVerified": true,
+    "businessName": "Precision Prasad Manufacturing",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-TA-19-127766",
+    "gstNumber": "33ANJFP9101D2Z2",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b65",
+      "6a933027e969bc8658830ccd"
+    ],
+    "createdAt": "2026-04-20T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ab",
+    "borrowerId": "BOR-ENT-126",
+    "name": "Vikram Patil",
+    "mobile": "+919901454475",
+    "aadhaarVerified": true,
+    "businessName": "Universal Patil Enterprises",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-GU-09-598302",
+    "gstNumber": "24AXZCP7919L1Z6",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b67",
+      "6a933027e969bc8658830ccf"
+    ],
+    "createdAt": "2026-03-23T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ac",
+    "borrowerId": "BOR-ENT-127",
+    "name": "Krishna Varma",
+    "mobile": "+919589583333",
+    "aadhaarVerified": true,
+    "businessName": "Apex Varma Logistics",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-HA-26-951940",
+    "gstNumber": "06ACRCV4930J2Z3",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b69",
+      "6a933027e969bc8658830cd1"
+    ],
+    "createdAt": "2026-05-27T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ad",
+    "borrowerId": "BOR-ENT-128",
+    "name": "Manish Menon",
+    "mobile": "+919471925154",
+    "aadhaarVerified": true,
+    "businessName": "Everest Menon Industries",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-HA-28-285902",
+    "gstNumber": "06AYTPM4439O2Z7",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b6b",
+      "6a933027e969bc8658830cd3"
+    ],
+    "createdAt": "2025-08-21T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ae",
+    "borrowerId": "BOR-ENT-129",
+    "name": "Saurabh Chauhan",
+    "mobile": "+919979035493",
+    "aadhaarVerified": true,
+    "businessName": "Precision Chauhan Distributors",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-GU-24-964077",
+    "gstNumber": "24ADFCC5417U3Z7",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b6d",
+      "6a933027e969bc8658830cd5"
+    ],
+    "createdAt": "2025-12-04T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309af",
+    "borrowerId": "BOR-ENT-130",
+    "name": "Jagdish Chatterjee",
+    "mobile": "+919208136574",
+    "aadhaarVerified": true,
+    "businessName": "Delta Chatterjee Solutions",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-MA-13-117021",
+    "gstNumber": "27AYDPC9505U2Z4",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b6f",
+      "6a933027e969bc8658830cd7"
+    ],
+    "createdAt": "2026-02-22T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b0",
+    "borrowerId": "BOR-ENT-131",
+    "name": "Ravi Joshi",
+    "mobile": "+919123117283",
+    "aadhaarVerified": true,
+    "businessName": "Metro Joshi Distributors",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-UT-30-641956",
+    "gstNumber": "09AWDCJ8006I1Z5",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b71",
+      "6a933027e969bc8658830cd9"
+    ],
+    "createdAt": "2026-03-20T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b1",
+    "borrowerId": "BOR-ENT-132",
+    "name": "Deepak Trivedi",
+    "mobile": "+919754533179",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Trivedi Components",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-MA-01-302770",
+    "gstNumber": "27AVAFT1895E3Z1",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b73",
+      "6a933027e969bc8658830cdb"
+    ],
+    "createdAt": "2026-07-25T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b2",
+    "borrowerId": "BOR-ENT-133",
+    "name": "Saurabh Singhal",
+    "mobile": "+919399606481",
+    "aadhaarVerified": true,
+    "businessName": "Delta Singhal Manufacturing",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-GU-11-330019",
+    "gstNumber": "24AXNFS9808N1Z4",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b75",
+      "6a933027e969bc8658830cdd"
+    ],
+    "createdAt": "2025-10-30T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b3",
+    "borrowerId": "BOR-ENT-134",
+    "name": "Bhavna Shah",
+    "mobile": "+919922226080",
+    "aadhaarVerified": true,
+    "businessName": "Standard Shah Manufacturing",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-TE-22-220925",
+    "gstNumber": "36AGJFS1053L2Z5",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b77",
+      "6a933027e969bc8658830cdf"
+    ],
+    "createdAt": "2026-02-03T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b4",
+    "borrowerId": "BOR-ENT-135",
+    "name": "Amit Naik",
+    "mobile": "+919152947530",
+    "aadhaarVerified": true,
+    "businessName": "Apex Naik Enterprises",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-TA-26-339378",
+    "gstNumber": "33AWJPN5601M3Z9",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b79",
+      "6a933027e969bc8658830ce1"
+    ],
+    "createdAt": "2026-03-09T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b5",
+    "borrowerId": "BOR-ENT-136",
+    "name": "Sameer Gupta",
+    "mobile": "+919188993055",
+    "aadhaarVerified": true,
+    "businessName": "National Gupta Logistics",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-TA-17-615933",
+    "gstNumber": "33AXSPG5091N3Z3",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b7b",
+      "6a933027e969bc8658830ce3"
+    ],
+    "createdAt": "2026-07-25T19:16:55.241Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b6",
+    "borrowerId": "BOR-ENT-137",
+    "name": "Sachin Nambiar",
+    "mobile": "+919994251543",
+    "aadhaarVerified": true,
+    "businessName": "Shree Nambiar Ancillaries",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-UT-01-747812",
+    "gstNumber": "09AYKPN9829T3Z7",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 0,
+    "activeApplications": [
+      "6a933027e969bc8658830b7d",
+      "6a933027e969bc8658830ce5"
+    ],
+    "createdAt": "2026-05-14T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b7",
+    "borrowerId": "BOR-ENT-138",
+    "name": "Krishna Chatterjee",
+    "mobile": "+919899278549",
+    "aadhaarVerified": true,
+    "businessName": "Universal Chatterjee Manufacturing",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-HA-08-998904",
+    "gstNumber": "06AGDPC6786R2Z7",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "platformTrustScore": 84,
+    "activeApplications": [
+      "6a933027e969bc8658830b7f",
+      "6a933027e969bc8658830ce7"
+    ],
+    "createdAt": "2025-11-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b8",
+    "borrowerId": "BOR-ENT-139",
+    "name": "Anil Chopra",
+    "mobile": "+919401296296",
+    "aadhaarVerified": true,
+    "businessName": "Delta Chopra Ancillaries",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-GU-28-899764",
+    "gstNumber": "24AVQPC3603R3ZB",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 96,
+    "activeApplications": [
+      "6a933027e969bc8658830b81",
+      "6a933027e969bc8658830ce9"
+    ],
+    "createdAt": "2026-05-26T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309b9",
+    "borrowerId": "BOR-ENT-140",
+    "name": "Kavita Chopra",
+    "mobile": "+919264193672",
+    "aadhaarVerified": false,
+    "businessName": "Balaji Chopra Ancillaries",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-UT-25-347615",
+    "gstNumber": "09AWEFC6584F3ZA",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 67,
+    "activeApplications": [
+      "6a933027e969bc8658830b83",
+      "6a933027e969bc8658830ceb"
+    ],
+    "createdAt": "2026-02-08T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ba",
+    "borrowerId": "BOR-ENT-141",
+    "name": "Vikram Joshi",
+    "mobile": "+919218526234",
+    "aadhaarVerified": true,
+    "businessName": "Standard Joshi Fabrics",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-GU-04-406346",
+    "gstNumber": "24AVHPJ4701Q3Z5",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830b85",
+      "6a933027e969bc8658830ced"
+    ],
+    "createdAt": "2025-10-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309bb",
+    "borrowerId": "BOR-ENT-142",
+    "name": "Sachin Pillai",
+    "mobile": "+919961516203",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Pillai Components",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-GU-13-206512",
+    "gstNumber": "24AQGPP4594X2Z3",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 80,
+    "activeApplications": [
+      "6a933027e969bc8658830b87",
+      "6a933027e969bc8658830cef"
+    ],
+    "createdAt": "2026-06-07T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309bc",
+    "borrowerId": "BOR-ENT-143",
+    "name": "Sunil Bhattacharya",
+    "mobile": "+919457052469",
+    "aadhaarVerified": true,
+    "businessName": "Everest Bhattacharya Corporation",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-RA-01-745335",
+    "gstNumber": "08AYPCB8568S3Z1",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 78,
+    "activeApplications": [
+      "6a933027e969bc8658830b89"
+    ],
+    "createdAt": "2026-05-31T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309bd",
+    "borrowerId": "BOR-ENT-144",
+    "name": "Sunil Kulkarni",
+    "mobile": "+919735690586",
+    "aadhaarVerified": true,
+    "businessName": "Apex Kulkarni Distributors",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-GU-12-286705",
+    "gstNumber": "24AORFK7595H2Z3",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830b8b"
+    ],
+    "createdAt": "2025-12-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309be",
+    "borrowerId": "BOR-ENT-145",
+    "name": "Rahul Joshi",
+    "mobile": "+919894652777",
+    "aadhaarVerified": true,
+    "businessName": "Everest Joshi Engineering",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-GU-29-261176",
+    "gstNumber": "24AFLFJ7314D3Z2",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830b8d"
+    ],
+    "createdAt": "2025-09-25T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309bf",
+    "borrowerId": "BOR-ENT-146",
+    "name": "Isha Reddy",
+    "mobile": "+919597827932",
+    "aadhaarVerified": true,
+    "businessName": "Super Reddy Textiles",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-MA-18-965972",
+    "gstNumber": "27ADOCR6031E3Z3",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "platformTrustScore": 99,
+    "activeApplications": [
+      "6a933027e969bc8658830b8f"
+    ],
+    "createdAt": "2026-05-10T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c0",
+    "borrowerId": "BOR-ENT-147",
+    "name": "Umesh Swaminathan",
+    "mobile": "+919575771604",
+    "aadhaarVerified": false,
+    "businessName": "Mahalaxmi Swaminathan Components",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-WE-29-564980",
+    "gstNumber": "19AIHFS5718N3ZC",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830b91"
+    ],
+    "createdAt": "2026-05-25T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c1",
+    "borrowerId": "BOR-ENT-148",
+    "name": "Rahul Khan",
+    "mobile": "+919125706018",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Khan Components",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-MA-12-988757",
+    "gstNumber": "27AMDFK2014H1Z8",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 75,
+    "activeApplications": [
+      "6a933027e969bc8658830b93"
+    ],
+    "createdAt": "2026-06-02T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c2",
+    "borrowerId": "BOR-ENT-149",
+    "name": "Naveen Shetty",
+    "mobile": "+919611520061",
+    "aadhaarVerified": true,
+    "businessName": "Metro Shetty Trading Co.",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-UT-11-934525",
+    "gstNumber": "09AIZPS7224N1Z3",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 84,
+    "activeApplications": [
+      "6a933027e969bc8658830b95"
+    ],
+    "createdAt": "2026-01-07T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c3",
+    "borrowerId": "BOR-ENT-150",
+    "name": "Aditi Jha",
+    "mobile": "+919563769290",
+    "aadhaarVerified": false,
+    "businessName": "Pioneer Jha Fabrics",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-PU-23-266172",
+    "gstNumber": "03ACACJ7320I1Z6",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "platformTrustScore": 82,
+    "activeApplications": [
+      "6a933027e969bc8658830b97"
+    ],
+    "createdAt": "2026-04-14T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c4",
+    "borrowerId": "BOR-ENT-151",
+    "name": "Ramesh Pillai",
+    "mobile": "+919379675925",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Pillai Logistics",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-KA-22-514255",
+    "gstNumber": "29AIGFP5942G1Z7",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 78,
+    "activeApplications": [
+      "6a933027e969bc8658830b99"
+    ],
+    "createdAt": "2026-07-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c5",
+    "borrowerId": "BOR-ENT-152",
+    "name": "Kavita Kumar",
+    "mobile": "+919423128858",
+    "aadhaarVerified": true,
+    "businessName": "Mahalaxmi Kumar Trading Co.",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-GU-10-575995",
+    "gstNumber": "24AKUFK2395R1ZC",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 72,
+    "activeApplications": [
+      "6a933027e969bc8658830b9b"
+    ],
+    "createdAt": "2026-07-02T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c6",
+    "borrowerId": "BOR-ENT-153",
+    "name": "Bhavna Chatterjee",
+    "mobile": "+919624683641",
+    "aadhaarVerified": true,
+    "businessName": "Standard Chatterjee Industries",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-UT-20-215281",
+    "gstNumber": "09ATTFC2652O1Z9",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 89,
+    "activeApplications": [
+      "6a933027e969bc8658830b9d"
+    ],
+    "createdAt": "2025-09-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c7",
+    "borrowerId": "BOR-ENT-154",
+    "name": "Ritu Yadav",
+    "mobile": "+919681562500",
+    "aadhaarVerified": true,
+    "businessName": "Universal Yadav Ancillaries",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-TA-25-562669",
+    "gstNumber": "33ATRPY9350Z1ZA",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 82,
+    "activeApplications": [
+      "6a933027e969bc8658830b9f"
+    ],
+    "createdAt": "2026-03-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c8",
+    "borrowerId": "BOR-ENT-155",
+    "name": "Sneha Mishra",
+    "mobile": "+919857654320",
+    "aadhaarVerified": true,
+    "businessName": "Metro Mishra Corporation",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-KA-11-715381",
+    "gstNumber": "29AIYCM8796O1Z5",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 99,
+    "activeApplications": [
+      "6a933027e969bc8658830ba1"
+    ],
+    "createdAt": "2025-11-09T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309c9",
+    "borrowerId": "BOR-ENT-156",
+    "name": "Deepak Agarwal",
+    "mobile": "+919683514660",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Agarwal Industries",
+    "businessCategory": "electronics_hardware",
+    "udyamNumber": "UDYAM-TA-20-337307",
+    "gstNumber": "33AELPA8962D3Z7",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830ba3"
+    ],
+    "createdAt": "2025-08-24T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ca",
+    "borrowerId": "BOR-ENT-157",
+    "name": "Rahul Iyer",
+    "mobile": "+919956365740",
+    "aadhaarVerified": true,
+    "businessName": "Universal Iyer Logistics",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-KA-19-159000",
+    "gstNumber": "29AOJCI2487J2Z5",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 82,
+    "activeApplications": [
+      "6a933027e969bc8658830ba5"
+    ],
+    "createdAt": "2026-06-18T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309cb",
+    "borrowerId": "BOR-ENT-158",
+    "name": "Sneha Trivedi",
+    "mobile": "+919940096450",
+    "aadhaarVerified": true,
+    "businessName": "Apex Trivedi Components",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-TA-12-377685",
+    "gstNumber": "33AZGCT7676C3Z5",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 81,
+    "activeApplications": [
+      "6a933027e969bc8658830ba7"
+    ],
+    "createdAt": "2026-03-16T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309cc",
+    "borrowerId": "BOR-ENT-159",
+    "name": "Ajay Nair",
+    "mobile": "+919665262345",
+    "aadhaarVerified": true,
+    "businessName": "Shree Nair Fabrics",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-PU-18-557249",
+    "gstNumber": "03AIZCN7502Z3Z1",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "platformTrustScore": 93,
+    "activeApplications": [
+      "6a933027e969bc8658830ba9"
+    ],
+    "createdAt": "2026-04-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309cd",
+    "borrowerId": "BOR-ENT-160",
+    "name": "Kavita Patel",
+    "mobile": "+919229085648",
+    "aadhaarVerified": true,
+    "businessName": "Universal Patel Distributors",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-WE-30-128248",
+    "gstNumber": "19ATFCP2603J2Z2",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 76,
+    "activeApplications": [
+      "6a933027e969bc8658830bab"
+    ],
+    "createdAt": "2026-06-05T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309ce",
+    "borrowerId": "BOR-ENT-161",
+    "name": "Harish Mishra",
+    "mobile": "+919595455246",
+    "aadhaarVerified": true,
+    "businessName": "Navkar Mishra Corporation",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-MA-11-387905",
+    "gstNumber": "27AITCM7285E1ZB",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "platformTrustScore": 95,
+    "activeApplications": [
+      "6a933027e969bc8658830bad"
+    ],
+    "createdAt": "2025-08-05T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309cf",
+    "borrowerId": "BOR-ENT-162",
+    "name": "Ramesh Bansal",
+    "mobile": "+919494926697",
+    "aadhaarVerified": true,
+    "businessName": "Prime Bansal Textiles",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-GU-13-800108",
+    "gstNumber": "24ADHFB6521B3ZB",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 83,
+    "activeApplications": [
+      "6a933027e969bc8658830baf"
+    ],
+    "createdAt": "2025-09-11T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d0",
+    "borrowerId": "BOR-ENT-163",
+    "name": "Sanjay Sen",
+    "mobile": "+919224722222",
+    "aadhaarVerified": true,
+    "businessName": "Prime Sen Corporation",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-KA-28-395412",
+    "gstNumber": "29AGDFS8948V3ZC",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "platformTrustScore": 99,
+    "activeApplications": [
+      "6a933027e969bc8658830bb1"
+    ],
+    "createdAt": "2026-03-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d1",
+    "borrowerId": "BOR-ENT-164",
+    "name": "Amit Iyer",
+    "mobile": "+919648730709",
+    "aadhaarVerified": false,
+    "businessName": "National Iyer Engineering",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-UT-05-671041",
+    "gstNumber": "09AGHPI6874S1ZA",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 98,
+    "activeApplications": [
+      "6a933027e969bc8658830bb3"
+    ],
+    "createdAt": "2026-02-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d2",
+    "borrowerId": "BOR-ENT-165",
+    "name": "Vijay Verma",
+    "mobile": "+919997507716",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Verma Components",
+    "businessCategory": "retail",
+    "udyamNumber": "UDYAM-RA-02-990883",
+    "gstNumber": "08AMIPV5269F3Z3",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 88,
+    "activeApplications": [
+      "6a933027e969bc8658830bb5"
+    ],
+    "createdAt": "2025-12-07T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d3",
+    "borrowerId": "BOR-ENT-166",
+    "name": "Subhash Reddy",
+    "mobile": "+919868275462",
+    "aadhaarVerified": true,
+    "businessName": "Super Reddy Manufacturing",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-MA-09-885493",
+    "gstNumber": "27AXBCR2773S3ZB",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "platformTrustScore": 69,
+    "activeApplications": [
+      "6a933027e969bc8658830bb7"
+    ],
+    "createdAt": "2025-10-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d4",
+    "borrowerId": "BOR-ENT-167",
+    "name": "Bhavna Bansal",
+    "mobile": "+919124922839",
+    "aadhaarVerified": true,
+    "businessName": "Delta Bansal Logistics",
+    "businessCategory": "auto_ancillary",
+    "udyamNumber": "UDYAM-UT-20-252094",
+    "gstNumber": "09ARUCB5691Q2Z1",
+    "city": "Moradabad",
+    "state": "Uttar Pradesh",
+    "platformTrustScore": 87,
+    "activeApplications": [
+      "6a933027e969bc8658830bb9"
+    ],
+    "createdAt": "2025-11-26T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d5",
+    "borrowerId": "BOR-ENT-168",
+    "name": "Shilpa Saxena",
+    "mobile": "+919298005401",
+    "aadhaarVerified": true,
+    "businessName": "Delta Saxena Manufacturing",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-HA-13-154575",
+    "gstNumber": "06AHYCS2996K2ZA",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830bbb"
+    ],
+    "createdAt": "2026-02-02T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d6",
+    "borrowerId": "BOR-ENT-169",
+    "name": "Neha Iyer",
+    "mobile": "+919284745370",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Iyer Textiles",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-PU-01-623491",
+    "gstNumber": "03ARXFI1326X3Z9",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830bbd"
+    ],
+    "createdAt": "2026-04-30T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d7",
+    "borrowerId": "BOR-ENT-170",
+    "name": "Mukesh Chatterjee",
+    "mobile": "+919749031635",
+    "aadhaarVerified": true,
+    "businessName": "Delta Chatterjee Components",
+    "businessCategory": "services",
+    "udyamNumber": "UDYAM-GU-26-856064",
+    "gstNumber": "24AMEPC2988W2Z7",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 98,
+    "activeApplications": [
+      "6a933027e969bc8658830bbf"
+    ],
+    "createdAt": "2025-12-23T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d8",
+    "borrowerId": "BOR-ENT-171",
+    "name": "Chetan Mishra",
+    "mobile": "+919121419753",
+    "aadhaarVerified": true,
+    "businessName": "Delta Mishra Enterprises",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-TE-12-916184",
+    "gstNumber": "36ANBPM7952N1Z8",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 87,
+    "activeApplications": [
+      "6a933027e969bc8658830bc1"
+    ],
+    "createdAt": "2026-04-01T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309d9",
+    "borrowerId": "BOR-ENT-172",
+    "name": "Pranav Naik",
+    "mobile": "+919199131944",
+    "aadhaarVerified": true,
+    "businessName": "Mahalaxmi Naik Components",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-KA-01-434405",
+    "gstNumber": "29AMPPN3859J2Z5",
+    "city": "Peenya",
+    "state": "Karnataka",
+    "platformTrustScore": 76,
+    "activeApplications": [
+      "6a933027e969bc8658830bc3"
+    ],
+    "createdAt": "2025-11-26T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309da",
+    "borrowerId": "BOR-ENT-173",
+    "name": "Sneha Singh",
+    "mobile": "+919646057098",
+    "aadhaarVerified": true,
+    "businessName": "Precision Singh Enterprises",
+    "businessCategory": "plastics_packaging",
+    "udyamNumber": "UDYAM-TE-20-607951",
+    "gstNumber": "36AQJCS7013I3Z3",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "platformTrustScore": 87,
+    "activeApplications": [
+      "6a933027e969bc8658830bc5"
+    ],
+    "createdAt": "2026-06-13T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309db",
+    "borrowerId": "BOR-ENT-174",
+    "name": "Varun Bansal",
+    "mobile": "+919392750771",
+    "aadhaarVerified": true,
+    "businessName": "Sterling Bansal Distributors",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-GU-29-500709",
+    "gstNumber": "24AARFB1388N1Z7",
+    "city": "Surat",
+    "state": "Gujarat",
+    "platformTrustScore": 74,
+    "activeApplications": [
+      "6a933027e969bc8658830bc7"
+    ],
+    "createdAt": "2026-06-30T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309dc",
+    "borrowerId": "BOR-ENT-175",
+    "name": "Ajay Gupta",
+    "mobile": "+919536435185",
+    "aadhaarVerified": true,
+    "businessName": "Pioneer Gupta Trading Co.",
+    "businessCategory": "fmcg_wholesale",
+    "udyamNumber": "UDYAM-TA-07-243236",
+    "gstNumber": "33AFAFG9621A3ZA",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 66,
+    "activeApplications": [
+      "6a933027e969bc8658830bc9"
+    ],
+    "createdAt": "2025-08-06T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309dd",
+    "borrowerId": "BOR-ENT-176",
+    "name": "Ganesh Kumar",
+    "mobile": "+919640999228",
+    "aadhaarVerified": true,
+    "businessName": "Bharat Kumar Components",
+    "businessCategory": "pharma_distribution",
+    "udyamNumber": "UDYAM-GU-28-332754",
+    "gstNumber": "24ABGCK8018X2ZC",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 92,
+    "activeApplications": [
+      "6a933027e969bc8658830bcb"
+    ],
+    "createdAt": "2026-05-21T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309de",
+    "borrowerId": "BOR-ENT-177",
+    "name": "Aditi Pillai",
+    "mobile": "+919136998456",
+    "aadhaarVerified": true,
+    "businessName": "Super Pillai Textiles",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-GU-29-633152",
+    "gstNumber": "24ATPPP9553H3Z7",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "platformTrustScore": 63,
+    "activeApplications": [
+      "6a933027e969bc8658830bcd"
+    ],
+    "createdAt": "2025-11-24T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309df",
+    "borrowerId": "BOR-ENT-178",
+    "name": "Subhash Mehta",
+    "mobile": "+919321655092",
+    "aadhaarVerified": true,
+    "businessName": "Mahalaxmi Mehta Textiles",
+    "businessCategory": "manufacturing",
+    "udyamNumber": "UDYAM-RA-16-874984",
+    "gstNumber": "08AUCFM8862S2ZC",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "platformTrustScore": 69,
+    "activeApplications": [
+      "6a933027e969bc8658830bcf"
+    ],
+    "createdAt": "2026-07-03T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e0",
+    "borrowerId": "BOR-ENT-179",
+    "name": "Pranav Shetty",
+    "mobile": "+919658858024",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Shetty Manufacturing",
+    "businessCategory": "food_processing",
+    "udyamNumber": "UDYAM-TA-18-855474",
+    "gstNumber": "33APUPS5253O2Z8",
+    "city": "Tirupur",
+    "state": "Tamil Nadu",
+    "platformTrustScore": 69,
+    "activeApplications": [
+      "6a933027e969bc8658830bd1"
+    ],
+    "createdAt": "2025-11-16T19:16:55.242Z"
+  },
+  {
+    "_id": "6a933027e969bc86588309e1",
+    "borrowerId": "BOR-ENT-180",
+    "name": "Madhav Singh",
+    "mobile": "+919179162808",
+    "aadhaarVerified": true,
+    "businessName": "Balaji Singh Solutions",
+    "businessCategory": "textile",
+    "udyamNumber": "UDYAM-WE-11-338510",
+    "gstNumber": "19APVCS4696S1Z7",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "platformTrustScore": 89,
+    "activeApplications": [
+      "6a933027e969bc8658830bd3"
+    ],
+    "createdAt": "2026-07-28T19:16:55.242Z"
+  }
+]

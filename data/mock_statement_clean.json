@@ -1,0 +1,47 @@
+{
+  "accountNumber": "50100492817291",
+  "accountType": "CURRENT",
+  "bank": "HDFC Bank",
+  "holderName": "Priya Sharma",
+  "businessName": "Priya Textiles Surat",
+  "period": {
+    "from": "2025-04-01",
+    "to": "2026-03-31"
+  },
+  "summary": {
+    "totalCredit": 3420000,
+    "totalDebit": 2980000,
+    "netCashFlow": 440000,
+    "bounceCount": 0,
+    "avgMonthlyBalance": 285000,
+    "creditTransactionCount": 384,
+    "debitTransactionCount": 290
+  },
+  "monthlyMetrics": [
+    { "month": "2025-04", "credit": 275000, "debit": 235000, "closingBalance": 260000, "bounces": 0 },
+    { "month": "2025-05", "credit": 280000, "debit": 240000, "closingBalance": 300000, "bounces": 0 },
+    { "month": "2025-06", "credit": 290000, "debit": 250000, "closingBalance": 340000, "bounces": 0 },
+    { "month": "2025-07", "credit": 270000, "debit": 230000, "closingBalance": 380000, "bounces": 0 },
+    { "month": "2025-08", "credit": 285000, "debit": 255000, "closingBalance": 410000, "bounces": 0 },
+    { "month": "2025-09", "credit": 310000, "debit": 270000, "closingBalance": 450000, "bounces": 0 },
+    { "month": "2025-10", "credit": 325000, "debit": 285000, "closingBalance": 490000, "bounces": 0 },
+    { "month": "2025-11", "credit": 295000, "debit": 260000, "closingBalance": 525000, "bounces": 0 },
+    { "month": "2025-12", "credit": 270000, "debit": 240000, "closingBalance": 555000, "bounces": 0 },
+    { "month": "2026-01", "credit": 265000, "debit": 230000, "closingBalance": 590000, "bounces": 0 },
+    { "month": "2026-02", "credit": 275000, "debit": 240000, "closingBalance": 625000, "bounces": 0 },
+    { "month": "2026-03", "credit": 280000, "debit": 245000, "closingBalance": 660000, "bounces": 0 }
+  ],
+  "vendorDebits": [
+    { "vendor": "Vardhman Textiles Ltd", "category": "fabric_vendor", "totalAmount": 1420000, "frequency": 24 },
+    { "vendor": "Arvind Mills Supplies", "category": "yarn_vendor", "totalAmount": 860000, "frequency": 18 },
+    { "vendor": "Surat Power & Utility", "category": "utilities", "totalAmount": 180000, "frequency": 12 },
+    { "vendor": "Staff Payroll AutoDebit", "category": "payroll", "totalAmount": 520000, "frequency": 12 }
+  ],
+  "narrations": [
+    "UPI/CR/512984128/RetailPay",
+    "UPI/CR/512984129/FabricSales",
+    "ACH/DR/VardhmanTex/INV882",
+    "UPI/CR/512984130/SuratShowroom",
+    "NEFT/DR/ArvindMills/INV401"
+  ]
+}
