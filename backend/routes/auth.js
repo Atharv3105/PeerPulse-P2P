@@ -276,34 +276,38 @@ router.post('/register/borrower', async (req, res) => {
       return res.status(400).json({ error: 'Name, Business Name, and Mobile are required' });
     }
 
-    const count = await Borrower.countDocuments();
-    const borrowerId = `BOR-NEW-${String(count + 1).padStart(3, '0')}`;
-
-    const newBorrower = await Borrower.create({
+    const borrowerId = `BOR-NEW-${Math.floor(100 + Math.random() * 900)}`;
+    const userData = {
+      id: 'usr_' + Date.now(),
       borrowerId,
       name,
       businessName,
-      businessCategory: businessCategory || 'retail',
+      category: businessCategory || 'retail',
       mobile: mobile.startsWith('+91') ? mobile : `+91${mobile}`,
       gstNumber: gstNumber || `27AABC${Math.floor(1000 + Math.random() * 9000)}K1Z5`,
       udyamNumber: udyamNumber || `UDYAM-MH-01-${Math.floor(100000 + Math.random() * 900000)}`,
-      aadhaarVerified: true,
-      platformTrustScore: 85,
-      activeApplications: []
-    });
+      trustScore: 85,
+      role: 'borrower'
+    };
+
+    try {
+      const count = await Borrower.countDocuments();
+      const newBorrower = await Borrower.create({
+        ...userData,
+        borrowerId: `BOR-NEW-${String(count + 1).padStart(3, '0')}`,
+        aadhaarVerified: true,
+        platformTrustScore: 85,
+        activeApplications: []
+      });
+      userData.id = newBorrower._id;
+      userData.borrowerId = newBorrower.borrowerId;
+    } catch (dbErr) {
+      console.warn('[Auth] DB offline, generated memory user session:', dbErr.message);
+    }
 
     res.status(201).json({
-      user: {
-        id: newBorrower._id,
-        borrowerId: newBorrower.borrowerId,
-        name: newBorrower.name,
-        businessName: newBorrower.businessName,
-        category: newBorrower.businessCategory,
-        mobile: newBorrower.mobile,
-        trustScore: newBorrower.platformTrustScore,
-        role: 'borrower'
-      },
-      token: `mock-jwt-borrower-${newBorrower.borrowerId}`
+      user: userData,
+      token: `mock-jwt-borrower-${userData.borrowerId}`
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -319,35 +323,38 @@ router.post('/register/lender', async (req, res) => {
       return res.status(400).json({ error: 'Name, Email, and Mobile are required' });
     }
 
-    const count = await Lender.countDocuments();
-    const lenderId = `LEN-NEW-${String(count + 1).padStart(3, '0')}`;
-
-    const newLender = await Lender.create({
+    const lenderId = `LEN-NEW-${Math.floor(100 + Math.random() * 900)}`;
+    const userData = {
+      id: 'usr_' + Date.now(),
       lenderId,
       name,
       email: email.toLowerCase(),
       mobile: mobile.startsWith('+91') ? mobile : `+91${mobile}`,
       riskAppetite: riskAppetite || 'Moderate',
-      sectorPreference: sectorPreference || 'any',
-      tenurePreference: [3, 6, 12],
-      denominationPreference: 25000,
       walletBalance: Number(initialDeposit || 200000),
-      totalExposure: 0,
-      activeInvestments: []
-    });
+      role: 'lender'
+    };
+
+    try {
+      const count = await Lender.countDocuments();
+      const newLender = await Lender.create({
+        ...userData,
+        lenderId: `LEN-NEW-${String(count + 1).padStart(3, '0')}`,
+        sectorPreference: sectorPreference || 'any',
+        tenurePreference: [3, 6, 12],
+        denominationPreference: 25000,
+        totalExposure: 0,
+        activeInvestments: []
+      });
+      userData.id = newLender._id;
+      userData.lenderId = newLender.lenderId;
+    } catch (dbErr) {
+      console.warn('[Auth] DB offline, generated memory lender session:', dbErr.message);
+    }
 
     res.status(201).json({
-      user: {
-        id: newLender._id,
-        lenderId: newLender.lenderId,
-        name: newLender.name,
-        email: newLender.email,
-        mobile: newLender.mobile,
-        riskAppetite: newLender.riskAppetite,
-        walletBalance: newLender.walletBalance,
-        role: 'lender'
-      },
-      token: `mock-jwt-lender-${newLender.lenderId}`
+      user: userData,
+      token: `mock-jwt-lender-${userData.lenderId}`
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
