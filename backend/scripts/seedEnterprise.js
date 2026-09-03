@@ -17,7 +17,9 @@ const LoanApplication = require('../models/LoanApplication');
 const LoanRepayment = require('../models/LoanRepayment');
 const AuditLog = require('../models/AuditLog');
 
-const DATA_DIR = path.join(__dirname, '../../data');
+const DATA_DIR = fs.existsSync(path.join(__dirname, '../../data'))
+  ? path.join(__dirname, '../../data')
+  : path.join(__dirname, '../data');
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/peerpulse';
 
 async function seedEnterpriseDatabase() {
@@ -84,11 +86,21 @@ async function seedEnterpriseDatabase() {
     console.log(`      • NPA: ${await LoanRepayment.countDocuments({ status: 'NPA' })}`);
     console.log('========================================================================\n');
 
-    process.exit(0);
+    if (require.main === module) {
+      process.exit(0);
+    }
+    return true;
   } catch (err) {
     console.error('[SeedEnterprise] Error during seeding:', err);
-    process.exit(1);
+    if (require.main === module) {
+      process.exit(1);
+    }
+    throw err;
   }
 }
 
-seedEnterpriseDatabase();
+if (require.main === module) {
+  seedEnterpriseDatabase();
+}
+
+module.exports = seedEnterpriseDatabase;
