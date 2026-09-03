@@ -132,7 +132,7 @@ export default function LenderDashboard({ activeLenderId }) {
     try {
       const res = await api.voteOTS({
         restructureId,
-        lenderId: lender.lenderId,
+        lenderId: lender?.lenderId || 'LEN-VIKRAM-001',
         vote
       });
       setVoteMessage(`Vote recorded: ${vote}. Current fractional approval: ${res.currentApprovalPct}% (Threshold: 60%)`);

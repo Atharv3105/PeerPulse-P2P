@@ -377,14 +377,41 @@ async function seedDatabase() {
 
     const amitRepayment = await LoanRepayment.create({
       loanId: amitLoan._id,
-      status: "ACTIVE",
-      dpd: 0,
-      penalInterestAccrued: 0,
+      status: "DELAYED",
+      dpd: 12,
+      penalInterestAccrued: 2958,
+      penalInterestRate: 0.18,
       monthlyEmi: 45365,
       outstandingPrincipal: 500000,
       nextPaymentDueDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-      ewsFlags: [],
-      collectionAttempts: []
+      ewsFlags: [
+        {
+          triggeredAt: new Date(),
+          type: 'BALANCE_LOW',
+          severity: 'ALERT',
+          description: 'UPI velocity inflow dropped 42%. Account balance below threshold during NACH debit.'
+        }
+      ],
+      restructurePlan: {
+        restructureId: 'RES-AMIT-OTS',
+        option: 'OTS',
+        proposedAmount: 350000,
+        status: 'PENDING_VOTE',
+        appliedAt: new Date(),
+        expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+        votes: [],
+        approvalPercentage: 40.0
+      },
+      collectionAttempts: [
+        {
+          attemptDate: new Date(),
+          method: 'NACH',
+          outcome: 'FAILED',
+          amountAttempted: 45365,
+          channel: 'HDFC_NACH_GATEWAY',
+          notes: 'NACH auto-debit returned R08 Insufficient Balance'
+        }
+      ]
     });
 
     amitLoan.repayment = amitRepayment._id;

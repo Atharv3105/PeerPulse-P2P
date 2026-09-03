@@ -76,11 +76,13 @@
       }
     ],
     "restructurePlan": {
-      "option": "MORATORIUM",
-      "months": 2,
-      "status": "APPLIED",
+      "restructureId": "RES-AMIT-OTS",
+      "option": "OTS",
+      "proposedAmount": 350000,
+      "status": "PENDING_VOTE",
       "requestedAt": "2025-01-14T11:00:00.000Z",
-      "approvalPercentage": 0
+      "approvalPercentage": 40.0,
+      "votes": []
     },
     "createdAt": "2024-11-06T09:00:00.000Z"
   },

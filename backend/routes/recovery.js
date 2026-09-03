@@ -64,14 +64,15 @@ router.post('/restructure', async (req, res) => {
 router.post('/ots-vote', async (req, res) => {
   try {
     const { restructureId, lenderId, vote } = req.body;
-    if (!restructureId || !lenderId || !vote) {
-      return res.status(400).json({ error: 'restructureId, lenderId, and vote (APPROVE/REJECT) are required' });
+    if (!restructureId || !vote) {
+      return res.status(400).json({ error: 'restructureId and vote (APPROVE/REJECT) are required' });
     }
 
     const result = await RecoveryEngine.voteOTS(restructureId, lenderId, vote);
     res.json(result);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    console.error('[OTS Vote Error]:', err.message);
+    res.status(400).json({ error: err.message });
   }
 });
 
