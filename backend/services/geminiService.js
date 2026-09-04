@@ -33,7 +33,10 @@ class GeminiService {
       generationConfig: {
         temperature: 0.25,
         topP: 0.95,
-        maxOutputTokens: 750
+        maxOutputTokens: 2048,
+        thinkingConfig: {
+          thinkingBudget: 0
+        }
       }
     };
 
@@ -45,7 +48,7 @@ class GeminiService {
 
     const response = await axios.post(url, payload, {
       headers: { 'Content-Type': 'application/json' },
-      timeout: 16000
+      timeout: 20000
     });
 
     const candidates = response.data?.candidates;
