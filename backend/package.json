@@ -10,7 +10,8 @@
     "seed:enterprise": "node scripts/seedEnterprise.js",
     "seed:sql": "node scripts/seedSql.js",
     "test:sql": "node scripts/test_sql_reports.js",
-    "data:generate": "node scripts/generateEnterpriseStaticFiles.js"
+    "data:generate": "node scripts/generateEnterpriseStaticFiles.js",
+    "postinstall": "npm rebuild sqlite3 --build-from-source || true"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -22,7 +23,7 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.24.3",
     "sequelize": "^6.37.8",
-    "sqlite3": "^6.0.1",
+    "sqlite3": "^5.1.7",
     "uuid": "^11.0.5"
   },
   "devDependencies": {
