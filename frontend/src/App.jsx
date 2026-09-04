@@ -18,6 +18,7 @@ import LenderOnboarding from './pages/LenderOnboarding';
 import LenderDashboard from './pages/LenderDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import PublicMetrics from './pages/PublicMetrics';
+import SqlReports from './pages/SqlReports';
 import InstitutionalDashboard from './pages/InstitutionalDashboard';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -248,6 +249,7 @@ export default function App() {
           }
         >
           <Route path="/marketplace" element={<Marketplace activeLenderId={activeLenderId} />} />
+          <Route path="/sql-reports" element={<SqlReports />} />
           <Route path="/metrics" element={<PublicMetrics />} />
         </Route>
 

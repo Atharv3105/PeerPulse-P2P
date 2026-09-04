@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 */node_modules/
 
@@ -67,5 +67,8 @@ lerna-debug.log*
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
+# SQLite database files
+*.sqlite
+*.sqlite3
+data/*.sqlite
+data/*.sqlite3

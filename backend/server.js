@@ -42,6 +42,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/simulation', require('./routes/simulation'));
 app.use('/api/webhooks', require('./routes/webhooks'));
 app.use('/api/payments', require('./routes/payments'));
+app.use('/api/reports', require('./routes/reports'));
 
 // Server-Sent Events (SSE) Live Multi-Tab Sync Stream
 const eventBus = require('./services/eventBus');
@@ -101,8 +102,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: err.message || 'Internal Server Error' });
 });
 
-// Start Server & Connect DB
-connectDB().then(() => {
+// Start Server & Connect Databases (MongoDB + Relational SQL)
+const { testConnection } = require('./config/database');
+
+connectDB().then(async () => {
+  await testConnection();
   queueService.init();
   app.listen(PORT, () => {
     console.log(`[PeerPulse Backend] API Gateway running on http://localhost:${PORT}`);
