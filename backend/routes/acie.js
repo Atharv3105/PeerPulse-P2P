@@ -4,6 +4,7 @@ const multer = require('multer');
 const axios = require('axios');
 const FormData = require('form-data');
 const upload = multer({ storage: multer.memoryStorage() });
+const geminiService = require('../services/geminiService');
 
 const ACIE_SERVICE_URL = process.env.ACIE_SERVICE_URL || 'http://localhost:8001';
 
@@ -163,9 +164,24 @@ router.post('/score', async (req, res) => {
 
 // POST /api/acie/copilot/chat
 router.post('/copilot/chat', async (req, res) => {
+  // 1. Direct Live Google Gemini 2.5 API Call
   try {
-    const response = await axios.post(`${ACIE_SERVICE_URL}/api/acie/copilot/chat`, req.body, { timeout: 6000 });
-    res.json(response.data);
+    const liveAiResponse = await geminiService.generateCopilotResponse({
+      message: req.body.message,
+      context: req.body.context
+    });
+
+    if (liveAiResponse && liveAiResponse.reply) {
+      return res.json(liveAiResponse);
+    }
+  } catch (geminiErr) {
+    console.warn('[ACIE Copilot] Live Gemini error, checking fallbacks:', geminiErr.message);
+  }
+
+  // 2. Secondary proxy to local Python microservice (if running)
+  try {
+    const response = await axios.post(`${ACIE_SERVICE_URL}/api/acie/copilot/chat`, req.body, { timeout: 1500 });
+    return res.json(response.data);
   } catch (err) {
     const msg = (req.body.message || '').toLowerCase();
     const role = req.body.context?.role || 'borrower';

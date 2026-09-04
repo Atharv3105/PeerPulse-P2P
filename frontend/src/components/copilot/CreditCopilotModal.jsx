@@ -303,7 +303,10 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
         {
           id: 'copilot_' + Date.now(),
           sender: 'copilot',
-          text: res.reply || "Analysis complete."
+          text: res.reply || "Analysis complete.",
+          source: res.source,
+          model: res.model,
+          liveApi: Boolean(res.liveApi)
         }
       ]);
     } catch (err) {
@@ -425,7 +428,18 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
                     {msg.sender === 'user' ? (
                       <span className="whitespace-pre-wrap">{msg.text}</span>
                     ) : (
-                      <FormattedMessage text={msg.text} />
+                      <>
+                        <FormattedMessage text={msg.text} />
+                        {msg.id !== 'welcome' && (
+                          <div className="mt-2.5 pt-2 border-t border-[var(--border)]/60 flex items-center justify-between text-[10px] text-[var(--muted-fg)] font-mono">
+                            <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-semibold">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                              <span>{msg.liveApi ? 'Google Gemini 2.5 Flash • Live API' : 'PeerPulse Risk Engine'}</span>
+                            </span>
+                            <span>{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                          </div>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
