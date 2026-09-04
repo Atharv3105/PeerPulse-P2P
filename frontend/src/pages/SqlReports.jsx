@@ -18,6 +18,101 @@ import axios from 'axios';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
 
+function SqlCodeHighlighter({ code, isDarkTerminal }) {
+  if (!code) return null;
+
+  const lines = code.split('\n');
+
+  const keywords = new Set([
+    'SELECT', 'FROM', 'WHERE', 'JOIN', 'INNER', 'LEFT', 'RIGHT', 'OUTER', 'CROSS',
+    'ON', 'AND', 'OR', 'NOT', 'IN', 'IS', 'NULL', 'AS', 'CASE', 'WHEN', 'THEN',
+    'ELSE', 'END', 'GROUP', 'BY', 'ORDER', 'HAVING', 'WITH', 'UNION', 'ALL',
+    'OVER', 'PARTITION', 'ROW_NUMBER', 'DENSE_RANK', 'RANK', 'COUNT', 'SUM',
+    'AVG', 'MAX', 'MIN', 'ROUND', 'COALESCE', 'DISTINCT', 'TOP', 'LIMIT',
+    'ASC', 'DESC', 'CREATE', 'PROCEDURE', 'TABLE', 'VIEW', 'EXEC', 'DECLARE',
+    'BEGIN', 'TRANSACTION', 'COMMIT', 'ROLLBACK', 'UPDATE', 'INSERT', 'INTO',
+    'VALUES', 'DELETE', 'DROP', 'ALTER', 'SET', 'CAST', 'CONVERT', 'DATEADD',
+    'DATEDIFF', 'GETDATE', 'CURRENT_TIMESTAMP'
+  ]);
+
+  return (
+    <>
+      {lines.map((line, lineIdx) => {
+        const trimmed = line.trim();
+
+        // 1. Comments
+        if (trimmed.startsWith('--')) {
+          return (
+            <div
+              key={lineIdx}
+              className={isDarkTerminal ? 'text-slate-400 italic font-mono' : 'text-slate-500 dark:text-slate-400 italic font-mono'}
+            >
+              {line}
+            </div>
+          );
+        }
+
+        // 2. Tokenize line words, punctuation, strings, numbers
+        const tokens = line.split(/(\s+|[(),;=<>+*/]|\b)/);
+
+        return (
+          <div key={lineIdx} className="font-mono">
+            {tokens.map((tok, tokIdx) => {
+              const upper = tok.toUpperCase();
+
+              // Keywords
+              if (keywords.has(upper)) {
+                return (
+                  <span
+                    key={tokIdx}
+                    className={isDarkTerminal ? 'text-sky-300 font-bold' : 'text-blue-700 dark:text-sky-300 font-bold'}
+                  >
+                    {tok}
+                  </span>
+                );
+              }
+
+              // Strings
+              if (/^'[^']*'?$/.test(tok) || tok.startsWith("'")) {
+                return (
+                  <span
+                    key={tokIdx}
+                    className={isDarkTerminal ? 'text-amber-300 font-medium' : 'text-amber-800 dark:text-amber-300 font-medium'}
+                  >
+                    {tok}
+                  </span>
+                );
+              }
+
+              // Numbers
+              if (/^\d+(?:\.\d+)?$/.test(tok)) {
+                return (
+                  <span
+                    key={tokIdx}
+                    className={isDarkTerminal ? 'text-emerald-400 font-semibold' : 'text-emerald-700 dark:text-emerald-400 font-semibold'}
+                  >
+                    {tok}
+                  </span>
+                );
+              }
+
+              // Default code text
+              return (
+                <span
+                  key={tokIdx}
+                  className={isDarkTerminal ? 'text-slate-100' : 'text-slate-900 dark:text-slate-100'}
+                >
+                  {tok}
+                </span>
+              );
+            })}
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
 export default function SqlReports() {
   const [reports, setReports] = useState([]);
   const [activeReportId, setActiveReportId] = useState('par-aging');
@@ -25,6 +120,7 @@ export default function SqlReports() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [showSql, setShowSql] = useState(true);
+  const [darkEditor, setDarkEditor] = useState(false);
   const [copied, setCopied] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -230,18 +326,54 @@ export default function SqlReports() {
 
       {/* SQL Script View (Collapsible) */}
       {showSql && reportResult?.rawSql && (
-        <div className="rounded-xl border border-slate-800 bg-slate-950 text-slate-100 overflow-hidden shadow-lg">
-          <div className="px-4 py-2.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400">
+        <div 
+          className={`rounded-xl border overflow-hidden shadow-md transition-colors ${
+            darkEditor 
+              ? 'border-slate-800 bg-[#0B0F17] text-slate-100' 
+              : 'border-slate-300 dark:border-slate-800 bg-white dark:bg-[#0B0F17] text-slate-900 dark:text-slate-100'
+          }`}
+        >
+          <div 
+            className={`px-4 py-2.5 border-b flex items-center justify-between text-xs transition-colors ${
+              darkEditor 
+                ? 'bg-slate-900/90 border-slate-800 text-slate-300' 
+                : 'bg-slate-100 dark:bg-slate-900/90 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200'
+            }`}
+          >
             <div className="flex items-center gap-2 font-mono">
-              <Code2 className="w-4 h-4 text-blue-400" />
-              <span>{activeDef?.file}</span>
-              <span className="text-slate-600">|</span>
-              <span className="text-emerald-400 font-semibold">{activeDef?.moduleType || 'Financial Risk Engine'}</span>
+              <Code2 className={`w-4 h-4 ${darkEditor ? 'text-blue-400' : 'text-blue-600 dark:text-blue-400'}`} />
+              <span className="font-bold text-slate-900 dark:text-slate-100">{activeDef?.file}</span>
+              <span className="text-slate-400 dark:text-slate-600">|</span>
+              <span className={`font-semibold ${darkEditor ? 'text-emerald-400' : 'text-emerald-700 dark:text-emerald-400'}`}>
+                {activeDef?.moduleType || 'Financial Risk Engine'}
+              </span>
             </div>
-            <span className="text-[11px] text-slate-400">ANSI / T-SQL Compliant</span>
+
+            <div className="flex items-center gap-3 font-mono text-[11px]">
+              <button
+                type="button"
+                onClick={() => setDarkEditor(!darkEditor)}
+                className="px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-sans text-xs cursor-pointer transition-colors shadow-xs"
+                title="Toggle Code Theme"
+              >
+                {darkEditor ? '☀️ Light Canvas' : '🌙 Dark Terminal'}
+              </button>
+              <span className="text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">
+                ANSI / T-SQL Compliant
+              </span>
+            </div>
           </div>
-          <pre className="p-4 text-xs font-mono overflow-x-auto max-h-72 leading-relaxed text-blue-200">
-            <code>{reportResult.rawSql}</code>
+
+          <pre 
+            className={`p-4 text-xs font-mono overflow-x-auto max-h-80 leading-relaxed transition-colors ${
+              darkEditor 
+                ? 'bg-[#0B0F17] text-slate-100 selection:bg-blue-950' 
+                : 'bg-white dark:bg-[#0B0F17] text-slate-900 dark:text-slate-100 selection:bg-blue-100 dark:selection:bg-blue-900'
+            }`}
+          >
+            <code>
+              <SqlCodeHighlighter code={reportResult.rawSql} isDarkTerminal={darkEditor} />
+            </code>
           </pre>
         </div>
       )}
