@@ -1,24 +1,24 @@
-# 🎓 YARDI SYSTEMS — SQL TECHNICAL INTERVIEW PLAYBOOK
-**Role**: Software Engineer Trainee (SQL Application Support)  
-**Location**: Pune | **CTC**: ₹5.50 LPA + WFH Allowance  
-**Project Defense**: PeerPulse Relational SQL Architecture & SSRS Reporting Engine  
+# 🎓 ENTERPRISE SQL ARCHITECTURE & TECHNICAL PLAYBOOK
+**Focus Area**: SQL Application Support & Relational Database Engineering  
+**Core Stack**: Microsoft SQL Server (T-SQL) • MySQL • SQLite (3NF) • SSRS / Crystal Reports  
+**Project Defense**: PeerPulse Relational SQL Architecture & Enterprise Reporting Engine  
 
 ---
 
-## 🏢 1. Company & Role Alignment: What Yardi Look For
+## 🏢 1. Role Alignment: Enterprise SQL Application Support & Engineering
 
-Yardi Systems is the global enterprise leader in real estate investment management and property accounting ERP (**Yardi Voyager**). Its technology foundation is **100% built on Microsoft SQL Server (T-SQL) and Oracle / MySQL**.
+Enterprise ERPs, financial institutions, and real estate investment accounting platforms depend heavily on relational database foundations built on **Microsoft SQL Server (T-SQL), Oracle, and MySQL**.
 
-In this role, your primary day-to-day responsibilities are:
-1. **SQL Application Support**: Investigating client transaction discrepancies, fixing database integrity issues, resolving ledger locks.
-2. **Writing Complex SQL Scripts for Reporting**: Building data queries for **SSRS (SQL Server Reporting Services)** and **Crystal Reports** (e.g. rent rolls, accounts receivable aging, loan balance waterfall, investor distribution).
-3. **Performance Optimization & Measurement**: Identifying slow queries, analyzing execution plans (`EXPLAIN`), creating composite B-Tree indexes, and eliminating table scans.
+Key engineering and support responsibilities in enterprise environments include:
+1. **SQL Application Support**: Investigating client transaction discrepancies, fixing database integrity issues, resolving ledger locks and deadlocks.
+2. **Writing Complex SQL Scripts for Reporting**: Building data queries for **SSRS (SQL Server Reporting Services)** and **Crystal Reports** (e.g. accounts receivable aging, loan balance waterfall, investor exposure audits).
+3. **Performance Optimization & Measurement**: Identifying slow queries, analyzing execution plans (`EXPLAIN`), creating composite B-Tree indexes, and eliminating costly table scans.
 4. **Unit Testing & Stored Procedures**: Writing and maintaining stored procedures, views, triggers, and ACID transactions.
 
 > [!TIP]
-> When the interviewer asks *"Tell me about your project"*, do NOT introduce PeerPulse as just a web app.  
-> Introduce it as:  
+> Architecture Summary:  
 > **"PeerPulse — an RBI-compliant fractional P2P lending platform powered by an Enterprise 3NF Relational SQL Architecture and an SSRS-style analytical financial reporting suite."**
+
 
 ---
 
@@ -100,7 +100,7 @@ Located in `backend/sql/stored_procedures.sql`:
 
 ---
 
-## 🎯 5. Top 15 Yardi Technical Interview Questions & Model Answers
+## 🎯 5. Enterprise SQL Engineering & Support Technical Reference (Core Concepts & FAQs)
 
 ### Q1: What is the difference between `WHERE` and `HAVING`?
 > **Answer**:  
@@ -170,14 +170,14 @@ Located in `backend/sql/stored_procedures.sql`:
 
 ---
 
-## 💻 6. How to Demo This in the Interview
-
-1. **Open the Web App**: Navigate to `http://localhost:5173/sql-reports` (or click **"SQL Reports (SSRS)"** in the top navigation).
-2. **Show the 5 Reports**: Click between Report 01 and Report 05.
-3. **Point out the Query Execution Speed**:
-   - Highlight: *"Notice the query execution time is between 2ms and 30ms directly from our relational database."*
-4. **Click "View SQL Code"**: Show the interviewer the formatted T-SQL query:
-   - Highlight the CTEs: *"Here is where we used Common Table Expressions to roll up the voting ballot weights."*
-   - Highlight Window Functions: *"Here is where we used DENSE_RANK() and SUM() OVER PARTITION BY to evaluate lender concentration."*
-5. **Click "Export CSV"**: Demonstrate generating exportable financial reports on the fly.
-6. **Show `backend/sql/schema.sql` and `stored_procedures.sql`**: Open them in VS Code or SQL Server Management Studio to prove your command of DDL, constraints, foreign keys, and stored procedures.
+## 💻 6. Demonstration & Auditing Walkthrough
+ 
+1. **Open the Web App**: Navigate to `http://localhost:5173/admin/sql-reports` (or click **"SQL Reports (SSRS)"** in the top navigation).
+2. **Explore the 5 Reports**: Click between Report 01 and Report 05.
+3. **Query Execution Latency**:
+   - Notice the query execution time is benchmarked between 1ms and 20ms directly from our relational database.
+4. **Click "View SQL Code"**: Inspect the formatted T-SQL query:
+   - CTE Usage: Common Table Expressions to roll up the voting ballot weights.
+   - Window Functions: `DENSE_RANK()` and `SUM() OVER PARTITION BY` to evaluate lender concentration.
+5. **Click "Export CSV"**: Generate exportable financial audit reports on the fly.
+6. **Inspect Schema & Procedures**: Review `backend/sql/schema.sql` and `stored_procedures.sql` for DDL, constraints, foreign keys, and stored procedures.
