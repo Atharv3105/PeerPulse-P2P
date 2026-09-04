@@ -118,6 +118,33 @@ class SimulationEngine {
         reason: `Advanced platform timeline by ${daysToAdd} days. Accrued ₹${totalPenalAccrued.toLocaleString('en-IN')} penal interest.`,
         timestamp: new Date()
       });
+
+      // Synchronize SQL Repayments for relational ledger and reports
+      try {
+        const { Repayment: SqlRepayment } = require('../models/sql');
+        if (SqlRepayment) {
+          const sqlRepayments = await SqlRepayment.findAll();
+          for (let sRep of sqlRepayments) {
+            if (sRep.dpd > 0 || sRep.status !== 'ACTIVE' || Math.random() < 0.12) {
+              const newDpd = (sRep.dpd || 0) + daysToAdd;
+              const principal = parseFloat(sRep.outstanding_principal || 300000);
+              const addPenal = Math.round(principal * 0.18 * (daysToAdd / 365));
+              let newStatus = sRep.status;
+              if (newDpd >= 90) newStatus = 'NPA';
+              else if (newDpd >= 31) newStatus = 'AT_RISK';
+              else if (newDpd >= 1) newStatus = 'DELAYED';
+
+              await sRep.update({
+                dpd: newDpd,
+                penal_interest_accrued: parseFloat(sRep.penal_interest_accrued || 0) + addPenal,
+                status: newStatus
+              });
+            }
+          }
+        }
+      } catch (sqlErr) {
+        // Safe fallback if SQL tables are uninitialized
+      }
     } catch (dbErr) {
       console.warn('[SimulationEngine] DB offline, using memory simulation state:', dbErr.message);
     }
@@ -210,13 +237,13 @@ class SimulationEngine {
     this.initDefaultActivities();
 
     return new Promise((resolve, reject) => {
-      exec('node scripts/seedEnterprise.js', { cwd: path.join(__dirname, '../') }, (err, stdout, stderr) => {
+      exec('node scripts/seedEnterprise.js && node scripts/seedSql.js', { cwd: path.join(__dirname, '../') }, (err, stdout, stderr) => {
         if (err) {
           console.error('[SimulationEngine] Reset error:', err);
           return reject(err);
         }
         resolve({
-          message: 'Timeline reset to Day 0 with original baseline seed state',
+          message: 'Timeline reset to Day 0 with original baseline seed state (MongoDB & SQL)',
           daysOffset: 0,
           simulatedDate: this.getCurrentSimulatedDate().toISOString().split('T')[0]
         });

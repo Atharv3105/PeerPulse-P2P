@@ -22,14 +22,14 @@ export default function TimeMachineBar({ dark, onTimelineChange }) {
   useEffect(() => {
     fetchStatus();
 
-    // Close when clicking outside
-    const handleClickOutside = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
+    // Close when pressing Escape
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const handleFastForward = async (days) => {

@@ -596,19 +596,206 @@ export const api = {
       return res.data;
     } catch (err) {
       console.warn('[Copilot API fallback]', err.message);
-      const msg = message.toLowerCase();
+      const msg = (message || '').toLowerCase();
       const role = context?.role || 'borrower';
+      const lender = context?.lender || {};
+      const borrower = context?.borrower || {};
+      const lenderName = lender.name || 'Vikram Sethi';
+      const walletBalance = lender.walletBalance || 450000;
 
-      if (role === 'lender' || msg.includes('stress') || msg.includes('portfolio') || msg.includes('shock')) {
+      // 1. Investment / Marketplace Opportunities Intent
+      if (
+        msg.includes('investment') ||
+        msg.includes('invest') ||
+        msg.includes('look for') ||
+        msg.includes('recommend') ||
+        msg.includes('marketplace') ||
+        msg.includes('tranche') ||
+        msg.includes('opportunities') ||
+        msg.includes('where should') ||
+        msg.includes('where to')
+      ) {
         return {
           source: 'copilot-engine',
-          reply: `### 📊 Portfolio Stress-Testing Report (Shock Delta: -15.0% Sector Contraction)\n\n• **Active Tranches**: 4 Loans (Total Value: ₹1,00,000)\n• **Baseline Expected IRR**: **14.8% p.a.**\n• **Stressed Net IRR**: **11.5% p.a.** (-3.3% variance)\n• **Simulated Max Capital at Risk**: ₹5,250\n\n**Risk Officer Recommendations**:\n1. **Concentration Buffer**: Re-balance allocations so no single sector exceeds 35% of total wallet (RBI Master Direction limit is 50%).\n2. **Tranche Sizing**: Keep individual borrower commitments at ₹25,000 to maximize fractional diversification across 20+ independent MSMEs.\n3. **Grade Hedging**: Maintain at least 60% of tranches in Grade A prime assets to absorb delayed payments from subprime Grade C exposures.`
+          reply: `### 💼 Executive Investment Memorandum
+**Target Investor**: ${lenderName} (Uninvested Escrow Balance: ₹${walletBalance.toLocaleString('en-IN')})
+**Strategy**: Fractional Grade A/B MSME Diversification & Regulatory Cap Optimization
+
+**Recommended New Deployments from Live Marketplace**:
+1. **Apex Precision Components** (Automotive & Precision Engineering)
+   • **Yield**: **14.0% p.a.** | **Rating**: **Grade A** (Score: 782/900)
+   • **Structure**: ₹25,000 Fractional Tranche (Loan: ₹4,50,000 • 92% Funded)
+   • **Credit Strengths**: Zero 30+ DPD history across 36 months; GST monthly turnover ₹18.4L with 1:1 bank credits reconciliation; verified e-NACH mandate active with HDFC Bank.
+   • **Allocation Advice**: Commit 1 tranche (₹25,000) to capture immediate closing yield.
+
+2. **Sri Balaji Engineering Works** (Heavy Machinery & Industrial Tools)
+   • **Yield**: **13.5% p.a.** | **Rating**: **Grade A** (Score: 795/900)
+   • **Structure**: ₹25,000 Fractional Tranche (Anchor Co-lending 80:20 with Bajaj Finserv NBFC)
+   • **Credit Strengths**: Institutional anchor derisking; Tier-1 OEM purchase orders from Tata Motors & Bharat Forge; audited DSCR 1.84x.
+   • **Allocation Advice**: Commit 1-2 tranches (₹25,000 - ₹50,000) for stable anchor-backed cashflow.
+
+3. **Delta Chauhan Logistics** (Cold-Chain Transportation)
+   • **Yield**: **15.5% p.a.** | **Rating**: **Grade B** (Score: 718/900)
+   • **Structure**: ₹25,000 Fractional Tranche (High-turnover working capital)
+   • **Credit Strengths**: Fast cash-cycle turnaround (14 days); 0 NACH bounces in 18 months; GPS-tracked fleet collateral.
+   • **Allocation Advice**: Allocate 1 tranche (₹25,000) to optimize overall portfolio blended yield to **14.2% p.a.**
+
+**Risk & Governance Directives**:
+• **RBI Concentration Ceiling**: Maximum ₹50,000 exposure per borrower strictly enforced.
+• **Liquidity Buffer**: Deploy ₹1,00,000 today from your ₹4,50,000 idle cash, preserving ₹3,50,000 in IDFC Trustee Escrow for upcoming Tier-1 syndications.`
+        };
+      }
+
+      // 2. Amit Deshmukh OTS Restructuring Ballot Intent
+      if (
+        msg.includes('amit') ||
+        msg.includes('ots') ||
+        msg.includes('vote') ||
+        msg.includes('ballot') ||
+        msg.includes('restructur') ||
+        msg.includes('settlement') ||
+        msg.includes('deshmukh')
+      ) {
+        return {
+          source: 'copilot-engine',
+          reply: `### ⚖️ Restructuring Ballot Analysis & Voting Recommendation
+**Borrower**: Amit Deshmukh (Deshmukh Precision Engineering)
+**Active Holding**: ₹50,000 Tranche (DPD: 12 Days | Current Stage: Stage 1 Delayed)
+**Lender Voting Power**: **40.0% Consortium Weight** (Decisive Swing Vote)
+
+**Restructuring Proposal Terms**:
+• **Settlement Offer**: ₹3,50,000 upfront One-Time Settlement (OTS)
+• **Net Recovery Yield**: **84.0% of Outstanding Principal** within 7 banking days via direct IDFC Trustee Escrow sweep.
+• **Waiver Requested**: 16% principal haircut + accumulated penal interest.
+
+**Comparative Resolution Scenarios**:
+1. **Option A: Approve OTS Settlement (Recommended)**:
+   • Guaranteed immediate capital return of ₹42,000 on your ₹50,000 tranche.
+   • Net loss limited to ₹8,000, immediately offset by ongoing Grade A yields within 45 days.
+   • Eliminates NPA classification and prevents legal drag.
+
+2. **Option B: Reject OTS & Proceed to Legal / SARFAESI**:
+   • Recovery timeline: 18 - 24 months in Debt Recovery Tribunal (DRT).
+   • Historical MSME legal recovery average: **32.0% - 45.0%** net after recovery agency & legal fees.
+   • Capital remains locked in non-accrual NPA status with zero interim liquidity.
+
+**Chief Risk Officer Verdict**:
+**VOTE APPROVE**. Given your 40% voting weight, your approval guarantees passing the 75% consortium threshold and unlocks instant recovery into your escrow wallet.`
+        };
+      }
+
+      // 3. Idle Cash Deployment / Escrow Allocation Intent
+      if (
+        msg.includes('idle') ||
+        msg.includes('deploy') ||
+        msg.includes('allocate') ||
+        msg.includes('escrow cash') ||
+        msg.includes('uninvested') ||
+        msg.includes('wallet')
+      ) {
+        return {
+          source: 'copilot-engine',
+          reply: `### 💰 Escrow Cash Deployment Strategy
+**Current Uninvested Liquidity**: ₹4,50,000 (IDFC Trustee Escrow Account)
+**Current Active Exposure**: ₹1,25,000 across 3 Loans | **RBI Aggregate Ceiling**: ₹10,00,000
+
+**3-Tier Deployment Roadmap**:
+1. **Immediate Allocation (₹1,50,000 • 33% of Idle Cash)**:
+   • Commit to 6 fractional tranches of ₹25,000 each across diversified Grade A & B MSMEs.
+   • Recommended sectors: Healthcare Logistics (13.8%), Precision Tooling (14.2%), and Agri-Cold Storage (14.5%).
+   • Increases projected annual gross interest yield by **+₹21,300**.
+
+2. **Strategic Reserve (₹1,50,000 • 33% of Idle Cash)**:
+   • Hold for upcoming 80:20 institutional co-lending syndications with Bajaj Finserv & Tata Capital NBFCs.
+   • Target yield: 13.0% - 13.5% with enhanced credit loss protection.
+
+3. **Liquidity Cushion (₹1,50,000 • 34% of Idle Cash)**:
+   • Retain for secondary market tranche purchases and instant platform withdrawals.
+
+**Regulatory Compliance**:
+Post-deployment total exposure will be ₹2,75,000, operating comfortably at 27.5% of your ₹10,00,000 RBI P2P aggregate lender limit.`
+        };
+      }
+
+      // 4. Portfolio Stress Testing / Shock Intent
+      if (
+        msg.includes('stress') ||
+        msg.includes('shock') ||
+        msg.includes('scenario') ||
+        msg.includes('var') ||
+        msg.includes('contraction')
+      ) {
+        return {
+          source: 'copilot-engine',
+          reply: `### 📊 Portfolio Stress-Testing Report (Shock Delta: -15.0% Sector Contraction)
+**Simulated Scenario**: 15% revenue decline in domestic manufacturing & delayed input supply cycles.
+**Portfolio Base**: ₹1,25,000 across 3 active tranches (${lenderName})
+
+**Stress Impact Metrics**:
+• **Baseline Expected Net IRR**: **14.8% p.a.**
+• **Stressed Net IRR**: **11.5% p.a.** (-3.3% variance)
+• **Simulated Max Capital at Risk**: ₹5,250 (4.2% of total portfolio)
+• **Probability of Default (PD) Surge**: +2.1% in Tier-2 manufacturing tranches
+
+**Risk Mitigation Directives**:
+1. **Sector Diversification**: Cap manufacturing exposure at 35% of total deployed capital.
+2. **Fractional Granularity**: Maintain ₹25,000 tranche sizing across 20+ borrowers to dilute individual default volatility.
+3. **Escrow Safeguard**: Rely on automated NACH re-presentment sweeps on days 3, 7, 15, and 25 to maximize cure rates.`
+        };
+      }
+
+      // 5. Borrower Rate Reduction Intent
+      if (
+        msg.includes('lower') ||
+        msg.includes('rate') ||
+        msg.includes('negotiate') ||
+        msg.includes('12%') ||
+        msg.includes('reduction')
+      ) {
+        return {
+          source: 'copilot-engine',
+          reply: `### 📋 Action Plan: Lowering MSME Borrowing Rate to 12.0%
+**Borrower**: ${borrower.businessName || 'Priya Textiles Surat'} | **Current Rate**: 13.5% p.a. | **Target Rate**: 12.0% p.a.
+
+**Underwriter's Assessment**:
+Your ACIE trust score of 810/900 reflects strong fundamentals with zero EMI bounces. To qualify for prime Grade A+ pricing (12.0% p.a.):
+
+**3-Step Optimization Roadmap**:
+1. **Zero-Bounce Liquidity Buffer**: Maintain a minimum closing balance of ₹35,000 between the 1st and 5th of each month to guarantee automated NACH clearing.
+2. **GSTR-1 & Bank Deposit Alignment**: Keep quarterly GSTR-3B filings strictly aligned (under 5% variance) with gross banking turnover credits.
+3. **Counterparty Network Expansion**: Distribute your incoming UPI collections across 10+ verified commercial vendors to eliminate circular counterparty flags.`
+        };
+      }
+
+      // 6. Role-based Defaults
+      if (role === 'lender') {
+        return {
+          source: 'copilot-engine',
+          reply: `### 💼 Portfolio Overview for ${lenderName}
+• **Total Deployed Capital**: ₹1,25,000 across 3 active tranches
+• **Uninvested Escrow Cash**: ₹${walletBalance.toLocaleString('en-IN')}
+• **Blended Net Portfolio Yield**: **14.2% p.a.**
+• **Diversification Rating**: 8.8/10 (RBI compliant)
+
+**Suggested Inquiries**:
+• *"What new investments should I look for"* — Screen top Grade A listings on the marketplace.
+• *"Should I approve Amit's OTS?"* — Review recovery projections for Amit Deshmukh's ballot.
+• *"Deploy idle ₹4.5L escrow cash"* — Strategy for uninvested cash.`
         };
       }
 
       return {
         source: 'copilot-engine',
-        reply: `### 📋 Credit Assessment for ${context?.borrower?.businessName || 'Priya Textiles Surat'}\n\n**ACIE Rating**: Grade **${context?.acie?.grade || 'B'}** (${context?.acie?.score || 710}/900) • **Recommended Interest Rate**: **14.5% p.a.**\n\n**Underwriter's Summary**:\nYour business showcases solid commercial viability with consistent banking turnover and zero EMI bounces across 12 months.\n\n**🚀 3-Step Action Plan to Lower Your Interest Rate by 1.5% - 2.5%**:\n1. **Zero-Bounce Buffer**: Maintain a minimum closing balance of ₹35,000 between the 1st and 5th of each month to avoid NACH bounce penalties.\n2. **GSTR-1 Alignment**: File quarterly GST returns on time to ensure continuous 1:1 turnover reconciliation against bank deposits.\n3. **Vendor Ring Elimination**: Keep UPI counterparty velocity distributed across at least 8 unique business accounts to boost trust graph metrics.`
+        reply: `### 📋 Credit Assessment for ${borrower.businessName || 'Priya Textiles Surat'}
+**ACIE Rating**: Grade **${context?.acie?.grade || 'A'}** (${context?.acie?.score || 810}/900) • **Recommended Interest Rate**: **13.5% p.a.**
+
+**Underwriter's Summary**:
+Your business showcases solid commercial viability with consistent banking turnover and zero EMI bounces across 12 months.
+
+**🚀 3-Step Action Plan to Lower Your Interest Rate by 1.5% - 2.5%**:
+1. **Zero-Bounce Buffer**: Maintain a minimum closing balance of ₹35,000 between the 1st and 5th of each month to avoid NACH bounce penalties.
+2. **GSTR-1 Alignment**: File quarterly GST returns on time to ensure continuous 1:1 turnover reconciliation against bank deposits.
+3. **Vendor Ring Elimination**: Keep UPI counterparty velocity distributed across at least 8 unique business accounts to boost trust graph metrics.`
       };
     }
   },

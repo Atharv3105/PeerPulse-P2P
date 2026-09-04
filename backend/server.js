@@ -22,6 +22,9 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Static directory for uploaded/mock documents
 app.use('/data', express.static(path.join(__dirname, '../data')));
 
+// Favicon handler
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 // Health Check
 app.get('/health', (req, res) => {
   res.json({

@@ -157,7 +157,12 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
   useEffect(() => {
     const fetchLiveAccount = async () => {
       try {
-        const isLender = window.location.pathname.includes('/lender') || currentRole === 'lender';
+        const isLender = 
+          window.location.pathname.includes('/lender') || 
+          window.location.pathname.includes('/marketplace') || 
+          currentRole === 'lender' ||
+          authUser?.role === 'lender';
+
         if (isLender) {
           const lId = activeLenderId || 'LEN-VIKRAM-001';
           const lData = await api.getLender(lId);
@@ -181,7 +186,7 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
     };
 
     fetchLiveAccount();
-  }, [isOpen, activeLenderId, activeBorrowerId, currentRole]);
+  }, [isOpen, activeLenderId, activeBorrowerId, currentRole, authUser]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -215,8 +220,53 @@ export default function CreditCopilotModal({ activeBorrowerId, activeLenderId, c
     setIsTyping(true);
 
     try {
-      const isLender = window.location.pathname.includes('/lender') || activeTab === 'lender' || textToSend.toLowerCase().includes('stress');
-      const effectiveRole = isLender ? 'lender' : 'borrower';
+      const textLower = textToSend.toLowerCase();
+      const isBorrowerIntent = 
+        textLower.includes('lower my rate') || 
+        textLower.includes('rate reduction') || 
+        textLower.includes('my business') || 
+        textLower.includes('gst filing') || 
+        textLower.includes('priya textiles');
+
+      const isLenderIntent = 
+        textLower.includes('invest') || 
+        textLower.includes('look for') ||
+        textLower.includes('portfolio') || 
+        textLower.includes('stress') || 
+        textLower.includes('ots') || 
+        textLower.includes('ballot') || 
+        textLower.includes('deploy') || 
+        textLower.includes('escrow') || 
+        textLower.includes('tranche') || 
+        textLower.includes('yield') || 
+        textLower.includes('irr') || 
+        textLower.includes('shock') ||
+        textLower.includes('marketplace') ||
+        textLower.includes('allocation') ||
+        textLower.includes('amit');
+
+      let effectiveRole = 'lender';
+      if (isBorrowerIntent && !isLenderIntent) {
+        effectiveRole = 'borrower';
+      } else if (isLenderIntent) {
+        effectiveRole = 'lender';
+      } else if (activeTab === 'borrower') {
+        effectiveRole = 'borrower';
+      } else if (activeTab === 'lender') {
+        effectiveRole = 'lender';
+      } else if (window.location.pathname.includes('/borrower')) {
+        effectiveRole = 'borrower';
+      } else if (window.location.pathname.includes('/lender') || window.location.pathname.includes('/marketplace')) {
+        effectiveRole = 'lender';
+      } else if (currentRole === 'borrower') {
+        effectiveRole = 'borrower';
+      } else if (currentRole === 'lender' || authUser?.role === 'lender') {
+        effectiveRole = 'lender';
+      } else if (accountData.activePersonaName?.includes('Priya')) {
+        effectiveRole = 'borrower';
+      } else {
+        effectiveRole = 'lender';
+      }
 
       // Full Live Account Context
       const payloadContext = {
