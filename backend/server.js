@@ -104,9 +104,21 @@ app.use((err, req, res, next) => {
 
 // Start Server & Connect Databases (MongoDB + Relational SQL)
 const { testConnection } = require('./config/database');
+const { Loan } = require('./models/sql');
+const seedSqlDatabase = require('./scripts/seedSql');
 
 connectDB().then(async () => {
   await testConnection();
+  try {
+    const sqlLoanCount = await Loan.count().catch(() => 0);
+    if (sqlLoanCount === 0) {
+      console.log('[PeerPulse Server] Initializing and seeding relational SQL database...');
+      await seedSqlDatabase();
+    }
+  } catch (sqlErr) {
+    console.warn('[PeerPulse Server] SQL auto-seed skipped:', sqlErr.message);
+  }
+
   queueService.init();
   app.listen(PORT, () => {
     console.log(`[PeerPulse Backend] API Gateway running on http://localhost:${PORT}`);
