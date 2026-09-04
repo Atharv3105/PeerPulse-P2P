@@ -1,6 +1,6 @@
 -- ============================================================================
 -- REPORT 04: PRO-RATA RECOVERY DISTRIBUTION & NODAL ESCROW WATERFALL
--- Target Reporting Tool: Crystal Reports / SSRS
+-- Module: Financial Ledger & Nodal Escrow Reconciliation
 -- Purpose: Complete financial audit of delinquent loan recovery proceeds,
 --          platform resolution fee (3%), and investor pro-rata credit ledgers.
 -- Features Used: Multi-Table JOINs, Precision Decimal Math, GROUP BY Subtotals

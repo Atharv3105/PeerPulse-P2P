@@ -1,6 +1,6 @@
 -- ============================================================================
 -- REPORT 05: ACIE CREDIT SCORE MIGRATION & EWS EARLY WARNING SURVEILLANCE
--- Target Reporting Tool: SQL Server Reporting Services (SSRS)
+-- Module: Underwriting Telemetry & Early Warning Signal Surveillance
 -- Purpose: 5-Dimensional underwriter surveillance tracking cashflow volatility,
 --          forgery flags, and early warning delinquency triggers across MSMEs.
 -- Features Used: Aggregate Percentages, Conditional Categorization, JSON Queries

@@ -11,45 +11,45 @@ const REPORT_CATALOG = [
     id: 'par-aging',
     number: '01',
     name: 'Portfolio at Risk (PAR) & DPD Aging Matrix',
-    targetTool: 'SSRS (SQL Server Reporting Services)',
+    moduleType: 'Delinquency & Provisioning',
     file: '01_portfolio_at_risk_aging.sql',
-    category: 'Delinquency & Provisioning',
+    category: 'Regulatory Portfolio Surveillance',
     description: 'Calculates sectoral delinquency exposure, DPD aging buckets (Current, SMA-0, SMA-1, SMA-2, NPA), PAR-30 ratio, and penal interest accrued across MSME sectors.'
   },
   {
     id: 'lender-concentration',
     number: '02',
     name: 'Lender Exposure & RBI Concentration Audit',
-    targetTool: 'SSRS / Crystal Reports',
+    moduleType: 'Regulatory Compliance & Exposure',
     file: '02_lender_diversification_concentration.sql',
-    category: 'Regulatory Compliance',
+    category: 'Statutory Exposure Audit',
     description: 'Uses Window Functions (DENSE_RANK, SUM() OVER) to detect single-borrower exposure cap breaches (≤ ₹50,000) and platform lender ceilings (≤ ₹10 Lakhs).'
   },
   {
     id: 'ots-waterfall',
     number: '03',
     name: 'Restructuring Ballot Weighted Consensus Waterfall',
-    targetTool: 'SSRS (SQL Server Reporting Services)',
+    moduleType: 'Restructuring State Machine',
     file: '03_ots_voting_consensus_waterfall.sql',
-    category: 'Restructuring State Machine',
+    category: 'Debt Resolution Governance',
     description: 'Common Table Expressions (CTEs) rolling up fractional lender voting ballots weighted by capital share, comparing against the statutory 60% approval threshold.'
   },
   {
     id: 'recovery-ledger',
     number: '04',
     name: 'Pro-Rata Recovery Distribution & Nodal Escrow Waterfall',
-    targetTool: 'Crystal Reports / SSRS',
+    moduleType: 'Nodal Escrow & Resolution',
     file: '04_pro_rata_recovery_distribution_ledger.sql',
-    category: 'Financial Ledger & Escrow',
+    category: 'Financial Ledger & Escrow Audit',
     description: 'Multi-table financial audit verifying gross delinquency recovery, platform resolution fee deduction (3%), and net pro-rata credits to fractional investor wallets.'
   },
   {
     id: 'credit-migration',
     number: '05',
     name: 'ACIE Credit Score Migration & EWS Surveillance',
-    targetTool: 'SSRS (SQL Server Reporting Services)',
+    moduleType: 'Underwriting & Risk Telemetry',
     file: '05_borrower_credit_migration_matrix.sql',
-    category: 'Underwriting & Risk Analytics',
+    category: 'Early Warning Surveillance',
     description: '5-Dimensional telemetry surveillance tracking cashflow volatility, GST filing discrepancies, and automated Early Warning Signal (EWS) action codes.'
   }
 ];
@@ -102,7 +102,7 @@ router.get('/:id/execute', async (req, res) => {
       reportId: reportDef.id,
       number: reportDef.number,
       name: reportDef.name,
-      targetTool: reportDef.targetTool,
+      moduleType: reportDef.moduleType,
       category: reportDef.category,
       dialect: sequelize.getDialect().toUpperCase(),
       executionTimeMs: Math.round(executionTimeMs * 100) / 100,

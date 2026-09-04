@@ -1,6 +1,6 @@
 -- ============================================================================
 -- REPORT 02: LENDER PORTFOLIO CONCENTRATION & RBI STATUTORY COMPLIANCE AUDIT
--- Target Reporting Tool: SQL Server Reporting Services (SSRS) / Crystal Reports
+-- Module: Statutory Exposure & Concentration Risk Surveillance
 -- Purpose: Identifies lender exposure concentration, RBI ₹50K per-borrower violations,
 --          and ranks lenders by fractional diversification depth.
 -- Features Used: Window Functions (ROW_NUMBER, SUM() OVER, DENSE_RANK), CTEs, PARTITION BY

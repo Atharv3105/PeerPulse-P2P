@@ -245,8 +245,8 @@ async function seedSqlDatabase() {
       target_id: 'SYSTEM_RELATIONAL_MIGRATION',
       previous_state: { database: 'MongoDB' },
       new_state: { database: sequelize.getDialect().toUpperCase(), total_loans: loansRaw.length },
-      performed_by: 'Yardi_Migration_Engine',
-      reason: 'Migrated 322 loans and ledgers to 3NF Relational SQL Architecture.'
+      performed_by: 'System_Risk_Admin',
+      reason: 'Synchronized 322 MSME loans and ledgers to 3NF Relational Architecture for regulatory audit.'
     });
 
     console.log('\n========================================================================');

@@ -14,14 +14,12 @@ export default function MarketplaceLayout({
 
   const tabs = [
     { id: "marketplace", label: "Live Loan Marketplace", icon: "🔍", path: "/marketplace" },
-    { id: "sql-reports", label: "SQL Reports (SSRS)", icon: "💾", path: "/sql-reports" },
     { id: "metrics", label: "RBI Statutory Metrics", icon: "📜", path: "/metrics" },
     { id: "lender", label: "Lender Dashboard", icon: "📊", path: "/lender" },
     { id: "borrower", label: "Apply as MSME", icon: "🏬", path: "/borrower/apply" },
   ];
 
   const getActiveTab = () => {
-    if (location.pathname.includes("/sql-reports")) return "sql-reports";
     if (location.pathname.includes("/metrics")) return "metrics";
     return "marketplace";
   };

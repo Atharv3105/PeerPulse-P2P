@@ -114,20 +114,20 @@ export default function SqlReports() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 flex items-center gap-1.5">
-                <Database className="w-3.5 h-3.5" /> 3NF Relational Architecture
+                <Database className="w-3.5 h-3.5" /> 3NF Relational Core
               </span>
               <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5" /> SSRS & Crystal Reports Spec
+                <ShieldCheck className="w-3.5 h-3.5" /> RBI Master Directions Spec
               </span>
               <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/30">
                 Dialect: {reportResult?.dialect || 'SQL'}
               </span>
             </div>
             <h1 className="text-3xl font-extrabold tracking-tight">
-              Enterprise SQL Reporting & Analytics Console
+              Core Banking SQL & Ledger Audit Console
             </h1>
             <p className="mt-2 text-sm text-slate-300 max-w-2xl">
-              Production-grade relational SQL reporting engine demonstrating complex multi-table joins, Common Table Expressions (CTEs), Window Functions, and dynamic DPD aging buckets.
+              Internal risk operations and compliance query workbench. Executes real-time financial ledger reconciliations, delinquency aging matrices, and statutory exposure audits.
             </p>
           </div>
 
@@ -170,8 +170,8 @@ export default function SqlReports() {
                   <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                     REPORT {rep.number}
                   </span>
-                  <span className="text-[10px] font-semibold text-blue-600 dark:text-blue-400">
-                    {rep.targetTool.split(' ')[0]}
+                  <span className="text-[10px] font-semibold text-blue-600 dark:text-blue-400 truncate max-w-[90px]">
+                    {rep.moduleType || 'AUDIT'}
                   </span>
                 </div>
                 <h4 className="font-semibold text-sm line-clamp-2">{rep.name}</h4>
@@ -236,7 +236,7 @@ export default function SqlReports() {
               <Code2 className="w-4 h-4 text-blue-400" />
               <span>{activeDef?.file}</span>
               <span className="text-slate-600">|</span>
-              <span className="text-emerald-400 font-semibold">{activeDef?.targetTool}</span>
+              <span className="text-emerald-400 font-semibold">{activeDef?.moduleType || 'Financial Risk Engine'}</span>
             </div>
             <span className="text-[11px] text-slate-400">ANSI / T-SQL Compliant</span>
           </div>
@@ -353,18 +353,18 @@ export default function SqlReports() {
         </div>
       </div>
 
-      {/* Yardi Technical Interview Explainer Callout */}
+      {/* Risk Engineering & SQL Optimization Explainer Callout */}
       <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-900/10 via-indigo-900/10 to-slate-900/10 border border-blue-500/20 shadow-sm">
         <div className="flex items-start gap-3">
           <Sparkles className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
           <div>
             <h4 className="font-semibold text-sm text-foreground">
-              Technical Rationale: SSRS Reporting Architecture & SQL Optimization
+              Core Banking & Risk Engineering: SQL Optimization & Ledger Integrity
             </h4>
             <p className="mt-1 text-xs text-muted-fg leading-relaxed">
-              In enterprise systems like Yardi Voyager, reporting queries are tuned to minimize table locks and avoid expensive nested loops. 
-              Report 01 leverages composite indexing on <code className="px-1.5 py-0.5 bg-muted rounded font-mono text-blue-500">repayments(dpd, status)</code> to perform index seeks for delinquency aging buckets. 
-              Report 02 utilizes <code className="px-1.5 py-0.5 bg-muted rounded font-mono text-blue-500">DENSE_RANK() OVER (PARTITION BY lender_id)</code> to identify exposure concentration in a single query scan, avoiding multiple correlated subqueries.
+              In regulated P2P lending platforms, financial ledger audits and regulatory compliance queries are engineered to execute without locking live transaction pipelines. 
+              Report 01 leverages composite B-Tree indexing on <code className="px-1.5 py-0.5 bg-muted rounded font-mono text-blue-500">repayments(dpd, status)</code> to perform index seeks for delinquency aging buckets. 
+              Report 02 utilizes <code className="px-1.5 py-0.5 bg-muted rounded font-mono text-blue-500">DENSE_RANK() OVER (PARTITION BY lender_id)</code> to identify exposure concentration in a single query scan, avoiding multiple correlated subqueries and table locks.
             </p>
           </div>
         </div>

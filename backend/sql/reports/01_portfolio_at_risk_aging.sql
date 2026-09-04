@@ -1,7 +1,7 @@
 -- ============================================================================
 -- REPORT 01: PORTFOLIO AT RISK (PAR) & DPD AGING MATRIX
--- Target Reporting Tool: SQL Server Reporting Services (SSRS) / Crystal Reports
--- Purpose: Regulatory Delinquency Aging, Sectoral Exposure Rollup & Provisioning
+-- Module: Regulatory Delinquency Aging, Sectoral Exposure Rollup & Provisioning
+-- Standard: RBI Master Direction - NBFC-P2P Delinquency Surveillance
 -- Features Used: CASE WHEN Aging Bucketing, Multi-Table INNER JOINs, Aggregate ROLLUP
 -- ============================================================================
 

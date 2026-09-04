@@ -219,6 +219,7 @@ export default function App() {
           }
         >
           <Route index element={<AdminDashboard />} />
+          <Route path="sql-reports" element={<SqlReports />} />
         </Route>
 
         {/* 5. Institutional / NBFC Co-Lending Portal */}
@@ -249,9 +250,11 @@ export default function App() {
           }
         >
           <Route path="/marketplace" element={<Marketplace activeLenderId={activeLenderId} />} />
-          <Route path="/sql-reports" element={<SqlReports />} />
           <Route path="/metrics" element={<PublicMetrics />} />
         </Route>
+
+        {/* Direct link redirect for SQL Reports */}
+        <Route path="/sql-reports" element={<Navigate to="/admin/sql-reports" replace />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />

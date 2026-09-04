@@ -18,12 +18,20 @@ export default function AdminPortalLayout({
     { id: "flagged", label: "Flagged Applications", icon: "⚑", path: "/admin", badge: 4 },
     { id: "ews", label: "EWS Distress Alerts", icon: "📡", path: "/admin#ews", badge: 7 },
     { id: "recovery", label: "Recovery Pipeline", icon: "🔄", path: "/admin#recovery" },
+    { id: "sql-reports", label: "Ledger Audit & SQL", icon: "💾", path: "/admin/sql-reports" },
     { id: "metrics", label: "Statutory Metrics", icon: "📜", path: "/metrics" },
   ];
 
   const bottomItems = [
     { id: "help", label: "Risk Policy Docs", icon: "📖" },
   ];
+
+  const getActiveId = () => {
+    if (location.pathname.includes("sql-reports")) return "sql-reports";
+    if (location.hash === "#ews") return "ews";
+    if (location.hash === "#recovery") return "recovery";
+    return "flagged";
+  };
 
   const handleSelect = (id) => {
     const item = navItems.find((n) => n.id === id);
@@ -38,7 +46,7 @@ export default function AdminPortalLayout({
     >
       <Sidebar
         items={navItems}
-        activeId="flagged"
+        activeId={getActiveId()}
         onSelect={handleSelect}
         bottomItems={bottomItems}
         portalLabel="Risk Ops"

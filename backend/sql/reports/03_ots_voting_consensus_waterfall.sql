@@ -1,6 +1,6 @@
 -- ============================================================================
 -- REPORT 03: ONE-TIME SETTLEMENT (OTS) RESTRUCTURING VOTING WATERFALL
--- Target Reporting Tool: SQL Server Reporting Services (SSRS) / Crystal Reports
+-- Module: Debt Restructuring & Resolution Governance
 -- Purpose: Rollup of fractional lender voting ballots, weighted by tranche capital,
 --          evaluating against the statutory 60% approval threshold.
 -- Features Used: Common Table Expressions (CTEs), Pro-Rata Weighting, HAVING Filter
